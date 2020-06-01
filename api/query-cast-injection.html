@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>MySQL 8.0的新增功能探索-强制转换操作 | BoobooWei</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://localhost:4000/api/query-cast-injection.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="zh-cn" href="http://localhost:4000/zh-cn/api/query-cast-injection">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-lato@0.0.75/index.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="BoobooWei" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="查询演员表注入。 在8.0.18及更高版本中，MySQL将强制转换操作注入表达式和条件内的查询项树中，在该表达式和条件中，参数的数据类型与预期的数据类型不匹配。这对查询结果或执行速度没有影响，但是使查询的执行等同于符合SQL标准的查询，同时保持了与MySQL早期版本的向后兼容性。  现在这样的隐式转换的时间类型（之间执行DATE， DATETIME， TIMESTAMP， TIME）和数字类型（">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MySQL 8.0的新增功能探索-强制转换操作">
+<meta property="og:url" content="http://localhost:4000/api/query-cast-injection">
+<meta property="og:site_name" content="BoobooWei">
+<meta property="og:description" content="查询演员表注入。 在8.0.18及更高版本中，MySQL将强制转换操作注入表达式和条件内的查询项树中，在该表达式和条件中，参数的数据类型与预期的数据类型不匹配。这对查询结果或执行速度没有影响，但是使查询的执行等同于符合SQL标准的查询，同时保持了与MySQL早期版本的向后兼容性。  现在这样的隐式转换的时间类型（之间执行DATE， DATETIME， TIMESTAMP， TIME）和数字类型（">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-26T17:58:00.000Z">
+<meta property="article:modified_time" content="2020-05-26T11:21:17.207Z">
+<meta property="article:author" content="Hexo">
+<meta property="article:tag" content="培训">
+<meta property="article:tag" content="MySQL高级管理教程-探索类">
+<meta property="article:tag" content="MySQL8">
+<meta name="twitter:card" content="summary">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48498357-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-6482217598104186",
+          enable_page_level_ads: true
+     });
+  </script>
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/zh-cn/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/linux/" class="main-nav-link">Linux</a><a href="/mysql/" class="main-nav-link">MySQL</a><a href="/oracle/" class="main-nav-link">Oracle</a><a href="/python/" class="main-nav-link">Python</a><a href="/git/" class="main-nav-link">Git</a><a href="/tick/" class="main-nav-link">TICK</a><a href="/api/" class="main-nav-link">MySQL8.0</a><a href="/news/" class="main-nav-link">日记</a><a href="/about/" class="main-nav-link">关于</a>
+      <a target="_blank" href="https://github.com/toberoot-wyp/toberoot-wyp.github.io" rel="external nofollow noreferrer noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="api/query-cast-injection.html">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">MySQL 8.0的新增功能探索-强制转换操作</h1>
+                <a target="_blank" href="https://github.com/hexojs/site/edit/master/source/api/query-cast-injection.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <ul>
+<li><strong>查询演员表注入。</strong> 在8.0.18及更高版本中，MySQL将强制转换操作注入表达式和条件内的查询项树中，在该表达式和条件中，参数的数据类型与预期的数据类型不匹配。这对查询结果或执行速度没有影响，但是使查询的执行等同于符合SQL标准的查询，同时保持了与MySQL早期版本的向后兼容性。</li>
+</ul>
+<p>现在这样的隐式转换的时间类型（之间执行<a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/datetime.html" rel="external nofollow noreferrer noopener"><code>DATE</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/datetime.html" rel="external nofollow noreferrer noopener"><code>DATETIME</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/datetime.html" rel="external nofollow noreferrer noopener"><code>TIMESTAMP</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/time.html" rel="external nofollow noreferrer noopener"><code>TIME</code></a>）和数字类型（<a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/integer-types.html" rel="external nofollow noreferrer noopener"><code>SMALLINT</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/integer-types.html" rel="external nofollow noreferrer noopener"><code>TINYINT</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/integer-types.html" rel="external nofollow noreferrer noopener"><code>MEDIUMINT</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/integer-types.html" rel="external nofollow noreferrer noopener"><code>INT</code></a>/ <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/integer-types.html" rel="external nofollow noreferrer noopener"><code>INTEGER</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/integer-types.html" rel="external nofollow noreferrer noopener"><code>BIGINT</code></a>; <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/fixed-point-types.html" rel="external nofollow noreferrer noopener"><code>DECIMAL</code></a>/ <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/fixed-point-types.html" rel="external nofollow noreferrer noopener"><code>NUMERIC</code></a>; <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/floating-point-types.html" rel="external nofollow noreferrer noopener"><code>FLOAT</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/floating-point-types.html" rel="external nofollow noreferrer noopener"><code>DOUBLE</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/floating-point-types.html" rel="external nofollow noreferrer noopener"><code>REAL</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/bit-type.html" rel="external nofollow noreferrer noopener"><code>BIT</code></a>），只要他们正在使用任何标准的数字比较运算符（相较<a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/assignment-operators.html#operator_assign-equal" rel="external nofollow noreferrer noopener"><code>=</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/comparison-operators.html#operator_greater-than-or-equal" rel="external nofollow noreferrer noopener"><code>&gt;=</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/comparison-operators.html#operator_greater-than" rel="external nofollow noreferrer noopener"><code>&gt;</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/comparison-operators.html#operator_less-than" rel="external nofollow noreferrer noopener"><code>&lt;</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/comparison-operators.html#operator_less-than-or-equal" rel="external nofollow noreferrer noopener"><code>&lt;=</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/comparison-operators.html#operator_not-equal" rel="external nofollow noreferrer noopener"><code>&lt;&gt;</code></a>/ <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/comparison-operators.html#operator_not-equal" rel="external nofollow noreferrer noopener"><code>!=</code></a>，要么 <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/comparison-operators.html#operator_equal-to" rel="external nofollow noreferrer noopener"><code>&lt;=&gt;</code></a>）。在这种情况下，任何尚未为a的值 <code>DOUBLE</code>都将强制转换为1。现在还执行强制转换注入，以比较<a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/datetime.html" rel="external nofollow noreferrer noopener"><code>DATE</code></a>或 <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/time.html" rel="external nofollow noreferrer noopener"><code>TIME</code></a>值与 <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/datetime.html" rel="external nofollow noreferrer noopener"><code>DATETIME</code></a>值，其中，必要时将参数强制转换 为 <code>DATETIME</code>。</p>
+<p>从MySQL 8.0.21开始，在将字符串类型与其他类型进行比较时，也会执行此类转换。被投字符串类型包括<a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/char.html" rel="external nofollow noreferrer noopener"><code>CHAR</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/char.html" rel="external nofollow noreferrer noopener"><code>VARCHAR</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/binary-varbinary.html" rel="external nofollow noreferrer noopener"><code>BINARY</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/binary-varbinary.html" rel="external nofollow noreferrer noopener"><code>VARBINARY</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/blob.html" rel="external nofollow noreferrer noopener"><code>BLOB</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/blob.html" rel="external nofollow noreferrer noopener"><code>TEXT</code></a>， <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/enum.html" rel="external nofollow noreferrer noopener"><code>ENUM</code></a>，和 <a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/set.html" rel="external nofollow noreferrer noopener"><code>SET</code></a>。将字符串类型的值与数字类型或进行比较时 <code>YEAR</code>，字符串强制转换为 <code>DOUBLE</code>; 如果其他参数的类型不是<code>FLOAT</code>，<code>DOUBLE</code>或者<code>REAL</code>，它也投来 <code>DOUBLE</code>。在将字符串类型与a <code>DATETIME</code>或<code>TIMESTAMP</code> value 进行比较时 ，字符串将强制转换为<code>DATETIME</code>; 将字符串类型与比较时<code>DATE</code>，字符串被强制转换为<code>DATE</code>。</p>
+<p>因此能够看到通过查看的输出时石膏注入到一个给定的查询<a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/explain.html#explain-analyze" rel="external nofollow noreferrer noopener"><code>EXPLAIN ANALYZE</code></a>，<code>EXPLAIN FORMAT=JSON</code>或者，如下所示，<code>EXPLAIN FORMAT=TREE</code>：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql&gt; CREATE TABLE d (dt DATETIME, d DATE, t TIME);</span><br><span class="line">Query OK, 0 rows affected (0.62 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; CREATE TABLE n (i INT, d DECIMAL, f FLOAT, dc DECIMAL);</span><br><span class="line">Query OK, 0 rows affected (0.51 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; CREATE TABLE s (c CHAR(25), vc VARCHAR(25),</span><br><span class="line">    -&gt;     bn BINARY(50), vb VARBINARY(50), b BLOB, t TEXT,</span><br><span class="line">    -&gt;     e ENUM('a', 'b', 'c'), se SET('x' ,'y', 'z'));</span><br><span class="line">Query OK, 0 rows affected (0.50 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; EXPLAIN FORMAT=TREE SELECT * from d JOIN n ON d.dt = n.i\G</span><br><span class="line">*************************** 1\. row ***************************</span><br><span class="line"><span class="keyword">EXPLAIN</span>: -&gt; <span class="keyword">Inner</span> <span class="keyword">hash</span> <span class="keyword">join</span> (<span class="keyword">cast</span>(d.dt <span class="keyword">as</span> <span class="keyword">double</span>) = <span class="keyword">cast</span>(n.i <span class="keyword">as</span> <span class="keyword">double</span>))</span><br><span class="line">(<span class="keyword">cost</span>=<span class="number">0.70</span> <span class="keyword">rows</span>=<span class="number">1</span>)</span><br><span class="line">    -&gt; <span class="keyword">Table</span> <span class="keyword">scan</span> <span class="keyword">on</span> n  (<span class="keyword">cost</span>=<span class="number">0.35</span> <span class="keyword">rows</span>=<span class="number">1</span>)</span><br><span class="line">    -&gt; <span class="keyword">Hash</span></span><br><span class="line">        -&gt; <span class="keyword">Table</span> <span class="keyword">scan</span> <span class="keyword">on</span> d  (<span class="keyword">cost</span>=<span class="number">0.35</span> <span class="keyword">rows</span>=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">mysql&gt; <span class="keyword">EXPLAIN</span> <span class="keyword">FORMAT</span>=TREE <span class="keyword">SELECT</span> * <span class="keyword">from</span> s <span class="keyword">JOIN</span> d <span class="keyword">ON</span> d.dt = s.c\G</span><br><span class="line">*************************** <span class="number">1</span>\. <span class="keyword">row</span> ***************************</span><br><span class="line"><span class="keyword">EXPLAIN</span>: -&gt; <span class="keyword">Inner</span> <span class="keyword">hash</span> <span class="keyword">join</span> (d.dt = <span class="keyword">cast</span>(s.c <span class="keyword">as</span> datetime(<span class="number">6</span>)))  (<span class="keyword">cost</span>=<span class="number">0.72</span> <span class="keyword">rows</span>=<span class="number">1</span>)</span><br><span class="line">    -&gt; <span class="keyword">Table</span> <span class="keyword">scan</span> <span class="keyword">on</span> d  (<span class="keyword">cost</span>=<span class="number">0.37</span> <span class="keyword">rows</span>=<span class="number">1</span>)</span><br><span class="line">    -&gt; <span class="keyword">Hash</span></span><br><span class="line">        -&gt; <span class="keyword">Table</span> <span class="keyword">scan</span> <span class="keyword">on</span> s  (<span class="keyword">cost</span>=<span class="number">0.35</span> <span class="keyword">rows</span>=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="number">1</span> <span class="keyword">row</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.01</span> sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; <span class="keyword">EXPLAIN</span> <span class="keyword">FORMAT</span>=TREE <span class="keyword">SELECT</span> * <span class="keyword">from</span> n <span class="keyword">JOIN</span> s <span class="keyword">ON</span> n.d = s.c\G</span><br><span class="line">*************************** <span class="number">1</span>\. <span class="keyword">row</span> ***************************</span><br><span class="line"><span class="keyword">EXPLAIN</span>: -&gt; <span class="keyword">Inner</span> <span class="keyword">hash</span> <span class="keyword">join</span> (<span class="keyword">cast</span>(n.d <span class="keyword">as</span> <span class="keyword">double</span>) = <span class="keyword">cast</span>(s.c <span class="keyword">as</span> <span class="keyword">double</span>))  (<span class="keyword">cost</span>=<span class="number">0.70</span> <span class="keyword">rows</span>=<span class="number">1</span>)</span><br><span class="line">    -&gt; <span class="keyword">Table</span> <span class="keyword">scan</span> <span class="keyword">on</span> s  (<span class="keyword">cost</span>=<span class="number">0.35</span> <span class="keyword">rows</span>=<span class="number">1</span>)</span><br><span class="line">    -&gt; <span class="keyword">Hash</span></span><br><span class="line">        -&gt; <span class="keyword">Table</span> <span class="keyword">scan</span> <span class="keyword">on</span> n  (<span class="keyword">cost</span>=<span class="number">0.35</span> <span class="keyword">rows</span>=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="number">1</span> <span class="keyword">row</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
+
+<p>也可以通过执行看到这种强制类型转换<code>EXPLAIN [FORMAT=TRADITIONAL]</code>，在这种情况下，也有必要<a target="_blank" href="https://dev.mysql.com/doc/refman/8.0/en/show-warnings.html" rel="external nofollow noreferrer noopener"><code>SHOW WARNINGS</code></a>在执行<code>EXPLAIN</code>语句之后 发出。</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2020-05-26T11:21:17.207Z" itemprop="dateModified">上次更新：2020-05-26</time>
+                <a href="precise-information-for-json-schema-check-constraint.html" class="article-footer-prev" title="有关JSON模式CHECK约束失败的精确信息"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="redo-log-archiving.html" class="article-footer-next" title="重做日志归档"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'toberoot';
+  var disqus_url = 'http://localhost:4000/api/query-cast-injection.html';
+  var disqus_title = "MySQL 8.0的新增功能探索-强制转换操作";
+  var disqus_config = function(){
+    this.language = 'zh';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=hexoio" id="_carbonads_js"></script>
+              <strong class="sidebar-title">目录</strong>
+              
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">添加的功能</strong><a href="index.html" class="sidebar-link">概览</a><a href="additional-target-types-for-casts.html" class="sidebar-link">数据类型转换函数</a><a href="aliases-in-single-table-delete-statements.html" class="sidebar-link">单表DELETE语句中的别名</a><a href="atomic-ddl.html" class="sidebar-link">原子数据定义语句</a><a href="backup-lock.html" class="sidebar-link">备用锁</a><a href="c-api.html" class="sidebar-link">C API</a><a href="character-set-support.html" class="sidebar-link">字符集支持</a><a href="common-table-expressions.html" class="sidebar-link">常用表表达式</a><a href="configuration.html" class="sidebar-link">配置</a><a href="connection-management.html" class="sidebar-link">连接管理</a><a href="data-dictionary.html" class="sidebar-link">数据字典</a><a href="data-type-support.html" class="sidebar-link">数据类型支持</a><a href="explain-analyze-statement.html" class="sidebar-link">EXPLAIN ANALYZE语句</a><a href="hash-join-optimization.html" class="sidebar-link">哈希联接优化</a><a href="hintable-time-zone.html" class="sidebar-link">提示时区</a><a href="innodb-enhancements.html" class="sidebar-link">InnoDB增强功能</a><a href="internal-tempoary-tables.html" class="sidebar-link">内部临时表</a><a href="json-enhancements.html" class="sidebar-link">Json增强功能</a><a href="json-schema-validation.html" class="sidebar-link">JSON模式验证</a><a href="json-value-function.html" class="sidebar-link">JSON_VALUE函数</a><a href="lateral-derived-tables.html" class="sidebar-link">横向派生表</a><a href="multi-valued-indexes.html" class="sidebar-link">多值索引</a><a href="mysql-upgrade.html" class="sidebar-link">升级程序</a><a href="new-optimizer-switch-flags.html" class="sidebar-link">新的optimizer_switch标志</a><a href="optimizer-hints-for-force-index-ignore-index.html" class="sidebar-link">FORCE INDEX，IGNORE INDEX的优化程序提示</a><a href="optimizer.html" class="sidebar-link">优化器</a><a href="plugins.html" class="sidebar-link">插件</a><a href="precise-information-for-json-schema-check-constraint.html" class="sidebar-link">有关JSON模式CHECK约束失败的精确信息</a><a href="query-cast-injection.html" class="sidebar-link current">强制转换操作</a><a href="redo-log-archiving.html" class="sidebar-link">重做日志归档</a><a href="regular-expression-support.html" class="sidebar-link">正则表达式支持</a><a href="replication.html" class="sidebar-link">复制</a><a href="resource-management.html" class="sidebar-link">资源管理</a><a href="row-and-columns-aliases-with-on-duplicate-key-update.html" class="sidebar-link">行和列别名具有ON DUPLICATE KEY UPDATE</a><a href="security-and-account-management.html" class="sidebar-link">安全性和帐户管理</a><a href="sql-standard-explicit-table-clause-and-table-value-constructor.html" class="sidebar-link">SQL标准的显式表子句和表值构造函数</a><a href="table-encryption-management.html" class="sidebar-link">表加密管理</a><a href="the-clone-plugin.html" class="sidebar-link">克隆插件</a><a href="time-zone-support-for-timestamp-and-datatime.html" class="sidebar-link">TIMESTAMP和DATETIME的时区支持</a><a href="user-comments-and-user-attributes.html" class="sidebar-link">用户注释和用户属性</a><a href="window-functions.html" class="sidebar-link">窗口函数</a><a href="xml-enhancements.html" class="sidebar-link">XML增强功能</a><strong class="sidebar-title">不推荐使用的功能</strong><a href="window-functions.html" class="sidebar-link">窗口函数</a><strong class="sidebar-title">删除的功能</strong><a href="xml-enhancements.html" class="sidebar-link">XML增强功能</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2020 <a href="https://github.com/hexojs/hexo/graphs/contributors" rel="external nofollow noreferrer" target="_blank">Hexo</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://www.netlify.com/" rel="external nofollow noreferrer" class="footer-link" target="_blank"><img src="https://www.netlify.com/img/global/badges/netlify-dark.svg" style="margin-bottom:-14px"/></a>
+      <a href="https://twitter.com/" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/toberoot-wyp/toberoot-wyp.github.io" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/linux/" class="mobile-nav-link">Linux</a><a href="/mysql/" class="mobile-nav-link">MySQL</a><a href="/oracle/" class="mobile-nav-link">Oracle</a><a href="/python/" class="mobile-nav-link">Python</a><a href="/git/" class="mobile-nav-link">Git</a><a href="/tick/" class="mobile-nav-link">TICK</a><a href="/api/" class="mobile-nav-link">MySQL8.0</a><a href="/news/" class="mobile-nav-link">日记</a><a href="/about/" class="mobile-nav-link">关于</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/toberoot-wyp/toberoot-wyp.github.io" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">添加的功能</strong><a href="index.html" class="mobile-nav-link">概览</a><a href="additional-target-types-for-casts.html" class="mobile-nav-link">数据类型转换函数</a><a href="aliases-in-single-table-delete-statements.html" class="mobile-nav-link">单表DELETE语句中的别名</a><a href="atomic-ddl.html" class="mobile-nav-link">原子数据定义语句</a><a href="backup-lock.html" class="mobile-nav-link">备用锁</a><a href="c-api.html" class="mobile-nav-link">C API</a><a href="character-set-support.html" class="mobile-nav-link">字符集支持</a><a href="common-table-expressions.html" class="mobile-nav-link">常用表表达式</a><a href="configuration.html" class="mobile-nav-link">配置</a><a href="connection-management.html" class="mobile-nav-link">连接管理</a><a href="data-dictionary.html" class="mobile-nav-link">数据字典</a><a href="data-type-support.html" class="mobile-nav-link">数据类型支持</a><a href="explain-analyze-statement.html" class="mobile-nav-link">EXPLAIN ANALYZE语句</a><a href="hash-join-optimization.html" class="mobile-nav-link">哈希联接优化</a><a href="hintable-time-zone.html" class="mobile-nav-link">提示时区</a><a href="innodb-enhancements.html" class="mobile-nav-link">InnoDB增强功能</a><a href="internal-tempoary-tables.html" class="mobile-nav-link">内部临时表</a><a href="json-enhancements.html" class="mobile-nav-link">Json增强功能</a><a href="json-schema-validation.html" class="mobile-nav-link">JSON模式验证</a><a href="json-value-function.html" class="mobile-nav-link">JSON_VALUE函数</a><a href="lateral-derived-tables.html" class="mobile-nav-link">横向派生表</a><a href="multi-valued-indexes.html" class="mobile-nav-link">多值索引</a><a href="mysql-upgrade.html" class="mobile-nav-link">升级程序</a><a href="new-optimizer-switch-flags.html" class="mobile-nav-link">新的optimizer_switch标志</a><a href="optimizer-hints-for-force-index-ignore-index.html" class="mobile-nav-link">FORCE INDEX，IGNORE INDEX的优化程序提示</a><a href="optimizer.html" class="mobile-nav-link">优化器</a><a href="plugins.html" class="mobile-nav-link">插件</a><a href="precise-information-for-json-schema-check-constraint.html" class="mobile-nav-link">有关JSON模式CHECK约束失败的精确信息</a><a href="query-cast-injection.html" class="mobile-nav-link current">强制转换操作</a><a href="redo-log-archiving.html" class="mobile-nav-link">重做日志归档</a><a href="regular-expression-support.html" class="mobile-nav-link">正则表达式支持</a><a href="replication.html" class="mobile-nav-link">复制</a><a href="resource-management.html" class="mobile-nav-link">资源管理</a><a href="row-and-columns-aliases-with-on-duplicate-key-update.html" class="mobile-nav-link">行和列别名具有ON DUPLICATE KEY UPDATE</a><a href="security-and-account-management.html" class="mobile-nav-link">安全性和帐户管理</a><a href="sql-standard-explicit-table-clause-and-table-value-constructor.html" class="mobile-nav-link">SQL标准的显式表子句和表值构造函数</a><a href="table-encryption-management.html" class="mobile-nav-link">表加密管理</a><a href="the-clone-plugin.html" class="mobile-nav-link">克隆插件</a><a href="time-zone-support-for-timestamp-and-datatime.html" class="mobile-nav-link">TIMESTAMP和DATETIME的时区支持</a><a href="user-comments-and-user-attributes.html" class="mobile-nav-link">用户注释和用户属性</a><a href="window-functions.html" class="mobile-nav-link">窗口函数</a><a href="xml-enhancements.html" class="mobile-nav-link">XML增强功能</a><strong class="mobile-nav-title">不推荐使用的功能</strong><a href="window-functions.html" class="mobile-nav-link">窗口函数</a><strong class="mobile-nav-title">删除的功能</strong><a href="xml-enhancements.html" class="mobile-nav-link">XML增强功能</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="api/query-cast-injection.html">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- Cookie -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+  apiKey: 'cdea7d4e47d84f6145b77e7f68689f35',
+  indexName: 'hexo_zh-cn',
+  inputSelector: '#search-input'
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+
+
+</body>
+</html>
