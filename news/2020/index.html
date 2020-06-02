@@ -112,122 +112,110 @@
   <header class="article-header">
     
       <h1>
-        <a href="/news/2020/05/29/tec-oracle/" class="article-title" itemprop="name">Oracle11g常用视图</a>
+        <a href="/news/2020/06/03/tec-mysql/" class="article-title" itemprop="name">MySQL慢查询使用Table方式记录</a>
       </h1>
     
-    <a href="/news/2020/05/29/tec-oracle/" class="article-date"><time datetime="2020-05-28T16:11:33.000Z">2020-05-28</time></a>
+    <a href="/news/2020/06/03/tec-mysql/" class="article-date"><time datetime="2020-06-03T10:47:33.000Z">2020-06-03</time></a>
   </header>
   <div class="article-content" itemprop="articleBody">
-    <table>
+    <p>默认MySQL慢查询使用FILE记录，为方便数据分析，改为使用Table的方式保存，方便拉取后过滤分析。</p>
+<blockquote class="note info"><strong class="note-title">MySQL慢查询使用Table方式记录</strong><ol>
+<li>开启慢查询</li>
+<li>设置必要参数</li>
+<li>设置采集器</li>
+<li>设置轮询</li>
+</ol>
+</blockquote>
+
+<h2 id="查看慢查询相关参数" class="article-heading"><a href="#查看慢查询相关参数" class="headerlink" title="查看慢查询相关参数"></a>查看慢查询相关参数<a class="article-anchor" href="#查看慢查询相关参数" aria-hidden="true"></a></h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>  </span><br><span class="line">  <span class="string">'slow_query_log'</span> <span class="keyword">as</span>  parameter, </span><br><span class="line">  @@slow_query_log  <span class="keyword">as</span>  <span class="keyword">value</span>, <span class="string">'慢查询日志开启状态'</span> <span class="keyword">as</span>  info</span><br><span class="line"><span class="keyword">UNION</span>  </span><br><span class="line"><span class="keyword">SELECT</span>  </span><br><span class="line">  <span class="string">'long_query_time'</span>, </span><br><span class="line">  @@long_query_time, <span class="string">'慢查询阈值'</span> </span><br><span class="line"><span class="keyword">UNION</span>  </span><br><span class="line"><span class="keyword">SELECT</span>  </span><br><span class="line">  <span class="string">'long_query_time'</span>, </span><br><span class="line">  @@log_output, </span><br><span class="line">  <span class="string">'慢查询保存方式'</span> </span><br><span class="line"><span class="keyword">UNION</span>  </span><br><span class="line"><span class="keyword">SELECT</span>  </span><br><span class="line">  <span class="string">'slow_query_log_file'</span>, </span><br><span class="line">  @@slow_query_log_file, <span class="string">'慢查询日志文件'</span> </span><br><span class="line"><span class="keyword">UNION</span>  </span><br><span class="line"><span class="keyword">SELECT</span>  </span><br><span class="line">  <span class="string">'long_query_time'</span>, </span><br><span class="line">  @@log_queries_not_using_indexes, </span><br><span class="line">  <span class="string">'未使用索引查询是否记录'</span> </span><br><span class="line"><span class="keyword">UNION</span>  </span><br><span class="line"><span class="keyword">SELECT</span>  </span><br><span class="line">  <span class="string">'long_query_time'</span>, </span><br><span class="line">  @@log_slow_admin_statements, </span><br><span class="line">  <span class="string">'是否将慢管理语句包含例如analyze'</span>;</span><br></pre></td></tr></table></figure>
+
+
+<p>执行结果</p>
+<table>
 <thead>
 <tr>
-<th>Oracle常用视图</th>
-<th>说明</th>
+<th>parameter</th>
+<th>value</th>
+<th>info</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/statviews_4045.htm#REFRN23442" rel="external nofollow noreferrer noopener">dba_hist_snapshot</a></td>
-<td>在工作负载存储库中显示有关快照的信息。</td>
+<td>slow_query_log</td>
+<td>1</td>
+<td>慢查询日志开启状态</td>
 </tr>
 <tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_2085.htm" rel="external nofollow noreferrer noopener">v$osstat</a></td>
-<td>显示来自操作系统的系统利用率统计信息。每个系统统计信息返回一行          * PHYSICAL_MEMORY_BYTES:Total number of bytes of physical memory     * NUM_CPUS:Number of CPUs or processors available</td>
+<td>long_query_time</td>
+<td>0.1</td>
+<td>慢查询阈值</td>
 </tr>
 <tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_1097.htm#REFRN30047" rel="external nofollow noreferrer noopener">v$database</a></td>
-<td>显示控制文件中有关数据库的信息。</td>
+<td>long_query_time</td>
+<td>TABLE</td>
+<td>慢查询保存方式</td>
 </tr>
 <tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_2002.htm" rel="external nofollow noreferrer noopener">v$instance</a></td>
-<td>显示当前实例的状态。</td>
+<td>slow_query_log_file</td>
+<td>dataslow.log</td>
+<td>慢查询日志文件</td>
 </tr>
 <tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/statviews_4212.htm" rel="external nofollow noreferrer noopener">DBA_REGISTRY_HISTORY</a></td>
-<td>提供有关在数据库上执行的升级，降级和重要补丁更新的信息。</td>
+<td>long_query_time</td>
+<td>1</td>
+<td>未使用索引查询是否记录</td>
 </tr>
 <tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_2087.htm#REFRN30176" rel="external nofollow noreferrer noopener">v$parameter</a>      <a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/initparams017.htm#REFRN10006" rel="external nofollow noreferrer noopener">AUDIT_TRAIL</a>     <a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/initparams234.htm" rel="external nofollow noreferrer noopener">SESSIONS</a>      <a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/initparams202.htm#REFRN10175" rel="external nofollow noreferrer noopener">PROCESSES</a></td>
-<td>显示有关该会话当前有效的初始化参数的信息。         <br/> * audit_trail:启用或禁用数据库审核     <br/>* sessions:指定系统中可以创建的最大会话数。     <br/>* processes:指定可以同时连接到Oracle的最大操作系统用户进程数。它的值应允许所有后台进程，例如锁，作业队列进程和并行执行进程。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_1016.htm#REFRN30011" rel="external nofollow noreferrer noopener">V$ARCHIVED_LOG</a></td>
-<td><code>V$ARCHIVED_LOG</code>显示控制文件中的存档日志信息，包括存档日志名称。成功归档或清除联机重做日志后，将插入归档日志记录（<code>NULL</code>如果清除了日志，则名称列）。如果日志被归档两次，就会出现带有两个相同的归档日志记录<code>THREAD#</code>，<code>SEQUENCE#</code>和<code>FIRST_CHANGE#</code>，但使用不同的名称。从备份集或副本还原存档日志时，以及使用RMAN  <code>COPY</code>命令创建日志副本时，也会插入存档日志记录。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_2096.htm#REFRN30180" rel="external nofollow noreferrer noopener">V$PGASTAT</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/statviews_5081.htm#REFRN23302" rel="external nofollow noreferrer noopener">dba_users</a></td>
-<td><code>DBA_USERS</code> 描述数据库的所有用户。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/statviews_1158.htm#i1583352" rel="external nofollow noreferrer noopener">DBA_OBJECTS</a></td>
-<td><code>DBA_OBJECTS</code>描述数据库中的所有对象。          <code>V$LOCKED_OBJECT</code>列出系统上每个事务获取的所有锁。它显示哪些会话在什么对象和什么模式下持有DML锁（即TM类型的队列）。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_3016.htm" rel="external nofollow noreferrer noopener">v$session</a></td>
-<td>显示每个当前会话的会话信息。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_2030.htm#REFRN30125" rel="external nofollow noreferrer noopener">v$locked_object</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_3118.htm#REFRN30295" rel="external nofollow noreferrer noopener">v$undostat</a></td>
-<td>显示统计数据的直方图以显示系统的运行状况。可用的统计信息包括撤消空间消耗，事务并发以及在实例中执行的查询的长度。您可以使用此视图来估计当前工作负载所需的撤消空间量。Oracle使用此视图来调整系统中的撤消使用情况。如果系统处于手动撤消管理模式，则该视图返回NULL值。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_2031.htm" rel="external nofollow noreferrer noopener">v$log</a></td>
-<td>显示控制文件中的日志文件信息。          <strong>STATUS</strong>日志状态：          - <code>UNUSED</code>-在线重做日志从未写入过。这是刚刚添加的重做日志的状态，或者<code>RESETLOGS</code>不是当前重做日志时在之后的状态。     - <code>CURRENT</code>-当前重做日志。这意味着重做日志处于活动状态。重做日志可以打开或关闭。     - <code>ACTIVE</code>-日志处于活动状态，但不是当前日志。崩溃恢复需要它。它可能正在用于块恢复。它可能已存档，也可能未存档。     - <code>CLEARING</code>- <code>ALTER DATABASE CLEAR LOGFILE</code>语句后，日志将重新创建为空日志。清除日志后，状态变为<code>UNUSED</code>。     - <code>CLEARING_CURRENT</code>-当前日志正在清除关闭的线程。如果交换机出现故障，例如I / O错误写入新的日志头，则日志可以保持此状态。     - <code>INACTIVE</code>-实例恢复不再需要日志。它可能正在用于介质恢复。它可能已存档，也可能未存档。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_1105.htm" rel="external nofollow noreferrer noopener">v$dataguard_status</a></td>
-<td>显示最近写入警报日志或服务器进程跟踪文件的消息，这些消息与物理备用数据库或所有备用数据库类型的重做传输服务有关。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_2050.htm" rel="external nofollow noreferrer noopener">V$MANAGED_STANDBY</a></td>
-<td>显示与Data Guard环境中的物理备用数据库有关的某些Oracle Database进程的当前状态信息。实例关闭后，该视图不会继续存在。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_1027.htm#REFRN30171" rel="external nofollow noreferrer noopener">V$ASM_DISKGROUP</a></td>
-<td>V$ASM_DISKGROUP 为节点上的ASM实例发现的每个ASM磁盘组显示一行。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_2125.htm" rel="external nofollow noreferrer noopener">v$recovery_file_dest</a></td>
-<td>在快速恢复区域中显示有关磁盘配额和当前磁盘使用情况的信息。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/statviews_3194.htm#REFRN23076" rel="external nofollow noreferrer noopener">DBA_FREE_SPACE</a></td>
-<td>描述数据库中所有表空间的使用情况。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/statviews_5061.htm" rel="external nofollow noreferrer noopener">dba_temp_files</a></td>
-<td>DBA_TEMP_FILES 描述数据库中的所有临时文件（临时文件）。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/statviews_5060.htm#REFRN23287" rel="external nofollow noreferrer noopener">dba_tablespaces</a></td>
-<td>DBA_TABLESPACES 描述数据库中的所有表空间。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_3041.htm" rel="external nofollow noreferrer noopener">gv$sort_segment</a></td>
-<td>V$SORT_SEGMENT显示有关给定实例中每个排序段的信息。仅在表空间是TEMPORARY类型时更新视图。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_3114.htm" rel="external nofollow noreferrer noopener">v$transaction</a></td>
-<td>V$TRANSACTION 列出系统中的活动事务。</td>
-</tr>
-<tr>
-<td><a target="_blank" href="https://docs.oracle.com/cd/E11882_01/server.112/e40402/dynviews_1062.htm#REFRN30371" rel="external nofollow noreferrer noopener">v$backup_set_details</a></td>
-<td>备份信息10g 11g 12c</td>
+<td>long_query_time</td>
+<td>1</td>
+<td>是否将慢管理语句包含例如analyze</td>
 </tr>
 </tbody></table>
+<h2 id="开启慢查询Table方式" class="article-heading"><a href="#开启慢查询Table方式" class="headerlink" title="开启慢查询Table方式"></a>开启慢查询Table方式<a class="article-anchor" href="#开启慢查询Table方式" aria-hidden="true"></a></h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">variables</span> <span class="keyword">like</span> <span class="string">'%log%'</span>;</span><br><span class="line"><span class="keyword">set</span> <span class="keyword">global</span> log_output=<span class="string">'TABLE'</span>;</span><br><span class="line">desc slow_log;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@MySQL-01 11:43:  [(none)]&gt; show variables like <span class="string">'log_output'</span>;</span><br><span class="line">+---------------+-------+</span><br><span class="line">| Variable_name | Value |</span><br><span class="line">+---------------+-------+</span><br><span class="line">| log_output    | FILE  |</span><br><span class="line">+---------------+-------+</span><br><span class="line">1 row <span class="keyword">in</span> <span class="built_in">set</span> (0.00 sec)</span><br><span class="line"></span><br><span class="line">root@MySQL-01 11:43:  [(none)]&gt; <span class="built_in">set</span> global log_output=<span class="string">'TABLE'</span>;</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"></span><br><span class="line">root@MySQL-01 11:44:  [(none)]&gt; show variables like <span class="string">'log_output'</span>;</span><br><span class="line">+---------------+-------+</span><br><span class="line">| Variable_name | Value |</span><br><span class="line">+---------------+-------+</span><br><span class="line">| log_output    | TABLE |</span><br><span class="line">+---------------+-------+</span><br><span class="line">1 row <span class="keyword">in</span> <span class="built_in">set</span> (0.01 sec)</span><br><span class="line"></span><br><span class="line">root@MySQL-01 11:44:  [(none)]&gt; use mysql;</span><br><span class="line">Database changed</span><br><span class="line">root@MySQL-01 11:44:  [mysql]&gt; show tables;</span><br><span class="line">+---------------------------+</span><br><span class="line">| Tables_in_mysql           |</span><br><span class="line">+---------------------------+</span><br><span class="line">| columns_priv              |</span><br><span class="line">| db                        |</span><br><span class="line">| engine_cost               |</span><br><span class="line">| event                     |</span><br><span class="line">| func                      |</span><br><span class="line">| general_log               |</span><br><span class="line">| gtid_executed             |</span><br><span class="line">| help_category             |</span><br><span class="line">| help_keyword              |</span><br><span class="line">| help_relation             |</span><br><span class="line">| help_topic                |</span><br><span class="line">| innodb_index_stats        |</span><br><span class="line">| innodb_table_stats        |</span><br><span class="line">| ndb_binlog_index          |</span><br><span class="line">| plugin                    |</span><br><span class="line">| proc                      |</span><br><span class="line">| procs_priv                |</span><br><span class="line">| proxies_priv              |</span><br><span class="line">| server_cost               |</span><br><span class="line">| servers                   |</span><br><span class="line">| slave_master_info         |</span><br><span class="line">| slave_relay_log_info      |</span><br><span class="line">| slave_worker_info         |</span><br><span class="line">| slow_log                  |</span><br><span class="line">| tables_priv               |</span><br><span class="line">| time_zone                 |</span><br><span class="line">| time_zone_leap_second     |</span><br><span class="line">| time_zone_name            |</span><br><span class="line">| time_zone_transition      |</span><br><span class="line">| time_zone_transition_type |</span><br><span class="line">| user                      |</span><br><span class="line">+---------------------------+</span><br><span class="line">31 rows <span class="keyword">in</span> <span class="built_in">set</span> (0.00 sec)</span><br><span class="line"></span><br><span class="line">root@MySQL-01 11:44:  [mysql]&gt; seledct * from slow_log <span class="built_in">limit</span> 1\G;</span><br><span class="line">ERROR 1064 (42000): You have an error <span class="keyword">in</span> your SQL syntax; check the manual that corresponds to your MySQL server version <span class="keyword">for</span> the right syntax to use near <span class="string">'seledct * from slow_log limit 1'</span> at line 1</span><br><span class="line">ERROR:</span><br><span class="line">No query specified</span><br><span class="line"></span><br><span class="line">root@MySQL-01 11:44:  [mysql]&gt; select * from slow_log <span class="built_in">limit</span> 1\G;</span><br><span class="line">Empty <span class="built_in">set</span> (0.00 sec)</span><br><span class="line"></span><br><span class="line">ERROR:</span><br><span class="line">No query specified</span><br><span class="line"></span><br><span class="line">root@MySQL-01 11:44:  [mysql]&gt; desc slow_log</span><br><span class="line">    -&gt; ;</span><br><span class="line">+----------------+---------------------+------+-----+----------------------+--------------------------------+</span><br><span class="line">| Field          | Type                | Null | Key | Default              | Extra                          |</span><br><span class="line">+----------------+---------------------+------+-----+----------------------+--------------------------------+</span><br><span class="line">| start_time     | timestamp(6)        | NO   |     | CURRENT_TIMESTAMP(6) | on update CURRENT_TIMESTAMP(6) |</span><br><span class="line">| user_host      | mediumtext          | NO   |     | NULL                 |                                |</span><br><span class="line">| query_time     | time(6)             | NO   |     | NULL                 |                                |</span><br><span class="line">| lock_time      | time(6)             | NO   |     | NULL                 |                                |</span><br><span class="line">| rows_sent      | int(11)             | NO   |     | NULL                 |                                |</span><br><span class="line">| rows_examined  | int(11)             | NO   |     | NULL                 |                                |</span><br><span class="line">| db             | varchar(512)        | NO   |     | NULL                 |                                |</span><br><span class="line">| last_insert_id | int(11)             | NO   |     | NULL                 |                                |</span><br><span class="line">| insert_id      | int(11)             | NO   |     | NULL                 |                                |</span><br><span class="line">| server_id      | int(10) unsigned    | NO   |     | NULL                 |                                |</span><br><span class="line">| sql_text       | mediumblob          | NO   |     | NULL                 |                                |</span><br><span class="line">| thread_id      | bigint(21) unsigned | NO   |     | NULL                 |                                |</span><br><span class="line">+----------------+---------------------+------+-----+----------------------+--------------------------------+</span><br><span class="line">12 rows <span class="keyword">in</span> <span class="built_in">set</span> (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="设置轮询" class="article-heading"><a href="#设置轮询" class="headerlink" title="设置轮询"></a>设置轮询<a class="article-anchor" href="#设置轮询" aria-hidden="true"></a></h2><p>因<code>mysql.slow_log</code>使用的是CSV 存储引擎，不利于查询分析，因此我们每日创建innodb引擎的表并将数据导入新表，并清空日志表。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> booboo;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> booboo.<span class="string">`slow_log`</span> (</span><br><span class="line">  <span class="string">`start_time`</span> <span class="built_in">timestamp</span>(<span class="number">6</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span>(<span class="number">6</span>) <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CURRENT_TIMESTAMP</span>(<span class="number">6</span>),</span><br><span class="line">  <span class="string">`user_host`</span> mediumtext <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`query_time`</span> <span class="built_in">time</span>(<span class="number">6</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`lock_time`</span> <span class="built_in">time</span>(<span class="number">6</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`rows_sent`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`rows_examined`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`db`</span> <span class="built_in">varchar</span>(<span class="number">512</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`last_insert_id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`insert_id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`server_id`</span> <span class="built_in">int</span>(<span class="number">10</span>) <span class="keyword">unsigned</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`sql_text`</span> mediumblob <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`thread_id`</span> <span class="built_in">bigint</span>(<span class="number">21</span>) <span class="keyword">unsigned</span> <span class="keyword">NOT</span> <span class="literal">NULL</span></span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">innodb</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8 <span class="keyword">COMMENT</span>=<span class="string">'Slow log'</span>;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> booboo.slow_log  <span class="keyword">select</span> * <span class="keyword">from</span> mysql.slow_log;</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> booboo.slow_log <span class="keyword">add</span> <span class="keyword">index</span> idx_dba(start_time,db,query_time);</span><br><span class="line"><span class="keyword">truncate</span> <span class="keyword">table</span> mysql.slow_log;</span><br></pre></td></tr></table></figure>
+
+<p>常用的查询</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> slow_log <span class="keyword">where</span> start_time &gt; <span class="string">"2020-06-01"</span> <span class="keyword">and</span> db=<span class="string">'test'</span> <span class="keyword">order</span> <span class="keyword">by</span> query_time <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="生产案例" class="article-heading"><a href="#生产案例" class="headerlink" title="生产案例"></a>生产案例<a class="article-anchor" href="#生产案例" aria-hidden="true"></a></h2><blockquote class="note warn"><strong class="note-title">RDS For MySQL 慢查询日志清理</strong><ol>
+<li>目前mysql.slow_log保存了从2017-4月开始到现在的所有慢日志，数据量大</li>
+<li>该表目前无索引</li>
+<li>按照 <code>query_time</code> 查询慢查询非常慢，直接报错</li>
+</ol>
+<p>解决建议：</p>
+<ol>
+<li>阿里工单询问RDS5.7是否有参数控制该表的定期删除，例如只保留7天的慢查询(<code>truncate mysql.slow_log;</code>)</li>
+<li>阿里产品没有现成的配置，则自己写一个定时任务定期清理即可</li>
+</ol>
+</blockquote>
 
   </div>
   
 </article>
 
 
+        
+      
+        
+          <article class="article post archive-post" itemscope itemtype="http://schema.org/Article">
+            <a class="archive-post-link" href="/news/2020/06/03/tec-mysql/">
+              <strong class="archive-post-title" itemprop="name">MySQL慢查询使用FILE方式记录</strong>
+              <span class="archive-post-date"><time datetime="2020-06-02T17:47:33.000Z">2020-06-02</time></span>
+            </a>
+          </article>
+        
+      
+        
+          <article class="article post archive-post" itemscope itemtype="http://schema.org/Article">
+            <a class="archive-post-link" href="/news/2020/05/29/tec-oracle/">
+              <strong class="archive-post-title" itemprop="name">Oracle11g常用视图</strong>
+              <span class="archive-post-date"><time datetime="2020-05-28T16:11:33.000Z">2020-05-28</time></span>
+            </a>
+          </article>
         
       
         
