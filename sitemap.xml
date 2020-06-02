@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/api/aliases-in-single-table-delete-statements</loc>
+    
+    <lastmod>2020-06-02T01:40:32.299Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/api/additional-target-types-for-casts</loc>
     
-    <lastmod>2020-06-01T10:45:45.104Z</lastmod>
+    <lastmod>2020-06-02T01:24:27.258Z</lastmod>
     
   </url>
   
@@ -313,13 +320,6 @@
     <loc>http://www.toberoot.com/api/precise-information-for-json-schema-check-constraint</loc>
     
     <lastmod>2020-05-26T11:21:17.175Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/aliases-in-single-table-delete-statements</loc>
-    
-    <lastmod>2020-05-26T11:21:17.173Z</lastmod>
     
   </url>
   
