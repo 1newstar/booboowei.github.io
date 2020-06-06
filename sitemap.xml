@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/mse/computer/computer_performance_evaluation</loc>
+    
+    <lastmod>2020-06-06T15:44:37.916Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mse/computer/</loc>
+    
+    <lastmod>2020-06-06T12:27:00.093Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/api/resource-management</loc>
     
     <lastmod>2020-06-06T05:04:08.320Z</lastmod>
@@ -320,13 +334,6 @@
     <loc>http://www.toberoot.com/mse/c++/</loc>
     
     <lastmod>2020-06-06T03:22:35.982Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mse/computer/</loc>
-    
-    <lastmod>2020-06-06T01:57:26.676Z</lastmod>
     
   </url>
   
