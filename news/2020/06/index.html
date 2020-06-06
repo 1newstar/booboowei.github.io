@@ -66,7 +66,8 @@
           enable_page_level_ads: true
      });
   </script>
-
+  <!-- at the end of the HEAD -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 </head>
 
 <body>
@@ -77,7 +78,7 @@
       <a href='/' id="logo">ToBeRoot</a>
     </h1>
     <nav id="main-nav">
-      <a href="/api/" class="main-nav-link">MySQL8.0</a><a href="/linux/" class="main-nav-link">Linux</a><a href="/mysql/" class="main-nav-link">MySQL</a><a href="/oracle/" class="main-nav-link">Oracle</a><a href="/python/" class="main-nav-link">Python</a><a href="/git/" class="main-nav-link">Git</a><a href="/tick/" class="main-nav-link">TICK</a><a href="/news/" class="main-nav-link">日记</a><a href="/about/" class="main-nav-link">关于</a>
+      <a href="/api/" class="main-nav-link">MySQL8.0</a><a href="/linux/" class="main-nav-link">Linux</a><a href="/mysql/" class="main-nav-link">MySQL</a><a href="/oracle/" class="main-nav-link">Oracle</a><a href="/python/" class="main-nav-link">Python</a><a href="/git/" class="main-nav-link">Git</a><a href="/tick/" class="main-nav-link">TICK</a><a href="/mse/" class="main-nav-link">MSE</a><a href="/news/" class="main-nav-link">News</a><a href="/about/" class="main-nav-link">About</a>
       <a target="_blank" href="https://github.com/BoobooWei" rel="external nofollow noreferrer noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
@@ -106,98 +107,23 @@
 <div id="content-wrap">
   <div class="wrapper">
     <div class="inner">
+
+
+    <article class="article post archive-post" itemscope itemtype="http://schema.org/Article">
+
+        <header class="article-header">
+             <h1 class="article-title" itemprop="name">News</h1>
+             </header>
+    </article>
+
       
         
-          <article class="article post" itemscope itemtype="http://schema.org/Article">
-  <header class="article-header">
-    
-      <h1>
-        <a href="/news/2020/06/03/tec-mysql/" class="article-title" itemprop="name">MySQL慢查询使用Table方式记录</a>
-      </h1>
-    
-    <a href="/news/2020/06/03/tec-mysql/" class="article-date"><time datetime="2020-06-03T10:47:33.000Z">2020-06-03</time></a>
-  </header>
-  <div class="article-content" itemprop="articleBody">
-    <p>默认MySQL慢查询使用FILE记录，为方便数据分析，改为使用Table的方式保存，方便拉取后过滤分析。</p>
-<blockquote class="note info"><strong class="note-title">MySQL慢查询使用Table方式记录</strong><ol>
-<li>开启慢查询</li>
-<li>设置必要参数</li>
-<li>设置采集器</li>
-<li>设置轮询</li>
-</ol>
-</blockquote>
-
-<h2 id="查看慢查询相关参数" class="article-heading"><a href="#查看慢查询相关参数" class="headerlink" title="查看慢查询相关参数"></a>查看慢查询相关参数<a class="article-anchor" href="#查看慢查询相关参数" aria-hidden="true"></a></h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>  </span><br><span class="line">  <span class="string">'slow_query_log'</span> <span class="keyword">as</span>  parameter, </span><br><span class="line">  @@slow_query_log  <span class="keyword">as</span>  <span class="keyword">value</span>, <span class="string">'慢查询日志开启状态'</span> <span class="keyword">as</span>  info</span><br><span class="line"><span class="keyword">UNION</span>  </span><br><span class="line"><span class="keyword">SELECT</span>  </span><br><span class="line">  <span class="string">'long_query_time'</span>, </span><br><span class="line">  @@long_query_time, <span class="string">'慢查询阈值'</span> </span><br><span class="line"><span class="keyword">UNION</span>  </span><br><span class="line"><span class="keyword">SELECT</span>  </span><br><span class="line">  <span class="string">'long_query_time'</span>, </span><br><span class="line">  @@log_output, </span><br><span class="line">  <span class="string">'慢查询保存方式'</span> </span><br><span class="line"><span class="keyword">UNION</span>  </span><br><span class="line"><span class="keyword">SELECT</span>  </span><br><span class="line">  <span class="string">'slow_query_log_file'</span>, </span><br><span class="line">  @@slow_query_log_file, <span class="string">'慢查询日志文件'</span> </span><br><span class="line"><span class="keyword">UNION</span>  </span><br><span class="line"><span class="keyword">SELECT</span>  </span><br><span class="line">  <span class="string">'long_query_time'</span>, </span><br><span class="line">  @@log_queries_not_using_indexes, </span><br><span class="line">  <span class="string">'未使用索引查询是否记录'</span> </span><br><span class="line"><span class="keyword">UNION</span>  </span><br><span class="line"><span class="keyword">SELECT</span>  </span><br><span class="line">  <span class="string">'long_query_time'</span>, </span><br><span class="line">  @@log_slow_admin_statements, </span><br><span class="line">  <span class="string">'是否将慢管理语句包含例如analyze'</span>;</span><br></pre></td></tr></table></figure>
-
-
-<p>执行结果</p>
-<table>
-<thead>
-<tr>
-<th>parameter</th>
-<th>value</th>
-<th>info</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>slow_query_log</td>
-<td>1</td>
-<td>慢查询日志开启状态</td>
-</tr>
-<tr>
-<td>long_query_time</td>
-<td>0.1</td>
-<td>慢查询阈值</td>
-</tr>
-<tr>
-<td>long_query_time</td>
-<td>TABLE</td>
-<td>慢查询保存方式</td>
-</tr>
-<tr>
-<td>slow_query_log_file</td>
-<td>dataslow.log</td>
-<td>慢查询日志文件</td>
-</tr>
-<tr>
-<td>long_query_time</td>
-<td>1</td>
-<td>未使用索引查询是否记录</td>
-</tr>
-<tr>
-<td>long_query_time</td>
-<td>1</td>
-<td>是否将慢管理语句包含例如analyze</td>
-</tr>
-</tbody></table>
-<h2 id="开启慢查询Table方式" class="article-heading"><a href="#开启慢查询Table方式" class="headerlink" title="开启慢查询Table方式"></a>开启慢查询Table方式<a class="article-anchor" href="#开启慢查询Table方式" aria-hidden="true"></a></h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">variables</span> <span class="keyword">like</span> <span class="string">'%log%'</span>;</span><br><span class="line"><span class="keyword">set</span> <span class="keyword">global</span> log_output=<span class="string">'TABLE'</span>;</span><br><span class="line">desc slow_log;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">root@MySQL-01 11:43:  [(none)]&gt; show variables like <span class="string">'log_output'</span>;</span><br><span class="line">+---------------+-------+</span><br><span class="line">| Variable_name | Value |</span><br><span class="line">+---------------+-------+</span><br><span class="line">| log_output    | FILE  |</span><br><span class="line">+---------------+-------+</span><br><span class="line">1 row <span class="keyword">in</span> <span class="built_in">set</span> (0.00 sec)</span><br><span class="line"></span><br><span class="line">root@MySQL-01 11:43:  [(none)]&gt; <span class="built_in">set</span> global log_output=<span class="string">'TABLE'</span>;</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"></span><br><span class="line">root@MySQL-01 11:44:  [(none)]&gt; show variables like <span class="string">'log_output'</span>;</span><br><span class="line">+---------------+-------+</span><br><span class="line">| Variable_name | Value |</span><br><span class="line">+---------------+-------+</span><br><span class="line">| log_output    | TABLE |</span><br><span class="line">+---------------+-------+</span><br><span class="line">1 row <span class="keyword">in</span> <span class="built_in">set</span> (0.01 sec)</span><br><span class="line"></span><br><span class="line">root@MySQL-01 11:44:  [(none)]&gt; use mysql;</span><br><span class="line">Database changed</span><br><span class="line">root@MySQL-01 11:44:  [mysql]&gt; show tables;</span><br><span class="line">+---------------------------+</span><br><span class="line">| Tables_in_mysql           |</span><br><span class="line">+---------------------------+</span><br><span class="line">| columns_priv              |</span><br><span class="line">| db                        |</span><br><span class="line">| engine_cost               |</span><br><span class="line">| event                     |</span><br><span class="line">| func                      |</span><br><span class="line">| general_log               |</span><br><span class="line">| gtid_executed             |</span><br><span class="line">| help_category             |</span><br><span class="line">| help_keyword              |</span><br><span class="line">| help_relation             |</span><br><span class="line">| help_topic                |</span><br><span class="line">| innodb_index_stats        |</span><br><span class="line">| innodb_table_stats        |</span><br><span class="line">| ndb_binlog_index          |</span><br><span class="line">| plugin                    |</span><br><span class="line">| proc                      |</span><br><span class="line">| procs_priv                |</span><br><span class="line">| proxies_priv              |</span><br><span class="line">| server_cost               |</span><br><span class="line">| servers                   |</span><br><span class="line">| slave_master_info         |</span><br><span class="line">| slave_relay_log_info      |</span><br><span class="line">| slave_worker_info         |</span><br><span class="line">| slow_log                  |</span><br><span class="line">| tables_priv               |</span><br><span class="line">| time_zone                 |</span><br><span class="line">| time_zone_leap_second     |</span><br><span class="line">| time_zone_name            |</span><br><span class="line">| time_zone_transition      |</span><br><span class="line">| time_zone_transition_type |</span><br><span class="line">| user                      |</span><br><span class="line">+---------------------------+</span><br><span class="line">31 rows <span class="keyword">in</span> <span class="built_in">set</span> (0.00 sec)</span><br><span class="line"></span><br><span class="line">root@MySQL-01 11:44:  [mysql]&gt; seledct * from slow_log <span class="built_in">limit</span> 1\G;</span><br><span class="line">ERROR 1064 (42000): You have an error <span class="keyword">in</span> your SQL syntax; check the manual that corresponds to your MySQL server version <span class="keyword">for</span> the right syntax to use near <span class="string">'seledct * from slow_log limit 1'</span> at line 1</span><br><span class="line">ERROR:</span><br><span class="line">No query specified</span><br><span class="line"></span><br><span class="line">root@MySQL-01 11:44:  [mysql]&gt; select * from slow_log <span class="built_in">limit</span> 1\G;</span><br><span class="line">Empty <span class="built_in">set</span> (0.00 sec)</span><br><span class="line"></span><br><span class="line">ERROR:</span><br><span class="line">No query specified</span><br><span class="line"></span><br><span class="line">root@MySQL-01 11:44:  [mysql]&gt; desc slow_log</span><br><span class="line">    -&gt; ;</span><br><span class="line">+----------------+---------------------+------+-----+----------------------+--------------------------------+</span><br><span class="line">| Field          | Type                | Null | Key | Default              | Extra                          |</span><br><span class="line">+----------------+---------------------+------+-----+----------------------+--------------------------------+</span><br><span class="line">| start_time     | timestamp(6)        | NO   |     | CURRENT_TIMESTAMP(6) | on update CURRENT_TIMESTAMP(6) |</span><br><span class="line">| user_host      | mediumtext          | NO   |     | NULL                 |                                |</span><br><span class="line">| query_time     | time(6)             | NO   |     | NULL                 |                                |</span><br><span class="line">| lock_time      | time(6)             | NO   |     | NULL                 |                                |</span><br><span class="line">| rows_sent      | int(11)             | NO   |     | NULL                 |                                |</span><br><span class="line">| rows_examined  | int(11)             | NO   |     | NULL                 |                                |</span><br><span class="line">| db             | varchar(512)        | NO   |     | NULL                 |                                |</span><br><span class="line">| last_insert_id | int(11)             | NO   |     | NULL                 |                                |</span><br><span class="line">| insert_id      | int(11)             | NO   |     | NULL                 |                                |</span><br><span class="line">| server_id      | int(10) unsigned    | NO   |     | NULL                 |                                |</span><br><span class="line">| sql_text       | mediumblob          | NO   |     | NULL                 |                                |</span><br><span class="line">| thread_id      | bigint(21) unsigned | NO   |     | NULL                 |                                |</span><br><span class="line">+----------------+---------------------+------+-----+----------------------+--------------------------------+</span><br><span class="line">12 rows <span class="keyword">in</span> <span class="built_in">set</span> (0.00 sec)</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="设置轮询" class="article-heading"><a href="#设置轮询" class="headerlink" title="设置轮询"></a>设置轮询<a class="article-anchor" href="#设置轮询" aria-hidden="true"></a></h2><p>因<code>mysql.slow_log</code>使用的是CSV 存储引擎，不利于查询分析，因此我们每日创建innodb引擎的表并将数据导入新表，并清空日志表。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> booboo;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> booboo.<span class="string">`slow_log`</span> (</span><br><span class="line">  <span class="string">`start_time`</span> <span class="built_in">timestamp</span>(<span class="number">6</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="keyword">CURRENT_TIMESTAMP</span>(<span class="number">6</span>) <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">CURRENT_TIMESTAMP</span>(<span class="number">6</span>),</span><br><span class="line">  <span class="string">`user_host`</span> mediumtext <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`query_time`</span> <span class="built_in">time</span>(<span class="number">6</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`lock_time`</span> <span class="built_in">time</span>(<span class="number">6</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`rows_sent`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`rows_examined`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`db`</span> <span class="built_in">varchar</span>(<span class="number">512</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`last_insert_id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`insert_id`</span> <span class="built_in">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`server_id`</span> <span class="built_in">int</span>(<span class="number">10</span>) <span class="keyword">unsigned</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`sql_text`</span> mediumblob <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="string">`thread_id`</span> <span class="built_in">bigint</span>(<span class="number">21</span>) <span class="keyword">unsigned</span> <span class="keyword">NOT</span> <span class="literal">NULL</span></span><br><span class="line">) <span class="keyword">ENGINE</span>=<span class="keyword">innodb</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8 <span class="keyword">COMMENT</span>=<span class="string">'Slow log'</span>;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> booboo.slow_log  <span class="keyword">select</span> * <span class="keyword">from</span> mysql.slow_log;</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> booboo.slow_log <span class="keyword">add</span> <span class="keyword">index</span> idx_dba(start_time,db,query_time);</span><br><span class="line"><span class="keyword">truncate</span> <span class="keyword">table</span> mysql.slow_log;</span><br></pre></td></tr></table></figure>
-
-<p>常用的查询</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> slow_log <span class="keyword">where</span> start_time &gt; <span class="string">"2020-06-01"</span> <span class="keyword">and</span> db=<span class="string">'test'</span> <span class="keyword">order</span> <span class="keyword">by</span> query_time <span class="keyword">desc</span>;</span><br></pre></td></tr></table></figure>
-
-<h2 id="生产案例" class="article-heading"><a href="#生产案例" class="headerlink" title="生产案例"></a>生产案例<a class="article-anchor" href="#生产案例" aria-hidden="true"></a></h2><blockquote class="note warn"><strong class="note-title">RDS For MySQL 慢查询日志清理</strong><ol>
-<li>目前mysql.slow_log保存了从2017-4月开始到现在的所有慢日志，数据量大</li>
-<li>该表目前无索引</li>
-<li>按照 <code>query_time</code> 查询慢查询非常慢，直接报错</li>
-</ol>
-<p>解决建议：</p>
-<ol>
-<li>阿里工单询问RDS5.7是否有参数控制该表的定期删除，例如只保留7天的慢查询(<code>truncate mysql.slow_log;</code>)</li>
-<li>阿里产品没有现成的配置，则自己写一个定时任务定期清理即可</li>
-</ol>
-</blockquote>
-
-  </div>
-  
-</article>
-
-
+          <article class="article post archive-post" itemscope itemtype="http://schema.org/Article">
+            <a class="archive-post-link" href="/news/2020/06/03/tec-mysql/">
+              <strong class="archive-post-title" itemprop="name">MySQL慢查询使用Table方式记录</strong>
+              <span class="archive-post-date"><time datetime="2020-06-03T10:47:33.000Z">2020-06-03</time></span>
+            </a>
+          </article>
         
       
         
@@ -229,7 +155,7 @@
   <nav id="mobile-nav">
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
-      <a href="/api/" class="mobile-nav-link">MySQL8.0</a><a href="/linux/" class="mobile-nav-link">Linux</a><a href="/mysql/" class="mobile-nav-link">MySQL</a><a href="/oracle/" class="mobile-nav-link">Oracle</a><a href="/python/" class="mobile-nav-link">Python</a><a href="/git/" class="mobile-nav-link">Git</a><a href="/tick/" class="mobile-nav-link">TICK</a><a href="/news/" class="mobile-nav-link">日记</a><a href="/about/" class="mobile-nav-link">关于</a>
+      <a href="/api/" class="mobile-nav-link">MySQL8.0</a><a href="/linux/" class="mobile-nav-link">Linux</a><a href="/mysql/" class="mobile-nav-link">MySQL</a><a href="/oracle/" class="mobile-nav-link">Oracle</a><a href="/python/" class="mobile-nav-link">Python</a><a href="/git/" class="mobile-nav-link">Git</a><a href="/tick/" class="mobile-nav-link">TICK</a><a href="/mse/" class="mobile-nav-link">MSE</a><a href="/news/" class="mobile-nav-link">News</a><a href="/about/" class="mobile-nav-link">About</a>
       <li class="mobile-nav-item">
         <a href="https://github.com/BoobooWei" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
       </li>
@@ -262,15 +188,29 @@
 
 <!-- Algolia -->
 
+<!-- at the end of the BODY -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+    apiKey: 'ad652bf20bcd81434ad119c8cf34722e',
+    indexName: 'toberoot',
+    inputSelector: '#search-input'
+});
+</script>
+
+<!--   backup
 <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
 <script type="text/javascript">
 document.getElementById('search-input-wrap').classList.add('on');
 docsearch({
-  apiKey: 'cdea7d4e47d84f6145b77e7f68689f35',
-  indexName: 'hexo_zh-cn',
+  apiKey: 'ad652bf20bcd81434ad119c8cf34722e',
+  indexName: 'toberoot',
   inputSelector: '#search-input'
 });
 </script>
+-->
+
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
@@ -281,6 +221,7 @@ docsearch({
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 <!-- Bootstrap JS -->
+
 
 
 </body>

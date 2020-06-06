@@ -49,11 +49,9 @@
 <meta property="og:description" content="JSON模式验证。 MySQL 8.0.17添加了两个功能 JSON_SCHEMA_VALID()， JSON_SCHEMA_VALIDATION_REPORT() 用于再次验证JSON文档JSON模式。 JSON_SCHEMA_VALID()如果文档根据架构进行验证，则返回TRUE（1），否则通过FALSE（0）返回。 JSON_SCHEMA_VALIDATION_REPORT()返回一个JS">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-26T17:58:00.000Z">
-<meta property="article:modified_time" content="2020-05-26T11:21:17.224Z">
+<meta property="article:modified_time" content="2020-06-06T05:04:08.068Z">
 <meta property="article:author" content="魏亚萍">
-<meta property="article:tag" content="培训">
-<meta property="article:tag" content="MySQL高级管理教程-探索类">
-<meta property="article:tag" content="MySQL8">
+<meta property="article:tag" content="MySQL新特性">
 <meta name="twitter:card" content="summary">
 <meta property="fb:admins" content="100000247608790">
   <!-- Google Analytics -->
@@ -75,7 +73,8 @@
           enable_page_level_ads: true
      });
   </script>
-
+  <!-- at the end of the HEAD -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 </head>
 
 <body>
@@ -86,7 +85,7 @@
       <a href='/' id="logo">ToBeRoot</a>
     </h1>
     <nav id="main-nav">
-      <a href="/api/" class="main-nav-link">MySQL8.0</a><a href="/linux/" class="main-nav-link">Linux</a><a href="/mysql/" class="main-nav-link">MySQL</a><a href="/oracle/" class="main-nav-link">Oracle</a><a href="/python/" class="main-nav-link">Python</a><a href="/git/" class="main-nav-link">Git</a><a href="/tick/" class="main-nav-link">TICK</a><a href="/news/" class="main-nav-link">日记</a><a href="/about/" class="main-nav-link">关于</a>
+      <a href="/api/" class="main-nav-link">MySQL8.0</a><a href="/linux/" class="main-nav-link">Linux</a><a href="/mysql/" class="main-nav-link">MySQL</a><a href="/oracle/" class="main-nav-link">Oracle</a><a href="/python/" class="main-nav-link">Python</a><a href="/git/" class="main-nav-link">Git</a><a href="/tick/" class="main-nav-link">TICK</a><a href="/mse/" class="main-nav-link">MSE</a><a href="/news/" class="main-nav-link">News</a><a href="/about/" class="main-nav-link">About</a>
       <a target="_blank" href="https://github.com/BoobooWei" rel="external nofollow noreferrer noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
@@ -120,7 +119,7 @@
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">MySQL 8.0的新增功能探索-JSON模式验证</h1>
-                <a target="_blank" href="https://github.com/hexojs/site/edit/master/source/api/json-schema-validation.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <a target="_blank" href="https://github.com/booboowei/site/edit/master/source/api/json-schema-validation.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
                 <ul>
@@ -136,7 +135,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-05-26T11:21:17.224Z" itemprop="dateModified">上次更新：2020-05-26</time>
+                <time class="article-footer-updated" datetime="2020-06-06T05:04:08.068Z" itemprop="dateModified">上次更新：2020-06-06</time>
                 <a href="json-enhancements.html" class="article-footer-prev" title="Json增强功能"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="json-value-function.html" class="article-footer-next" title="JSON_VALUE函数"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -206,7 +205,7 @@
   <nav id="mobile-nav">
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
-      <a href="/api/" class="mobile-nav-link">MySQL8.0</a><a href="/linux/" class="mobile-nav-link">Linux</a><a href="/mysql/" class="mobile-nav-link">MySQL</a><a href="/oracle/" class="mobile-nav-link">Oracle</a><a href="/python/" class="mobile-nav-link">Python</a><a href="/git/" class="mobile-nav-link">Git</a><a href="/tick/" class="mobile-nav-link">TICK</a><a href="/news/" class="mobile-nav-link">日记</a><a href="/about/" class="mobile-nav-link">关于</a>
+      <a href="/api/" class="mobile-nav-link">MySQL8.0</a><a href="/linux/" class="mobile-nav-link">Linux</a><a href="/mysql/" class="mobile-nav-link">MySQL</a><a href="/oracle/" class="mobile-nav-link">Oracle</a><a href="/python/" class="mobile-nav-link">Python</a><a href="/git/" class="mobile-nav-link">Git</a><a href="/tick/" class="mobile-nav-link">TICK</a><a href="/mse/" class="mobile-nav-link">MSE</a><a href="/news/" class="mobile-nav-link">News</a><a href="/about/" class="mobile-nav-link">About</a>
       <li class="mobile-nav-item">
         <a href="https://github.com/BoobooWei" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
       </li>
@@ -241,15 +240,29 @@
 
 <!-- Algolia -->
 
+<!-- at the end of the BODY -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+    apiKey: 'ad652bf20bcd81434ad119c8cf34722e',
+    indexName: 'toberoot',
+    inputSelector: '#search-input'
+});
+</script>
+
+<!--   backup
 <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
 <script type="text/javascript">
 document.getElementById('search-input-wrap').classList.add('on');
 docsearch({
-  apiKey: 'cdea7d4e47d84f6145b77e7f68689f35',
-  indexName: 'hexo_zh-cn',
+  apiKey: 'ad652bf20bcd81434ad119c8cf34722e',
+  indexName: 'toberoot',
   inputSelector: '#search-input'
 });
 </script>
+-->
+
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
@@ -260,6 +273,7 @@ docsearch({
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 <!-- Bootstrap JS -->
+
 
 
 </body>

@@ -66,7 +66,8 @@
           enable_page_level_ads: true
      });
   </script>
-
+  <!-- at the end of the HEAD -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 </head>
 
 <body>
@@ -77,7 +78,7 @@
       <a href='/' id="logo">ToBeRoot</a>
     </h1>
     <nav id="main-nav">
-      <a href="/api/" class="main-nav-link">MySQL8.0</a><a href="/linux/" class="main-nav-link">Linux</a><a href="/mysql/" class="main-nav-link">MySQL</a><a href="/oracle/" class="main-nav-link">Oracle</a><a href="/python/" class="main-nav-link">Python</a><a href="/git/" class="main-nav-link">Git</a><a href="/tick/" class="main-nav-link">TICK</a><a href="/news/" class="main-nav-link">日记</a><a href="/about/" class="main-nav-link">关于</a>
+      <a href="/api/" class="main-nav-link">MySQL8.0</a><a href="/linux/" class="main-nav-link">Linux</a><a href="/mysql/" class="main-nav-link">MySQL</a><a href="/oracle/" class="main-nav-link">Oracle</a><a href="/python/" class="main-nav-link">Python</a><a href="/git/" class="main-nav-link">Git</a><a href="/tick/" class="main-nav-link">TICK</a><a href="/mse/" class="main-nav-link">MSE</a><a href="/news/" class="main-nav-link">News</a><a href="/about/" class="main-nav-link">About</a>
       <a target="_blank" href="https://github.com/BoobooWei" rel="external nofollow noreferrer noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
@@ -106,35 +107,23 @@
 <div id="content-wrap">
   <div class="wrapper">
     <div class="inner">
+
+
+    <article class="article post archive-post" itemscope itemtype="http://schema.org/Article">
+
+        <header class="article-header">
+             <h1 class="article-title" itemprop="name">News</h1>
+             </header>
+    </article>
+
       
         
-          <article class="article post" itemscope itemtype="http://schema.org/Article">
-  <header class="article-header">
-    
-      <h1>
-        <a href="/news/2020/03/27/tec-python/" class="article-title" itemprop="name">CentOS6.5配置python3.7安装后ssl问题</a>
-      </h1>
-    
-    <a href="/news/2020/03/27/tec-python/" class="article-date"><time datetime="2020-03-26T19:58:02.000Z">2020-03-26</time></a>
-  </header>
-  <div class="article-content" itemprop="articleBody">
-    <p>摘要：解决Python3安装中的SSL问题</p>
-<a id="more"></a>
-
-<h2 id="报错明细" class="article-heading"><a href="#报错明细" class="headerlink" title="报错明细"></a>报错明细<a class="article-anchor" href="#报错明细" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip is configured with locations that require TLS/SSL, however the ssl module <span class="keyword">in</span> Python is not available.</span><br></pre></td></tr></table></figure>
-
-<h2 id="解决办法" class="article-heading"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法<a class="article-anchor" href="#解决办法" aria-hidden="true"></a></h2><p>由于系统是CentOS release 6.7，所有openssl的版本为 OpenSSL 1.0.1e ,而python3.7需要的openssl的版本为 1.0.2 或者 1.1.x,</p>
-<ul>
-<li>需要对openssl进行升级</li>
-<li>并重新编译python3.7.0 <code>export LDFLAGS=&quot;-L/usr/local/openssl/lib/&quot;</code></li>
-</ul>
-<h2 id="详细记录" class="article-heading"><a href="#详细记录" class="headerlink" title="详细记录"></a>详细记录<a class="article-anchor" href="#详细记录" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@CNACLQLJMP010 install]<span class="comment"># rpm -qa|grep openssl</span></span><br><span class="line">openssl-devel-1.0.1e-58.el6_10.x86_64</span><br><span class="line">openssl-1.0.1e-58.el6_10.x86_64</span><br><span class="line">openssl-static-1.0.1e-58.el6_10.x86_64</span><br><span class="line">[root@CNACLQLJMP010 install]<span class="comment"># openssl version</span></span><br><span class="line">OpenSSL 1.0.1e-fips 11 Feb 2013</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">wget https://www.openssl.org/<span class="built_in">source</span>/openssl-1.1.1-pre8.tar.gz</span><br><span class="line">tar -xf openssl-1.1.1-pre8.tar.gz</span><br><span class="line"><span class="built_in">cd</span> openssl-1.1.1-pre8</span><br><span class="line">./config --prefix=/usr/<span class="built_in">local</span>/openssl no-zlib</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">mv /usr/bin/openssl /usr/bin/openssl.bak</span><br><span class="line">mv /usr/include/openssl/ /usr/include/openssl.bak</span><br><span class="line">ln -s /usr/<span class="built_in">local</span>/openssl/include/openssl /usr/include/openssl</span><br><span class="line">ln -s /usr/<span class="built_in">local</span>/openssl/lib/libssl.so.1.1 /usr/<span class="built_in">local</span>/lib64/libssl.so</span><br><span class="line">ln -s /usr/<span class="built_in">local</span>/openssl/bin/openssl /usr/bin/openssl</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"/usr/local/openssl/lib"</span> &gt;&gt; /etc/ld.so.conf</span><br><span class="line">ldconfig -v</span><br><span class="line"></span><br><span class="line">openssl version</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [[ -f <span class="string">"/usr/bin/python3"</span> ]]; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">exit</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装系统依赖包</span></span><br><span class="line">yum -y install zlib-devel bzip2 bzip2-devel openssl openssl-static openssl-devel \</span><br><span class="line">ncurses ncurses-devel sqlite sqlite-devel readline readline-devel tk tk-devel lzma gdbm \</span><br><span class="line">gdbm-devel db4-devel libpcap-devel xz xz-devel libffi-devel gcc</span><br><span class="line"></span><br><span class="line"><span class="comment">#检测 cloudcare 是否存在</span></span><br><span class="line"><span class="keyword">if</span> [[ ! -f <span class="string">"/alidata"</span> ]];<span class="keyword">then</span></span><br><span class="line">mkdir /alidata</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Created /alidata"</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载安装包 python 3.7.3</span></span><br><span class="line"><span class="keyword">if</span> [[ ! -f <span class="string">"./Python-3.7.3.tgz"</span> ]];<span class="keyword">then</span></span><br><span class="line">curl -O https://cloud-software.oss-cn-hangzhou.aliyuncs.com/linux%20%E8%BD%AF%E4%BB%B6/Python-3.7.3.tgz</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压文件</span></span><br><span class="line">tar -xvf Python-3.7.3.tgz &amp;&amp; <span class="built_in">cd</span> Python-3.7.3/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 编译 python 包</span></span><br><span class="line"><span class="built_in">export</span> LDFLAGS=<span class="string">"-L/usr/local/openssl/lib/"</span></span><br><span class="line"></span><br><span class="line">./configure --prefix=/alidata/python3 </span><br><span class="line">make &amp;&amp; make install &amp;&amp; <span class="built_in">echo</span> <span class="string">"### Python3 install success!"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建软连接</span></span><br><span class="line">ln -s /alidata/python3/bin/python3 /usr/bin/python3 &amp;&amp; <span class="built_in">echo</span> <span class="string">"### Add python3 link Done!"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ln -s /alidata/python3/bin/pip3 /usr/bin/pip3 &amp;&amp; <span class="built_in">echo</span> <span class="string">"### Add pip3 link Done!"</span></span><br><span class="line">./configure --prefix=/alidata/python3 --with-openssl=/usr/<span class="built_in">local</span>/openssl</span><br><span class="line">make &amp;&amp; make install &amp;&amp; <span class="built_in">echo</span> <span class="string">"### Python3 install success!"</span></span><br></pre></td></tr></table></figure>
-
-  </div>
-  
-</article>
-
-
+          <article class="article post archive-post" itemscope itemtype="http://schema.org/Article">
+            <a class="archive-post-link" href="/news/2020/03/27/tec-python/">
+              <strong class="archive-post-title" itemprop="name">CentOS6.5配置python3.7安装后ssl问题</strong>
+              <span class="archive-post-date"><time datetime="2020-03-26T19:58:02.000Z">2020-03-26</time></span>
+            </a>
+          </article>
         
       
     </div>
@@ -157,7 +146,7 @@
   <nav id="mobile-nav">
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
-      <a href="/api/" class="mobile-nav-link">MySQL8.0</a><a href="/linux/" class="mobile-nav-link">Linux</a><a href="/mysql/" class="mobile-nav-link">MySQL</a><a href="/oracle/" class="mobile-nav-link">Oracle</a><a href="/python/" class="mobile-nav-link">Python</a><a href="/git/" class="mobile-nav-link">Git</a><a href="/tick/" class="mobile-nav-link">TICK</a><a href="/news/" class="mobile-nav-link">日记</a><a href="/about/" class="mobile-nav-link">关于</a>
+      <a href="/api/" class="mobile-nav-link">MySQL8.0</a><a href="/linux/" class="mobile-nav-link">Linux</a><a href="/mysql/" class="mobile-nav-link">MySQL</a><a href="/oracle/" class="mobile-nav-link">Oracle</a><a href="/python/" class="mobile-nav-link">Python</a><a href="/git/" class="mobile-nav-link">Git</a><a href="/tick/" class="mobile-nav-link">TICK</a><a href="/mse/" class="mobile-nav-link">MSE</a><a href="/news/" class="mobile-nav-link">News</a><a href="/about/" class="mobile-nav-link">About</a>
       <li class="mobile-nav-item">
         <a href="https://github.com/BoobooWei" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
       </li>
@@ -190,15 +179,29 @@
 
 <!-- Algolia -->
 
+<!-- at the end of the BODY -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+    apiKey: 'ad652bf20bcd81434ad119c8cf34722e',
+    indexName: 'toberoot',
+    inputSelector: '#search-input'
+});
+</script>
+
+<!--   backup
 <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
 <script type="text/javascript">
 document.getElementById('search-input-wrap').classList.add('on');
 docsearch({
-  apiKey: 'cdea7d4e47d84f6145b77e7f68689f35',
-  indexName: 'hexo_zh-cn',
+  apiKey: 'ad652bf20bcd81434ad119c8cf34722e',
+  indexName: 'toberoot',
   inputSelector: '#search-input'
 });
 </script>
+-->
+
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
@@ -209,6 +212,7 @@ docsearch({
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 <!-- Bootstrap JS -->
+
 
 
 </body>
