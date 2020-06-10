@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/api/atomic-ddl</loc>
+    
+    <lastmod>2020-06-10T07:00:56.595Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/news/2020/06/03/tec-mysql/</loc>
+    
+    <lastmod>2020-06-10T06:37:36.889Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/mse/c++/basic_grammar</loc>
     
     <lastmod>2020-06-08T06:02:02.915Z</lastmod>
@@ -352,23 +366,9 @@
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/api/atomic-ddl</loc>
-    
-    <lastmod>2020-06-08T04:30:46.310Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.toberoot.com/api/additional-target-types-for-casts</loc>
     
     <lastmod>2020-06-08T04:30:46.309Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/news/2020/06/03/tec-mysql/</loc>
-    
-    <lastmod>2020-06-02T04:41:48.991Z</lastmod>
     
   </url>
   
