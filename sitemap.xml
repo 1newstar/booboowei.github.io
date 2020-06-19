@@ -2,6 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/aliyun/bigdata/qbi/a02_quickstart</loc>
+    
+    <lastmod>2020-06-19T04:54:03.843Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/aliyun/bigdata/qbi/</loc>
+    
+    <lastmod>2020-06-19T02:49:43.647Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/aliyun/bigdata/qbi/a01_qbi_product</loc>
+    
+    <lastmod>2020-06-19T02:47:45.294Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/aliyun/bigdata/qbi/a00_introduce</loc>
+    
+    <lastmod>2020-06-19T02:28:33.380Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/aliyun/bigdata/</loc>
+    
+    <lastmod>2020-06-19T02:06:11.794Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/aliyun/</loc>
+    
+    <lastmod>2020-06-19T02:02:34.149Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mse/c++/variables_and_basic_types</loc>
+    
+    <lastmod>2020-06-12T07:03:50.595Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mse/c++/</loc>
+    
+    <lastmod>2020-06-12T07:00:44.458Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mse/c++/set_enviroment</loc>
+    
+    <lastmod>2020-06-12T06:22:28.200Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mse/c++/basic_grammar</loc>
+    
+    <lastmod>2020-06-12T06:17:27.636Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/api/backup-lock</loc>
     
     <lastmod>2020-06-10T07:45:10.169Z</lastmod>
@@ -23,30 +93,9 @@
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/mse/c++/basic_grammar</loc>
-    
-    <lastmod>2020-06-08T06:02:02.915Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mse/c++/set_enviroment</loc>
-    
-    <lastmod>2020-06-08T05:50:44.708Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.toberoot.com/mse/c++/introduction</loc>
     
     <lastmod>2020-06-08T04:57:48.896Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mse/c++/</loc>
-    
-    <lastmod>2020-06-08T04:51:11.078Z</lastmod>
     
   </url>
   
