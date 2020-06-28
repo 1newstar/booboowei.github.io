@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.toberoot.com/mse/c++/flow_control_statement</loc>
+    <loc>http://www.toberoot.com/mse/c++/array</loc>
     
-    <lastmod>2020-06-28T10:49:40.498Z</lastmod>
+    <lastmod>2020-06-28T23:52:18.448Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/mse/c++/variables_and_basic_types</loc>
     
-    <lastmod>2020-06-28T00:07:01.991Z</lastmod>
+    <lastmod>2020-06-28T23:48:26.995Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mse/c++/pointer_peference</loc>
+    
+    <lastmod>2020-06-28T23:04:09.912Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mse/c++/flow_control_statement</loc>
+    
+    <lastmod>2020-06-28T10:49:40.498Z</lastmod>
     
   </url>
   
