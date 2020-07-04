@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/mse/c++/pointer_peference</loc>
+    
+    <lastmod>2020-07-04T11:15:59.032Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/mse/c++/array</loc>
     
     <lastmod>2020-07-04T09:28:44.485Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://www.toberoot.com/mse/c++/variables_and_basic_types</loc>
     
     <lastmod>2020-06-28T23:48:26.995Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mse/c++/pointer_peference</loc>
-    
-    <lastmod>2020-06-28T23:04:09.912Z</lastmod>
     
   </url>
   
