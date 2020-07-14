@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/news/2020/07/14/tec-mysql/</loc>
+    
+    <lastmod>2020-07-14T03:43:17.617Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/linux/docker/zipkin</loc>
     
     <lastmod>2020-07-13T10:06:39.364Z</lastmod>
