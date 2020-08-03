@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/mysql/security/cis_mysql</loc>
+    
+    <lastmod>2020-08-03T05:54:43.497Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mysql/security/</loc>
+    
+    <lastmod>2020-08-03T05:52:33.541Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mysql/</loc>
+    
+    <lastmod>2020-08-03T05:50:53.875Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mse/c++/function</loc>
+    
+    <lastmod>2020-07-18T11:08:45.607Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/linux/docker/zipkin</loc>
     
-    <lastmod>2020-07-14T10:14:13.867Z</lastmod>
+    <lastmod>2020-07-16T02:53:21.095Z</lastmod>
     
   </url>
   
@@ -19,13 +47,6 @@
     <loc>http://www.toberoot.com/linux/docker/install_docker</loc>
     
     <lastmod>2020-07-13T07:46:45.633Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mse/c++/function</loc>
-    
-    <lastmod>2020-07-13T01:53:32.285Z</lastmod>
     
   </url>
   
@@ -544,13 +565,6 @@
     <loc>http://www.toberoot.com/linux/</loc>
     
     <lastmod>2020-06-01T03:27:29.400Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mysql/</loc>
-    
-    <lastmod>2020-06-01T03:27:29.398Z</lastmod>
     
   </url>
   
