@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/linux/excellent_tools/supervisor</loc>
+    
+    <lastmod>2020-08-04T01:57:51.254Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/excellent_tools/</loc>
+    
+    <lastmod>2020-08-04T01:52:07.039Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/mysql/security/cis_mysql</loc>
     
-    <lastmod>2020-08-03T09:38:49.284Z</lastmod>
+    <lastmod>2020-08-03T09:45:11.068Z</lastmod>
     
   </url>
   
