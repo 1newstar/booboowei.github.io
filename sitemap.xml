@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/aliyun/cms/custom_event</loc>
+    
+    <lastmod>2020-08-04T10:59:16.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/aliyun/cms/</loc>
+    
+    <lastmod>2020-08-04T10:44:11.908Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/linux/excellent_tools/prometheus</loc>
     
     <lastmod>2020-08-04T10:40:01.381Z</lastmod>
