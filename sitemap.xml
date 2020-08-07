@@ -2,807 +2,814 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.toberoot.com/aliyun/cms/custom_event</loc>
+    <loc>http://www.toberoot.com/mse/c++/exploring_variables</loc>
     
-    <lastmod>2020-08-04T10:59:16.894Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/aliyun/cms/</loc>
-    
-    <lastmod>2020-08-04T10:44:11.908Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/linux/excellent_tools/prometheus</loc>
-    
-    <lastmod>2020-08-04T10:40:01.381Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/linux/excellent_tools/systemd</loc>
-    
-    <lastmod>2020-08-04T04:40:59.108Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/linux/excellent_tools/supervisor</loc>
-    
-    <lastmod>2020-08-04T01:57:51.254Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/linux/excellent_tools/</loc>
-    
-    <lastmod>2020-08-04T01:52:07.039Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mysql/security/cis_mysql</loc>
-    
-    <lastmod>2020-08-03T09:45:11.068Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mysql/security/</loc>
-    
-    <lastmod>2020-08-03T05:52:33.541Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mysql/</loc>
-    
-    <lastmod>2020-08-03T05:50:53.875Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mse/c++/function</loc>
-    
-    <lastmod>2020-07-18T11:08:45.607Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/linux/docker/zipkin</loc>
-    
-    <lastmod>2020-07-16T02:53:21.095Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/news/2020/07/14/tec-mysql/</loc>
-    
-    <lastmod>2020-07-14T03:43:17.617Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/linux/docker/install_docker</loc>
-    
-    <lastmod>2020-07-13T07:46:45.633Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mse/c++/cplus_project</loc>
-    
-    <lastmod>2020-07-11T02:49:25.313Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mse/c++/pointer_peference</loc>
-    
-    <lastmod>2020-07-11T01:40:24.381Z</lastmod>
+    <lastmod>2020-08-07T00:02:31.616Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/mse/c++/array</loc>
     
-    <lastmod>2020-07-11T01:40:24.380Z</lastmod>
+    <lastmod>2020-08-06T23:53:31.220Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mse/c++/function</loc>
+    
+    <lastmod>2020-08-06T23:47:28.425Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mysql/</loc>
+    
+    <lastmod>2020-08-05T14:53:56.263Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/excellent_tools/prometheus</loc>
+    
+    <lastmod>2020-08-05T14:53:56.263Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/excellent_tools/supervisor</loc>
+    
+    <lastmod>2020-08-05T14:53:56.263Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/excellent_tools/systemd</loc>
+    
+    <lastmod>2020-08-05T14:53:56.263Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mse/c++/cplus_project</loc>
+    
+    <lastmod>2020-08-05T14:53:56.263Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mysql/security/</loc>
+    
+    <lastmod>2020-08-05T14:53:56.263Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mysql/security/cis_mysql</loc>
+    
+    <lastmod>2020-08-05T14:53:56.263Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/excellent_tools/</loc>
+    
+    <lastmod>2020-08-05T14:53:56.247Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/docker/zipkin</loc>
+    
+    <lastmod>2020-08-05T14:53:56.247Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/docker/install_docker</loc>
+    
+    <lastmod>2020-08-05T14:53:56.232Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/news/2020/07/14/tec-mysql/</loc>
+    
+    <lastmod>2020-08-05T14:53:56.216Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/aliyun/cms/</loc>
+    
+    <lastmod>2020-08-05T14:53:56.216Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/aliyun/cms/custom_event</loc>
+    
+    <lastmod>2020-08-05T14:53:56.216Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/mse/c++/dynamic_memory</loc>
     
-    <lastmod>2020-07-11T01:40:24.380Z</lastmod>
+    <lastmod>2020-07-04T11:55:36.508Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mse/c++/pointer_peference</loc>
+    
+    <lastmod>2020-07-04T11:15:59.032Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/mse/c++/variables_and_basic_types</loc>
     
-    <lastmod>2020-06-29T05:21:59.910Z</lastmod>
+    <lastmod>2020-06-28T23:48:26.995Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/mse/c++/flow_control_statement</loc>
     
-    <lastmod>2020-06-29T05:21:59.908Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mse/c++/set_enviroment</loc>
-    
-    <lastmod>2020-06-24T10:26:24.035Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mse/c++/basic_grammar</loc>
-    
-    <lastmod>2020-06-24T10:26:24.033Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/aliyun/bigdata/qbi/a03_quickdashboard</loc>
-    
-    <lastmod>2020-06-24T10:23:50.731Z</lastmod>
+    <lastmod>2020-06-28T10:49:40.498Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/aliyun/rds/rds_introduce</loc>
     
-    <lastmod>2020-06-24T10:18:18.920Z</lastmod>
+    <lastmod>2020-06-27T14:18:38.482Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/aliyun/bigdata/qbi/a02_quickstart</loc>
+    <loc>http://www.toberoot.com/aliyun/bigdata/qbi/a03_quickdashboard</loc>
     
-    <lastmod>2020-06-19T04:54:03.843Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/aliyun/bigdata/qbi/</loc>
-    
-    <lastmod>2020-06-19T02:49:43.647Z</lastmod>
+    <lastmod>2020-06-27T14:18:38.462Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/aliyun/bigdata/qbi/a01_qbi_product</loc>
+    <loc>http://www.toberoot.com/mse/c++/basic_grammar</loc>
     
-    <lastmod>2020-06-19T02:47:45.294Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/aliyun/bigdata/qbi/a00_introduce</loc>
-    
-    <lastmod>2020-06-19T02:28:33.380Z</lastmod>
+    <lastmod>2020-06-21T15:12:42.595Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/aliyun/bigdata/</loc>
+    <loc>http://www.toberoot.com/mse/c++/set_enviroment</loc>
     
-    <lastmod>2020-06-19T02:06:11.794Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/aliyun/</loc>
-    
-    <lastmod>2020-06-19T02:02:34.149Z</lastmod>
+    <lastmod>2020-06-21T13:21:25.216Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/mse/c++/</loc>
     
-    <lastmod>2020-06-12T07:00:44.458Z</lastmod>
+    <lastmod>2020-06-21T13:02:50.521Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/api/backup-lock</loc>
     
-    <lastmod>2020-06-10T07:45:10.169Z</lastmod>
+    <lastmod>2020-06-21T13:02:50.519Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/api/atomic-ddl</loc>
     
-    <lastmod>2020-06-10T07:00:56.595Z</lastmod>
+    <lastmod>2020-06-21T13:02:50.518Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/aliyun/</loc>
+    
+    <lastmod>2020-06-21T13:02:50.516Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/aliyun/bigdata/qbi/</loc>
+    
+    <lastmod>2020-06-21T13:02:50.459Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/aliyun/bigdata/qbi/a01_qbi_product</loc>
+    
+    <lastmod>2020-06-21T13:02:50.458Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/aliyun/bigdata/qbi/a02_quickstart</loc>
+    
+    <lastmod>2020-06-21T13:02:50.458Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/aliyun/bigdata/qbi/a00_introduce</loc>
+    
+    <lastmod>2020-06-21T13:02:50.457Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/aliyun/bigdata/</loc>
+    
+    <lastmod>2020-06-21T13:02:50.456Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2020/06/03/tec-mysql/</loc>
     
-    <lastmod>2020-06-10T06:37:36.889Z</lastmod>
+    <lastmod>2020-06-21T13:02:50.455Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/mse/c++/introduction</loc>
     
-    <lastmod>2020-06-08T04:57:48.896Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mse/</loc>
-    
-    <lastmod>2020-06-08T04:30:46.420Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mse/software/</loc>
-    
-    <lastmod>2020-06-08T04:30:46.420Z</lastmod>
+    <lastmod>2020-06-08T13:55:58.714Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/mse/computer/introduction_to_instruction_set</loc>
     
-    <lastmod>2020-06-08T04:30:46.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mse/computer/</loc>
-    
-    <lastmod>2020-06-08T04:30:46.324Z</lastmod>
+    <lastmod>2020-06-07T04:53:46.396Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/mse/computer/computer_performance_evaluation</loc>
     
-    <lastmod>2020-06-08T04:30:46.324Z</lastmod>
+    <lastmod>2020-06-07T04:29:49.462Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/mse/algorithm/</loc>
+    <loc>http://www.toberoot.com/mse/computer/</loc>
     
-    <lastmod>2020-06-08T04:30:46.323Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/user-comments-and-user-attributes</loc>
-    
-    <lastmod>2020-06-08T04:30:46.322Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/window-functions</loc>
-    
-    <lastmod>2020-06-08T04:30:46.322Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/xml-enhancements</loc>
-    
-    <lastmod>2020-06-08T04:30:46.322Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/table-encryption-management</loc>
-    
-    <lastmod>2020-06-08T04:30:46.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/the-clone-plugin</loc>
-    
-    <lastmod>2020-06-08T04:30:46.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/time-zone-support-for-timestamp-and-datatime</loc>
-    
-    <lastmod>2020-06-08T04:30:46.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/security-and-account-management</loc>
-    
-    <lastmod>2020-06-08T04:30:46.320Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/sql-standard-explicit-table-clause-and-table-value-constructor</loc>
-    
-    <lastmod>2020-06-08T04:30:46.320Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/replication</loc>
-    
-    <lastmod>2020-06-08T04:30:46.319Z</lastmod>
+    <lastmod>2020-06-06T12:27:00.093Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/api/resource-management</loc>
     
-    <lastmod>2020-06-08T04:30:46.319Z</lastmod>
+    <lastmod>2020-06-06T05:04:08.320Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/api/row-and-columns-aliases-with-on-duplicate-key-update</loc>
+    <loc>http://www.toberoot.com/api/xml-enhancements</loc>
     
-    <lastmod>2020-06-08T04:30:46.319Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/redo-log-archiving</loc>
-    
-    <lastmod>2020-06-08T04:30:46.318Z</lastmod>
+    <lastmod>2020-06-06T05:04:08.315Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/api/regular-expression-support</loc>
+    <loc>http://www.toberoot.com/api/the-clone-plugin</loc>
     
-    <lastmod>2020-06-08T04:30:46.318Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/plugins</loc>
-    
-    <lastmod>2020-06-08T04:30:46.317Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/query-cast-injection</loc>
-    
-    <lastmod>2020-06-08T04:30:46.317Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/precise-information-for-json-schema-check-constraint</loc>
-    
-    <lastmod>2020-06-08T04:30:46.317Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/new-optimizer-switch-flags</loc>
-    
-    <lastmod>2020-06-08T04:30:46.316Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/optimizer</loc>
-    
-    <lastmod>2020-06-08T04:30:46.316Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/optimizer-hints-for-force-index-ignore-</loc>
-    
-    <lastmod>2020-06-08T04:30:46.316Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/json-value-function</loc>
-    
-    <lastmod>2020-06-08T04:30:46.315Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/lateral-derived-tables</loc>
-    
-    <lastmod>2020-06-08T04:30:46.315Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/multi-valued-indexes</loc>
-    
-    <lastmod>2020-06-08T04:30:46.315Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/mysql-upgrade</loc>
-    
-    <lastmod>2020-06-08T04:30:46.315Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/internal-tempoary-tables</loc>
-    
-    <lastmod>2020-06-08T04:30:46.314Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/json-enhancements</loc>
-    
-    <lastmod>2020-06-08T04:30:46.314Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/json-schema-validation</loc>
-    
-    <lastmod>2020-06-08T04:30:46.314Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/innodb-enhancements</loc>
-    
-    <lastmod>2020-06-08T04:30:46.314Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/explain-analyze-statement</loc>
-    
-    <lastmod>2020-06-08T04:30:46.313Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/hash-join-optimization</loc>
-    
-    <lastmod>2020-06-08T04:30:46.313Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/hintable-time-zone</loc>
-    
-    <lastmod>2020-06-08T04:30:46.313Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/</loc>
-    
-    <lastmod>2020-06-08T04:30:46.313Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/connection-management</loc>
-    
-    <lastmod>2020-06-08T04:30:46.312Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/configuration</loc>
-    
-    <lastmod>2020-06-08T04:30:46.312Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/data-dictionary</loc>
-    
-    <lastmod>2020-06-08T04:30:46.312Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/data-type-support</loc>
-    
-    <lastmod>2020-06-08T04:30:46.312Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/c-api</loc>
-    
-    <lastmod>2020-06-08T04:30:46.311Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/character-set-support</loc>
-    
-    <lastmod>2020-06-08T04:30:46.311Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/common-table-expressions</loc>
-    
-    <lastmod>2020-06-08T04:30:46.311Z</lastmod>
+    <lastmod>2020-06-06T05:04:08.300Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/api/aliases-in-single-table-delete-statements</loc>
     
-    <lastmod>2020-06-08T04:30:46.310Z</lastmod>
+    <lastmod>2020-06-06T05:04:08.277Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/precise-information-for-json-schema-check-constraint</loc>
+    
+    <lastmod>2020-06-06T05:04:08.272Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/user-comments-and-user-attributes</loc>
+    
+    <lastmod>2020-06-06T05:04:08.267Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/row-and-columns-aliases-with-on-duplicate-key-update</loc>
+    
+    <lastmod>2020-06-06T05:04:08.262Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/configuration</loc>
+    
+    <lastmod>2020-06-06T05:04:08.255Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/window-functions</loc>
+    
+    <lastmod>2020-06-06T05:04:08.251Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/explain-analyze-statement</loc>
+    
+    <lastmod>2020-06-06T05:04:08.246Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/sql-standard-explicit-table-clause-and-table-value-constructor</loc>
+    
+    <lastmod>2020-06-06T05:04:08.238Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/innodb-enhancements</loc>
+    
+    <lastmod>2020-06-06T05:04:08.232Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/hash-join-optimization</loc>
+    
+    <lastmod>2020-06-06T05:04:08.219Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/json-enhancements</loc>
+    
+    <lastmod>2020-06-06T05:04:08.201Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/data-type-support</loc>
+    
+    <lastmod>2020-06-06T05:04:08.195Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/mysql-upgrade</loc>
+    
+    <lastmod>2020-06-06T05:04:08.188Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/</loc>
+    
+    <lastmod>2020-06-06T05:04:08.183Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/redo-log-archiving</loc>
+    
+    <lastmod>2020-06-06T05:04:08.179Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/connection-management</loc>
+    
+    <lastmod>2020-06-06T05:04:08.174Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/new-optimizer-switch-flags</loc>
+    
+    <lastmod>2020-06-06T05:04:08.169Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/plugins</loc>
+    
+    <lastmod>2020-06-06T05:04:08.164Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/api/additional-target-types-for-casts</loc>
     
-    <lastmod>2020-06-08T04:30:46.309Z</lastmod>
+    <lastmod>2020-06-06T05:04:08.152Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/news/2020/06/03/tec-mysql/</loc>
+    <loc>http://www.toberoot.com/api/table-encryption-management</loc>
     
-    <lastmod>2020-06-02T04:41:48.988Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/about/</loc>
-    
-    <lastmod>2020-06-01T07:34:12.813Z</lastmod>
+    <lastmod>2020-06-06T05:04:08.146Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/</loc>
+    <loc>http://www.toberoot.com/api/data-dictionary</loc>
     
-    <lastmod>2020-06-01T06:27:44.063Z</lastmod>
+    <lastmod>2020-06-06T05:04:08.141Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/character-set-support</loc>
+    
+    <lastmod>2020-06-06T05:04:08.126Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/hintable-time-zone</loc>
+    
+    <lastmod>2020-06-06T05:04:08.121Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/regular-expression-support</loc>
+    
+    <lastmod>2020-06-06T05:04:08.099Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/json-value-function</loc>
+    
+    <lastmod>2020-06-06T05:04:08.094Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/c-api</loc>
+    
+    <lastmod>2020-06-06T05:04:08.087Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/replication</loc>
+    
+    <lastmod>2020-06-06T05:04:08.079Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/internal-tempoary-tables</loc>
+    
+    <lastmod>2020-06-06T05:04:08.074Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/json-schema-validation</loc>
+    
+    <lastmod>2020-06-06T05:04:08.068Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/time-zone-support-for-timestamp-and-datatime</loc>
+    
+    <lastmod>2020-06-06T05:04:08.057Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/common-table-expressions</loc>
+    
+    <lastmod>2020-06-06T05:04:08.049Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/optimizer</loc>
+    
+    <lastmod>2020-06-06T05:04:08.041Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/multi-valued-indexes</loc>
+    
+    <lastmod>2020-06-06T05:04:08.032Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/lateral-derived-tables</loc>
+    
+    <lastmod>2020-06-06T05:04:08.025Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/optimizer-hints-for-force-index-ignore-</loc>
+    
+    <lastmod>2020-06-06T05:04:08.001Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/security-and-account-management</loc>
+    
+    <lastmod>2020-06-06T05:04:07.992Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/query-cast-injection</loc>
+    
+    <lastmod>2020-06-06T05:04:07.976Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mse/software/</loc>
+    
+    <lastmod>2020-06-06T04:33:34.998Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mse/</loc>
+    
+    <lastmod>2020-06-06T04:12:04.789Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mse/algorithm/</loc>
+    
+    <lastmod>2020-06-06T04:01:07.155Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/tick/</loc>
     
-    <lastmod>2020-06-01T03:27:54.786Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/python/</loc>
-    
-    <lastmod>2020-06-01T03:27:50.145Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/oracle/</loc>
-    
-    <lastmod>2020-06-01T03:27:39.984Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/linux/</loc>
-    
-    <lastmod>2020-06-01T03:27:29.400Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/git/</loc>
-    
-    <lastmod>2020-06-01T03:27:13.942Z</lastmod>
+    <lastmod>2020-06-06T01:47:23.209Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/themes/</loc>
     
-    <lastmod>2020-05-28T08:26:16.754Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.636Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/python/</loc>
+    
+    <lastmod>2020-06-06T01:47:22.633Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/plugins/</loc>
     
-    <lastmod>2020-05-28T08:26:16.736Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.631Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/oracle/</loc>
+    
+    <lastmod>2020-06-06T01:47:22.629Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/</loc>
+    
+    <lastmod>2020-06-06T01:47:22.614Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/</loc>
+    
+    <lastmod>2020-06-06T01:47:22.612Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/git/</loc>
+    
+    <lastmod>2020-06-06T01:47:22.575Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/about/</loc>
+    
+    <lastmod>2020-06-06T01:47:22.501Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2020/05/29/tec-oracle/</loc>
     
-    <lastmod>2020-05-28T08:11:50.904Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.499Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/news/2020/06/03/tec-mysql/</loc>
+    
+    <lastmod>2020-06-06T01:47:22.499Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2020/05/24/tec-mysql/</loc>
     
-    <lastmod>2020-05-22T05:35:44.921Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.498Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2020/05/22/tec-mysql/</loc>
     
-    <lastmod>2020-05-21T09:48:15.819Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/news/2020/05/20/tec-linux/</loc>
-    
-    <lastmod>2020-05-19T03:11:00.187Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.498Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2020/05/19/tec-linux/</loc>
     
-    <lastmod>2020-05-19T02:41:42.544Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.477Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/news/2020/05/14/tec-linux/</loc>
+    <loc>http://www.toberoot.com/news/2020/05/20/tec-linux/</loc>
     
-    <lastmod>2020-05-13T08:31:58.187Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/news/2020/05/13/tec-redhat/</loc>
-    
-    <lastmod>2020-05-13T07:35:23.562Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/news/2019/05/13/tec-git/</loc>
-    
-    <lastmod>2020-05-12T08:04:41.669Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.477Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2020/05/12/tec-mysql/</loc>
     
-    <lastmod>2020-05-12T05:43:47.631Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.476Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/news/2020/05/13/tec-redhat/</loc>
+    
+    <lastmod>2020-06-06T01:47:22.476Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/news/2020/05/14/tec-linux/</loc>
+    
+    <lastmod>2020-06-06T01:47:22.475Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/news/2019/05/13/tec-git/</loc>
+    
+    <lastmod>2020-06-06T01:47:22.475Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2020/05/11/tec-mysql/</loc>
     
-    <lastmod>2020-05-11T04:05:53.794Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.474Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2020/04/24/tec-mysql/</loc>
     
-    <lastmod>2020-05-08T10:17:41.647Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.472Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2020/05/06/tec-jira-md/</loc>
     
-    <lastmod>2020-05-06T02:41:50.527Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/news/2020/04/24/tec-rds-md/</loc>
-    
-    <lastmod>2020-05-02T18:08:12.219Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.471Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2020/04/24/tec-mysql/</loc>
     
-    <lastmod>2020-04-24T05:54:27.062Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.470Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/news/2018/05/17/tec-mysql/</loc>
+    <loc>http://www.toberoot.com/news/2020/04/24/tec-rds-md/</loc>
     
-    <lastmod>2020-04-24T03:47:24.332Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/news/2020/04/23/tec-datadog/</loc>
-    
-    <lastmod>2020-04-22T11:47:38.125Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.470Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2020/04/23/tec-pg-md/</loc>
     
-    <lastmod>2020-04-22T09:28:48.152Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.469Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/news/2020/04/18/tec-html/</loc>
+    <loc>http://www.toberoot.com/news/2020/04/23/tec-datadog/</loc>
     
-    <lastmod>2020-04-17T13:27:46.282Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.469Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2020/04/14/tec-mysql/</loc>
     
-    <lastmod>2020-04-14T06:40:45.053Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.468Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/news/2020/04/02/tec-front/</loc>
+    <loc>http://www.toberoot.com/news/2020/04/18/tec-html/</loc>
     
-    <lastmod>2020-04-02T03:33:24.117Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.468Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2020/03/27/tec-python/</loc>
     
-    <lastmod>2020-03-29T14:01:08.427Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.467Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/news/2018/08/03/tec-mongodb/</loc>
+    <loc>http://www.toberoot.com/news/2020/04/02/tec-front/</loc>
     
-    <lastmod>2020-03-28T07:44:43.089Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/news/2017/08/19/tec-mysql/</loc>
-    
-    <lastmod>2020-03-28T07:43:00.118Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.467Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2018/08/22/tec-mysql/</loc>
     
-    <lastmod>2020-03-22T08:32:42.580Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.466Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/news/2018/08/03/tec-mongodb/</loc>
+    
+    <lastmod>2020-06-06T01:47:22.460Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.toberoot.com/news/2018/05/29/tec-oracle/</loc>
     
-    <lastmod>2020-03-22T08:32:42.573Z</lastmod>
+    <lastmod>2020-06-06T01:47:22.459Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/news/2018/05/17/tec-mysql/</loc>
+    
+    <lastmod>2020-06-06T01:47:22.451Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/news/2017/08/19/tec-mysql/</loc>
+    
+    <lastmod>2020-06-06T01:47:22.439Z</lastmod>
     
   </url>
   

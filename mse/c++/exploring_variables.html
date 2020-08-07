@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>探索变量 | BoobooWei</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://www.toberoot.com/mse/c++/exploring_variables.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="zh-cn" href="http://www.toberoot.com/zh-cn/mse/c++/exploring_variables">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  
+<link rel="stylesheet" href="/css/navy.css">
+
+  <!-- endbuild -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-lato@0.0.75/index.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="BoobooWei" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="前面系统地学习了变量和基础类型，这里，我们总结常用的类型和常用处理方法，就像Python中不同类型变量的魔法。 C++ 数字通常，当我们需要用到数字时，我们会使用原始的数据类型，如 int、short、long、float 和 double 等等。这些用于数字的数据类型，其可能的值和数值范围，我们已经在 C++ 数据类型一章中讨论过。 C++ 定义数字我们已经在之前章节的各种实例中定义过数字。下面">
+<meta property="og:type" content="website">
+<meta property="og:title" content="探索变量">
+<meta property="og:url" content="http://www.toberoot.com/mse/c++/exploring_variables">
+<meta property="og:site_name" content="BoobooWei">
+<meta property="og:description" content="前面系统地学习了变量和基础类型，这里，我们总结常用的类型和常用处理方法，就像Python中不同类型变量的魔法。 C++ 数字通常，当我们需要用到数字时，我们会使用原始的数据类型，如 int、short、long、float 和 double 等等。这些用于数字的数据类型，其可能的值和数值范围，我们已经在 C++ 数据类型一章中讨论过。 C++ 定义数字我们已经在之前章节的各种实例中定义过数字。下面">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/08/string_representation.jpg">
+<meta property="article:published_time" content="2020-08-07T00:02:31.616Z">
+<meta property="article:modified_time" content="2020-08-07T00:02:31.616Z">
+<meta property="article:author" content="魏亚萍">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.runoob.com/wp-content/uploads/2014/08/string_representation.jpg">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Google Analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48498357-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-6482217598104186",
+          enable_page_level_ads: true
+     });
+  </script>
+  <!-- at the end of the HEAD -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href='/' id="logo">ToBeRoot</a>
+    </h1>
+    <nav id="main-nav">
+      <a href="/api/" class="main-nav-link">MySQL8.0</a><a href="/linux/" class="main-nav-link">Linux</a><a href="/mysql/" class="main-nav-link">MySQL</a><a href="/oracle/" class="main-nav-link">Oracle</a><a href="/python/" class="main-nav-link">Python</a><a href="/git/" class="main-nav-link">Git</a><a href="/tick/" class="main-nav-link">TICK</a><a href="/mse/" class="main-nav-link">menu.mse</a><a href="/aliyun/" class="main-nav-link">menu.aliyun</a><a href="/news/" class="main-nav-link">Neuigkeiten</a>
+      <a target="_blank" href="https://github.com/BoobooWei" rel="external nofollow noreferrer noopener" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical="">
+        
+          <option value="zh-cn" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">探索变量</h1>
+                <a target="_blank" href="https://github.com/booboowei/site/edit/master/source/mse/c++/exploring_variables.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="Dieses Dokument verbessern"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>前面系统地学习了变量和基础类型，这里，我们总结常用的类型和常用处理方法，就像Python中不同类型变量的魔法。</p>
+<h1 id="C-数字" class="article-heading"><a href="#C-数字" class="headerlink" title="C++ 数字"></a>C++ 数字<a class="article-anchor" href="#C-数字" aria-hidden="true"></a></h1><p>通常，当我们需要用到数字时，我们会使用原始的数据类型，如 int、short、long、float 和 double 等等。这些用于数字的数据类型，其可能的值和数值范围，我们已经在 C++ 数据类型一章中讨论过。</p>
+<h2 id="C-定义数字" class="article-heading"><a href="#C-定义数字" class="headerlink" title="C++ 定义数字"></a>C++ 定义数字<a class="article-anchor" href="#C-定义数字" aria-hidden="true"></a></h2><p>我们已经在之前章节的各种实例中定义过数字。下面是一个 C++ 中定义各种类型数字的综合实例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="comment">// 数字定义</span></span><br><span class="line">   <span class="keyword">short</span>  s;</span><br><span class="line">   <span class="keyword">int</span>    i;</span><br><span class="line">   <span class="keyword">long</span>   l;</span><br><span class="line">   <span class="keyword">float</span>  f;</span><br><span class="line">   <span class="keyword">double</span> d;</span><br><span class="line">   </span><br><span class="line">   <span class="comment">// 数字赋值</span></span><br><span class="line">   s = <span class="number">10</span>;      </span><br><span class="line">   i = <span class="number">1000</span>;    </span><br><span class="line">   l = <span class="number">1000000</span>; </span><br><span class="line">   f = <span class="number">230.47</span>;  </span><br><span class="line">   d = <span class="number">30949.374</span>;</span><br><span class="line">   </span><br><span class="line">   <span class="comment">// 数字输出</span></span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"short  s :"</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"int    i :"</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"long   l :"</span> &lt;&lt; l &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"float  f :"</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"double d :"</span> &lt;&lt; d &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">short  s :10</span><br><span class="line">int    i :1000</span><br><span class="line">long   l :1000000</span><br><span class="line">float  f :230.47</span><br><span class="line">double d :30949.4</span><br></pre></td></tr></table></figure>
+
+<h2 id="C-数学运算" class="article-heading"><a href="#C-数学运算" class="headerlink" title="C++ 数学运算"></a>C++ 数学运算<a class="article-anchor" href="#C-数学运算" aria-hidden="true"></a></h2><p>在 C++ 中，除了可以创建各种函数，还包含了各种有用的函数供您使用。这些函数写在标准 C 和 C++ 库中，叫做<strong>内置</strong>函数。您可以在程序中引用这些函数。</p>
+<p>C++ 内置了丰富的数学函数，可对各种数字进行运算。下表列出了 C++ 中一些有用的内置的数学函数。</p>
+<p>为了利用这些函数，您需要引用数学头文件 <strong><cmath></cmath></strong>。</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">函数 &amp; 描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><strong>double cos(double);</strong> 该函数返回弧度角（double 型）的余弦。</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>double sin(double);</strong> 该函数返回弧度角（double 型）的正弦。</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>double tan(double);</strong> 该函数返回弧度角（double 型）的正切。</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>double log(double);</strong> 该函数返回参数的自然对数。</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left"><strong>double pow(double, double);</strong> 假设第一个参数为 x，第二个参数为 y，则该函数返回 x 的 y 次方。</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left"><strong>double hypot(double, double);</strong> 该函数返回两个参数的平方总和的平方根，也就是说，参数为一个直角三角形的两个直角边，函数会返回斜边的长度。</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left"><strong>double sqrt(double);</strong> 该函数返回参数的平方根。</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left"><strong>int abs(int);</strong> 该函数返回整数的绝对值。</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left"><strong>double fabs(double);</strong> 该函数返回任意一个浮点数的绝对值。</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left"><strong>double floor(double);</strong> 该函数返回一个小于或等于传入参数的最大整数。</td>
+</tr>
+</tbody></table>
+<p>下面是一个关于数学运算的简单实例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="comment">// 数字定义</span></span><br><span class="line">   <span class="keyword">short</span>  s = <span class="number">10</span>;</span><br><span class="line">   <span class="keyword">int</span>    i = <span class="number">-1000</span>;</span><br><span class="line">   <span class="keyword">long</span>   l = <span class="number">100000</span>;</span><br><span class="line">   <span class="keyword">float</span>  f = <span class="number">230.47</span>;</span><br><span class="line">   <span class="keyword">double</span> d = <span class="number">200.374</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 数学运算</span></span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"sin(d) :"</span> &lt;&lt; <span class="built_in">sin</span>(d) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"abs(i)  :"</span> &lt;&lt; <span class="built_in">abs</span>(i) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"floor(d) :"</span> &lt;&lt; <span class="built_in">floor</span>(d) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"sqrt(f) :"</span> &lt;&lt; <span class="built_in">sqrt</span>(f) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"pow( d, 2) :"</span> &lt;&lt; <span class="built_in">pow</span>(d, <span class="number">2</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sin(d) :-0.634939</span><br><span class="line">abs(i)  :1000</span><br><span class="line">floor(d) :200</span><br><span class="line">sqrt(f) :15.1812</span><br><span class="line">pow( d, 2 ) :40149.7</span><br></pre></td></tr></table></figure>
+
+<h2 id="C-随机数" class="article-heading"><a href="#C-随机数" class="headerlink" title="C++ 随机数"></a>C++ 随机数<a class="article-anchor" href="#C-随机数" aria-hidden="true"></a></h2><p>在许多情况下，需要生成随机数。关于随机数生成器，有两个相关的函数。一个是 <strong>rand()</strong>，该函数只返回一个伪随机数。生成随机数之前必须先调用 <strong>srand()</strong> 函数。</p>
+<p>下面是一个关于生成随机数的简单实例。实例中使用了 <strong>time()</strong> 函数来获取系统时间的秒数，通过调用 rand() 函数来生成随机数：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> i,j;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 设置种子</span></span><br><span class="line">   srand( (<span class="keyword">unsigned</span>)time( <span class="literal">NULL</span> ) );</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 生成 10 个随机数 */</span></span><br><span class="line">   <span class="keyword">for</span>( i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++ )</span><br><span class="line">   &#123;</span><br><span class="line">      <span class="comment">// 生成实际的随机数</span></span><br><span class="line">      j= rand();</span><br><span class="line">      <span class="built_in">cout</span> &lt;&lt;<span class="string">"随机数： "</span> &lt;&lt; j &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">随机数： 1748144778</span><br><span class="line">随机数： 630873888</span><br><span class="line">随机数： 2134540646</span><br><span class="line">随机数： 219404170</span><br><span class="line">随机数： 902129458</span><br><span class="line">随机数： 920445370</span><br><span class="line">随机数： 1319072661</span><br><span class="line">随机数： 257938873</span><br><span class="line">随机数： 1256201101</span><br><span class="line">随机数： 580322989</span><br></pre></td></tr></table></figure>
+
+<h1 id="C-字符串" class="article-heading"><a href="#C-字符串" class="headerlink" title="C++ 字符串"></a>C++ 字符串<a class="article-anchor" href="#C-字符串" aria-hidden="true"></a></h1><p>C++ 提供了以下两种类型的字符串表示形式：</p>
+<ul>
+<li>C 风格字符串</li>
+<li>C++ 引入的 string 类类型</li>
+</ul>
+<h2 id="C-风格字符串" class="article-heading"><a href="#C-风格字符串" class="headerlink" title="C 风格字符串"></a>C 风格字符串<a class="article-anchor" href="#C-风格字符串" aria-hidden="true"></a></h2><p>C 风格的字符串起源于 C 语言，并在 C++ 中继续得到支持。字符串实际上是使用 <strong>null</strong> 字符 ‘\0’ 终止的一维字符数组。因此，一个以 null 结尾的字符串，包含了组成字符串的字符。</p>
+<p>下面的声明和初始化创建了一个 “Hello” 字符串。由于在数组的末尾存储了空字符，所以字符数组的大小比单词 “Hello” 的字符数多一个。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">char greeting[6] &#x3D; &#123;&#39;H&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39;\0&#39;&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>依据数组初始化规则，您可以把上面的语句写成以下语句：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">char greeting[] &#x3D; &quot;Hello&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>以下是 C/C++ 中定义的字符串的内存表示：</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2014/08/string_representation.jpg" alt="C/C++ 中的字符串表示"></p>
+<p>其实，您不需要把 <em>null</em> 字符放在字符串常量的末尾。C++ 编译器会在初始化数组时，自动把 ‘\0’ 放在字符串的末尾。让我们尝试输出上面的字符串：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">char</span> greeting[<span class="number">6</span>] = &#123;<span class="string">'H'</span>, <span class="string">'e'</span>, <span class="string">'l'</span>, <span class="string">'l'</span>, <span class="string">'o'</span>, <span class="string">'\0'</span>&#125;;</span><br><span class="line"> </span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"Greeting message: "</span>;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; greeting &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Greeting message: Hello</span><br></pre></td></tr></table></figure>
+
+<p>C++ 中有大量的函数用来操作以 null 结尾的字符串：supports a wide range of functions that manipulate null-terminated strings:</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">函数 &amp; 目的</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left"><strong>strcpy(s1, s2);</strong> 复制字符串 s2 到字符串 s1。</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>strcat(s1, s2);</strong> 连接字符串 s2 到字符串 s1 的末尾。</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>strlen(s1);</strong> 返回字符串 s1 的长度。</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>strcmp(s1, s2);</strong> 如果 s1 和 s2 是相同的，则返回 0；如果 s1&lt;s2 则返回值小于 0；如果 s1&gt;s2 则返回值大于 0。</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left"><strong>strchr(s1, ch);</strong> 返回一个指针，指向字符串 s1 中字符 ch 的第一次出现的位置。</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left"><strong>strstr(s1, s2);</strong> 返回一个指针，指向字符串 s1 中字符串 s2 的第一次出现的位置。</td>
+</tr>
+</tbody></table>
+<p>下面的实例使用了上述的一些函数：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">char</span> str1[<span class="number">11</span>] = <span class="string">"Hello"</span>;</span><br><span class="line">   <span class="keyword">char</span> str2[<span class="number">11</span>] = <span class="string">"World"</span>;</span><br><span class="line">   <span class="keyword">char</span> str3[<span class="number">11</span>];</span><br><span class="line">   <span class="keyword">int</span>  len ;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 复制 str1 到 str3</span></span><br><span class="line">   <span class="built_in">strcpy</span>( str3, str1);</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"strcpy( str3, str1) : "</span> &lt;&lt; str3 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 连接 str1 和 str2</span></span><br><span class="line">   <span class="built_in">strcat</span>( str1, str2);</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"strcat( str1, str2): "</span> &lt;&lt; str1 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 连接后，str1 的总长度</span></span><br><span class="line">   len = <span class="built_in">strlen</span>(str1);</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"strlen(str1) : "</span> &lt;&lt; len &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">strcpy( str3, str1) : Hello</span><br><span class="line">strcat( str1, str2): HelloWorld</span><br><span class="line">strlen(str1) : 10</span><br></pre></td></tr></table></figure>
+
+<h2 id="C-中的-String-类" class="article-heading"><a href="#C-中的-String-类" class="headerlink" title="C++ 中的 String 类"></a>C++ 中的 String 类<a class="article-anchor" href="#C-中的-String-类" aria-hidden="true"></a></h2><p>C++ 标准库提供了 <strong>string</strong> 类类型，支持上述所有的操作，另外还增加了其他更多的功能。我们将学习 C++ 标准库中的这个类，现在让我们先来看看下面这个实例：</p>
+<p>现在您可能还无法透彻地理解这个实例，因为到目前为止我们还没有讨论类和对象。所以现在您可以只是粗略地看下这个实例，等理解了面向对象的概念之后再回头来理解这个实例。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="built_in">string</span> str1 = <span class="string">"Hello"</span>;</span><br><span class="line">   <span class="built_in">string</span> str2 = <span class="string">"World"</span>;</span><br><span class="line">   <span class="built_in">string</span> str3;</span><br><span class="line">   <span class="keyword">int</span>  len ;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 复制 str1 到 str3</span></span><br><span class="line">   str3 = str1;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"str3 : "</span> &lt;&lt; str3 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 连接 str1 和 str2</span></span><br><span class="line">   str3 = str1 + str2;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"str1 + str2 : "</span> &lt;&lt; str3 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 连接后，str3 的总长度</span></span><br><span class="line">   len = str3.<span class="built_in">size</span>();</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">"str3.size() :  "</span> &lt;&lt; len &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">str3 : Hello</span><br><span class="line">str1 + str2 : HelloWorld</span><br><span class="line">str3.size() :  10</span><br></pre></td></tr></table></figure>
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2020-08-07T00:02:31.616Z" itemprop="dateModified">Zuletzt aktualisiert: 2020-08-07</time>
+                <a href="/mse/index.html" class="article-footer-next" title="sidebar.mse.overview"><span>Vor</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'toberoot';
+  var disqus_url = 'http://www.toberoot.com/mse/c++/exploring_variables.html';
+  var disqus_title = "探索变量";
+  var disqus_config = function(){
+    this.language = 'zh';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              
+<div id="carbonads">
+<span>
+<span class="carbon-wrap">
+<a href="https://github.com/booboowei" class="carbon-img" target="_blank" rel="noopener sponsored external nofollow noreferrer">
+    <img src="https://avatars2.githubusercontent.com/u/21328020?s=460&u=88cf6127c32932188f936d05636b7b0d36783ee1&v=4"
+    alt="ads via Carbon" border="0" style="max-width: 130px;">
+</a>
+<a href="/about/" class="carbon-text" target="_blank" rel="noopener sponsored">除了自己的无知，我什么都不知道</a>
+</span>
+</span>
+
+              <strong class="sidebar-title">Inhalt</strong>
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-%E6%95%B0%E5%AD%97"><span class="toc-text">C++ 数字</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%AE%9A%E4%B9%89%E6%95%B0%E5%AD%97"><span class="toc-text">C++ 定义数字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97"><span class="toc-text">C++ 数学运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E9%9A%8F%E6%9C%BA%E6%95%B0"><span class="toc-text">C++ 随机数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#C-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">C++ 字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E9%A3%8E%E6%A0%BC%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">C 风格字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E4%B8%AD%E7%9A%84-String-%E7%B1%BB"><span class="toc-text">C++ 中的 String 类</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">Nach oben</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner">
+    <strong class="sidebar-title">sidebar.mse.getting_started</strong><a href="/mse/index.html" class="sidebar-link">sidebar.mse.overview</a><strong class="sidebar-title">sidebar.mse.computer</strong><a href="/mse/computer/index.html" class="sidebar-link">sidebar.mse.overview</a><a href="/mse/computer/computer_performance_evaluation.html" class="sidebar-link">sidebar.mse.computer_performance_evaluation</a><a href="/mse/computer/introduction_to_instruction_set.html" class="sidebar-link">sidebar.mse.introduction_to_instruction_set</a><strong class="sidebar-title">sidebar.mse.c++</strong><a href="/mse/c++/index.html" class="sidebar-link">sidebar.mse.overview</a><a href="/mse/c++/introduction.html" class="sidebar-link">sidebar.mse.introduction</a><a href="/mse/c++/set_enviroment.html" class="sidebar-link">sidebar.mse.set_enviroment</a><a href="/mse/c++/basic_grammar.html" class="sidebar-link">sidebar.mse.basic_grammar</a><a href="/mse/c++/variables_and_basic_types.html" class="sidebar-link">sidebar.mse.variables_and_basic_types</a><a href="/mse/c++/flow_control_statement.html" class="sidebar-link">sidebar.mse.flow_control_statement</a><a href="/mse/c++/array.html" class="sidebar-link">sidebar.mse.array</a><a href="/mse/c++/pointer_peference.html" class="sidebar-link">sidebar.mse.pointer_peference</a><a href="/mse/c++/dynamic_memory.html" class="sidebar-link">sidebar.mse.dynamic_memory</a><a href="/mse/c++/cplus_project.html" class="sidebar-link">sidebar.mse.cplus_project</a><a href="/mse/c++/function.html" class="sidebar-link">sidebar.mse.function</a><strong class="sidebar-title">sidebar.mse.exploring_variables</strong><a href="/" class="sidebar-link">sidebar.mse.0</a><a href="m" class="sidebar-link">sidebar.mse.1</a><a href="s" class="sidebar-link">sidebar.mse.2</a><a href="e" class="sidebar-link">sidebar.mse.3</a><a href="/" class="sidebar-link">sidebar.mse.4</a><a href="c" class="sidebar-link">sidebar.mse.5</a><a href="+" class="sidebar-link">sidebar.mse.6</a><a href="+" class="sidebar-link">sidebar.mse.7</a><a href="/" class="sidebar-link">sidebar.mse.8</a><a href="e" class="sidebar-link">sidebar.mse.9</a><a href="x" class="sidebar-link">sidebar.mse.10</a><a href="p" class="sidebar-link">sidebar.mse.11</a><a href="l" class="sidebar-link">sidebar.mse.12</a><a href="o" class="sidebar-link">sidebar.mse.13</a><a href="r" class="sidebar-link">sidebar.mse.14</a><a href="i" class="sidebar-link">sidebar.mse.15</a><a href="n" class="sidebar-link">sidebar.mse.16</a><a href="g" class="sidebar-link">sidebar.mse.17</a><a href="_" class="sidebar-link">sidebar.mse.18</a><a href="v" class="sidebar-link">sidebar.mse.19</a><a href="a" class="sidebar-link">sidebar.mse.20</a><a href="r" class="sidebar-link">sidebar.mse.21</a><a href="i" class="sidebar-link">sidebar.mse.22</a><a href="a" class="sidebar-link">sidebar.mse.23</a><a href="b" class="sidebar-link">sidebar.mse.24</a><a href="l" class="sidebar-link">sidebar.mse.25</a><a href="e" class="sidebar-link">sidebar.mse.26</a><a href="s" class="sidebar-link">sidebar.mse.27</a><a href="." class="sidebar-link">sidebar.mse.28</a><a href="h" class="sidebar-link">sidebar.mse.29</a><a href="t" class="sidebar-link">sidebar.mse.30</a><a href="m" class="sidebar-link">sidebar.mse.31</a><a href="l" class="sidebar-link">sidebar.mse.32</a><strong class="sidebar-title">sidebar.mse.algorithm</strong><a href="/mse/algorithm/index.html" class="sidebar-link">sidebar.mse.overview</a><strong class="sidebar-title">sidebar.mse.software</strong><a href="/mse/software/index.html" class="sidebar-link">sidebar.mse.overview</a>
+  </div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2020 <a href="https://github.com/hexojs/hexo/graphs/contributors" rel="external nofollow noreferrer" target="_blank">魏亚萍</a><br>
+      Documentation licensed under <a href="https://choosealicense.com/licenses/agpl-3.0/" rel="external nofollow noreferrer" target="_blank">GNU AGPLv3</a>.
+    </div>
+    <div id="footer-links">
+      <a href="https://github.com/BoobooWei" rel="external nofollow noreferrer" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <a href="/api/" class="mobile-nav-link">MySQL8.0</a><a href="/linux/" class="mobile-nav-link">Linux</a><a href="/mysql/" class="mobile-nav-link">MySQL</a><a href="/oracle/" class="mobile-nav-link">Oracle</a><a href="/python/" class="mobile-nav-link">Python</a><a href="/git/" class="mobile-nav-link">Git</a><a href="/tick/" class="mobile-nav-link">TICK</a><a href="/mse/" class="mobile-nav-link">menu.mse</a><a href="/aliyun/" class="mobile-nav-link">menu.aliyun</a><a href="/news/" class="mobile-nav-link">Neuigkeiten</a>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/BoobooWei" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">sidebar.mse.getting_started</strong><a href="/mse/index.html" class="mobile-nav-link">sidebar.mse.overview</a><strong class="mobile-nav-title">sidebar.mse.computer</strong><a href="/mse/computer/index.html" class="mobile-nav-link">sidebar.mse.overview</a><a href="/mse/computer/computer_performance_evaluation.html" class="mobile-nav-link">sidebar.mse.computer_performance_evaluation</a><a href="/mse/computer/introduction_to_instruction_set.html" class="mobile-nav-link">sidebar.mse.introduction_to_instruction_set</a><strong class="mobile-nav-title">sidebar.mse.c++</strong><a href="/mse/c++/index.html" class="mobile-nav-link">sidebar.mse.overview</a><a href="/mse/c++/introduction.html" class="mobile-nav-link">sidebar.mse.introduction</a><a href="/mse/c++/set_enviroment.html" class="mobile-nav-link">sidebar.mse.set_enviroment</a><a href="/mse/c++/basic_grammar.html" class="mobile-nav-link">sidebar.mse.basic_grammar</a><a href="/mse/c++/variables_and_basic_types.html" class="mobile-nav-link">sidebar.mse.variables_and_basic_types</a><a href="/mse/c++/flow_control_statement.html" class="mobile-nav-link">sidebar.mse.flow_control_statement</a><a href="/mse/c++/array.html" class="mobile-nav-link">sidebar.mse.array</a><a href="/mse/c++/pointer_peference.html" class="mobile-nav-link">sidebar.mse.pointer_peference</a><a href="/mse/c++/dynamic_memory.html" class="mobile-nav-link">sidebar.mse.dynamic_memory</a><a href="/mse/c++/cplus_project.html" class="mobile-nav-link">sidebar.mse.cplus_project</a><a href="/mse/c++/function.html" class="mobile-nav-link">sidebar.mse.function</a><strong class="mobile-nav-title">sidebar.mse.exploring_variables</strong><a href="/" class="mobile-nav-link">sidebar.mse.0</a><a href="m" class="mobile-nav-link">sidebar.mse.1</a><a href="s" class="mobile-nav-link">sidebar.mse.2</a><a href="e" class="mobile-nav-link">sidebar.mse.3</a><a href="/" class="mobile-nav-link">sidebar.mse.4</a><a href="c" class="mobile-nav-link">sidebar.mse.5</a><a href="+" class="mobile-nav-link">sidebar.mse.6</a><a href="+" class="mobile-nav-link">sidebar.mse.7</a><a href="/" class="mobile-nav-link">sidebar.mse.8</a><a href="e" class="mobile-nav-link">sidebar.mse.9</a><a href="x" class="mobile-nav-link">sidebar.mse.10</a><a href="p" class="mobile-nav-link">sidebar.mse.11</a><a href="l" class="mobile-nav-link">sidebar.mse.12</a><a href="o" class="mobile-nav-link">sidebar.mse.13</a><a href="r" class="mobile-nav-link">sidebar.mse.14</a><a href="i" class="mobile-nav-link">sidebar.mse.15</a><a href="n" class="mobile-nav-link">sidebar.mse.16</a><a href="g" class="mobile-nav-link">sidebar.mse.17</a><a href="_" class="mobile-nav-link">sidebar.mse.18</a><a href="v" class="mobile-nav-link">sidebar.mse.19</a><a href="a" class="mobile-nav-link">sidebar.mse.20</a><a href="r" class="mobile-nav-link">sidebar.mse.21</a><a href="i" class="mobile-nav-link">sidebar.mse.22</a><a href="a" class="mobile-nav-link">sidebar.mse.23</a><a href="b" class="mobile-nav-link">sidebar.mse.24</a><a href="l" class="mobile-nav-link">sidebar.mse.25</a><a href="e" class="mobile-nav-link">sidebar.mse.26</a><a href="s" class="mobile-nav-link">sidebar.mse.27</a><a href="." class="mobile-nav-link">sidebar.mse.28</a><a href="h" class="mobile-nav-link">sidebar.mse.29</a><a href="t" class="mobile-nav-link">sidebar.mse.30</a><a href="m" class="mobile-nav-link">sidebar.mse.31</a><a href="l" class="mobile-nav-link">sidebar.mse.32</a><strong class="mobile-nav-title">sidebar.mse.algorithm</strong><a href="/mse/algorithm/index.html" class="mobile-nav-link">sidebar.mse.overview</a><strong class="mobile-nav-title">sidebar.mse.software</strong><a href="/mse/software/index.html" class="mobile-nav-link">sidebar.mse.overview</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="zh-cn" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- Cookie -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<!-- build:js build/js/main.js -->
+
+<script src="/js/lang_select.js"></script>
+
+
+<script src="/js/toc.js"></script>
+
+
+<script src="/js/mobile_nav.js"></script>
+
+<!-- endbuild -->
+
+<!-- Algolia -->
+
+<!-- at the end of the BODY -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+    apiKey: 'ad652bf20bcd81434ad119c8cf34722e',
+    indexName: 'toberoot',
+    inputSelector: '#search-input'
+});
+</script>
+
+<!--   backup
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+  apiKey: 'ad652bf20bcd81434ad119c8cf34722e',
+  indexName: 'toberoot',
+  inputSelector: '#search-input'
+});
+</script>
+-->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+
+
+
+</body>
+</html>
