@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/oracle/oracle-12c/</loc>
+    
+    <lastmod>2020-08-30T02:02:43.772Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/amy/english/k_star/2020-08-23-amy</loc>
     
     <lastmod>2020-08-29T12:20:54.376Z</lastmod>
@@ -208,13 +215,6 @@
     <loc>http://www.toberoot.com/oracle/oracle-11g/A-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85-00-</loc>
     
     <lastmod>2020-08-15T08:43:05.639Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/oracle/oracle-12c/</loc>
-    
-    <lastmod>2020-08-15T08:03:12.200Z</lastmod>
     
   </url>
   
