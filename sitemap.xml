@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/mysql/awesome-tools/pt-archiver</loc>
+    
+    <lastmod>2020-09-01T07:48:19.796Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/news/2020/09/26/tec-mysql/</loc>
+    
+    <lastmod>2020-09-01T06:00:10.672Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/oracle/ocp/1z0-071</loc>
     
     <lastmod>2020-08-31T07:40:10.351Z</lastmod>
@@ -40,13 +54,6 @@
     <loc>http://www.toberoot.com/linux/lamp/phpems</loc>
     
     <lastmod>2020-08-26T08:18:51.550Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/news/2020/09/26/tec-mysql/</loc>
-    
-    <lastmod>2020-08-26T08:14:14.932Z</lastmod>
     
   </url>
   
