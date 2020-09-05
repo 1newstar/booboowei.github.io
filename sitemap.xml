@@ -2,9 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/news/2020/09/05/aliyun-game/</loc>
+    
+    <lastmod>2020-09-05T12:07:33.636Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/oracle/ocp/1z0-071</loc>
+    
+    <lastmod>2020-09-05T12:00:09.752Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mysql/awesome-tools/pt-archiver</loc>
+    
+    <lastmod>2020-09-05T12:00:09.750Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/about/</loc>
+    
+    <lastmod>2020-09-05T12:00:09.748Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/news/2020/09/26/tec-mysql/</loc>
+    
+    <lastmod>2020-09-05T12:00:09.747Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/oracle/oracle-12c/</loc>
     
-    <lastmod>2020-08-30T02:02:43.772Z</lastmod>
+    <lastmod>2020-08-30T02:13:40.648Z</lastmod>
     
   </url>
   
@@ -58,13 +93,6 @@
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/news/2020/09/26/tec-mysql/</loc>
-    
-    <lastmod>2020-08-27T14:11:28.028Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.toberoot.com/amy/english/k_star/2020-08-03-amy</loc>
     
     <lastmod>2020-08-22T05:54:56.136Z</lastmod>
@@ -96,13 +124,6 @@
     <loc>http://www.toberoot.com/amy/english/</loc>
     
     <lastmod>2020-08-22T05:47:03.553Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/oracle/ocp/1z0-071</loc>
-    
-    <lastmod>2020-08-15T09:35:57.374Z</lastmod>
     
   </url>
   
@@ -1419,13 +1440,6 @@
     <loc>http://www.toberoot.com/git/</loc>
     
     <lastmod>2020-06-06T01:47:22.575Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/about/</loc>
-    
-    <lastmod>2020-06-06T01:47:22.501Z</lastmod>
     
   </url>
   
