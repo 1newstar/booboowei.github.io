@@ -41,15 +41,15 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="BoobooWei" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Git 学习笔记">
+  <meta name="description" content="Git 学习笔记  Git进阶_苏玲玩转Git三剑客学习笔记  课程综述为什么Git? GitHub是全球最大的开源社区，里面存放了很多优秀的开源项目的代码 GitLab的社区版本现在也被国内很多知名的互联网企业当作是代码管理的平台 GitHub和GitLab这两个平台在整个DevOps盛行的大环境中，他们不仅仅提供了代码管理的功能，他们还向外扩展提供了整个DevOps全生命周期的全流程的解决方案">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Git 学习笔记">
 <meta property="og:url" content="http://www.toberoot.com/git/">
 <meta property="og:site_name" content="BoobooWei">
-<meta property="og:description" content="Git 学习笔记">
+<meta property="og:description" content="Git 学习笔记  Git进阶_苏玲玩转Git三剑客学习笔记  课程综述为什么Git? GitHub是全球最大的开源社区，里面存放了很多优秀的开源项目的代码 GitLab的社区版本现在也被国内很多知名的互联网企业当作是代码管理的平台 GitHub和GitLab这两个平台在整个DevOps盛行的大环境中，他们不仅仅提供了代码管理的功能，他们还向外扩展提供了整个DevOps全生命周期的全流程的解决方案">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-06T01:47:22.575Z">
-<meta property="article:modified_time" content="2020-06-06T01:47:22.575Z">
+<meta property="article:published_time" content="2020-10-13T09:36:29.495Z">
+<meta property="article:modified_time" content="2020-10-13T09:36:29.495Z">
 <meta property="article:author" content="魏亚萍">
 <meta name="twitter:card" content="summary">
 <meta property="fb:admins" content="100000247608790">
@@ -122,11 +122,122 @@
               </header>
               <div class="article-content" itemprop="articleBody">
                 <p>Git 学习笔记</p>
+<blockquote>
+<p>Git进阶_苏玲玩转Git三剑客学习笔记</p>
+</blockquote>
+<h1 id="课程综述" class="article-heading"><a href="#课程综述" class="headerlink" title="课程综述"></a>课程综述<a class="article-anchor" href="#课程综述" aria-hidden="true"></a></h1><h2 id="为什么Git" class="article-heading"><a href="#为什么Git" class="headerlink" title="为什么Git?"></a>为什么Git?<a class="article-anchor" href="#为什么Git" aria-hidden="true"></a></h2><ul>
+<li>GitHub是全球最大的开源社区，里面存放了很多优秀的开源项目的代码</li>
+<li>GitLab的社区版本现在也被国内很多知名的互联网企业当作是代码管理的平台</li>
+<li>GitHub和GitLab这两个平台在整个DevOps盛行的大环境中，他们不仅仅提供了代码管理的功能，他们还向外扩展提供了整个DevOps全生命周期的全流程的解决方案</li>
+</ul>
+<h2 id="怎么学习？" class="article-heading"><a href="#怎么学习？" class="headerlink" title="怎么学习？"></a>怎么学习？<a class="article-anchor" href="#怎么学习？" aria-hidden="true"></a></h2><ul>
+<li>掌握Git</li>
+<li>熟悉GitHub和GitLab这两个平台的主要功能</li>
+<li>通过简单的项目走一遍团队协作、代码review和分支集成、以及整个持续交付的过程</li>
+</ul>
+<h2 id="收获什么？" class="article-heading"><a href="#收获什么？" class="headerlink" title="收获什么？"></a>收获什么？<a class="article-anchor" href="#收获什么？" aria-hidden="true"></a></h2><ul>
+<li>掌握Git的基本命令</li>
+<li>掌握Git的工作原理</li>
+<li>能基于GitHub和GitLab这两个平台做团队协作、代码review和分支集成的活动</li>
+<li>了解如何在GitHub和GitLab上如何开展持续交付活动</li>
+</ul>
+<h1 id="总结" class="article-heading"><a href="#总结" class="headerlink" title="总结"></a>总结<a class="article-anchor" href="#总结" aria-hidden="true"></a></h1><h2 id="常用命令" class="article-heading"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令<a class="article-anchor" href="#常用命令" aria-hidden="true"></a></h2><table>
+<thead>
+<tr>
+<th align="left">No.</th>
+<th align="left">常用场景</th>
+<th align="left">命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">怎么删除不需要的分支</td>
+<td align="left"><code>git brach -d branch_name</code></td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">怎么修改最新commit和message</td>
+<td align="left"><code>git commit --amend</code></td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">怎么修改老旧commit和message</td>
+<td align="left"><code>git rebase -i commit_father_id</code></td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">怎么把连续的多个commit整理成1个</td>
+<td align="left"><code>git rebase -i commit_father_id</code></td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">怎么把间隔的几个commit整理成1个</td>
+<td align="left"><code>git rebase -i commit_father_id</code></td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">怎么比较暂存区和HEAD所含文件的差异</td>
+<td align="left"><code>git diff --cached</code></td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">怎么比较工作区和暂存区所含文件的差异</td>
+<td align="left"><code>git diff</code></td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">如何让暂存区恢复和HEAD的一样</td>
+<td align="left"><code>git reset HEAD</code></td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">如何让工作区的文件恢复为和暂存区一样</td>
+<td align="left"><code>git checkout</code></td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">怎么消除暂存区部分文件的修改</td>
+<td align="left"><code>git reset HEAD -- file1 file2</code></td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">消除最近的几次提交</td>
+<td align="left"><code>git reset --hard commit_id</code></td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">看看不同提交的指定文件的差异</td>
+<td align="left"><code>git diff commit-id1 commit-id2 path-to-filename</code></td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">正确删除文件的方法</td>
+<td align="left"><code>git rm file</code></td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">开发中临时加塞了紧急任务怎么处理</td>
+<td align="left"><code>git stash</code></td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">如何指定不需要Git管理的文件</td>
+<td align="left"><code>touch .gitignore</code></td>
+</tr>
+<tr>
+<td align="left">16</td>
+<td align="left">如何将Git仓库备份到本地</td>
+<td align="left"><code>git clone --bare file://[local_path] [backup_name]</code></td>
+</tr>
+</tbody></table>
+<h2 id="git-config" class="article-heading"><a href="#git-config" class="headerlink" title="git.config"></a>git.config<a class="article-anchor" href="#git-config" aria-hidden="true"></a></h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">[core]</span></span><br><span class="line">        <span class="string">repositoryformatversion</span> <span class="string">=</span> <span class="number">0</span></span><br><span class="line">        <span class="string">filemode</span> <span class="string">=</span> <span class="literal">false</span></span><br><span class="line">        <span class="string">bare</span> <span class="string">=</span> <span class="literal">false</span></span><br><span class="line">        <span class="string">logallrefupdates</span> <span class="string">=</span> <span class="literal">true</span></span><br><span class="line">        <span class="string">symlinks</span> <span class="string">=</span> <span class="literal">false</span></span><br><span class="line">        <span class="string">ignorecase</span> <span class="string">=</span> <span class="literal">true</span></span><br><span class="line">        <span class="string">editor</span> <span class="string">=</span> <span class="string">vim</span></span><br><span class="line">        <span class="string">excludesfile</span> <span class="string">=</span> <span class="string">~/.gitignore</span></span><br><span class="line">        <span class="string">autocrlf</span> <span class="string">=</span> <span class="literal">true</span></span><br><span class="line"><span class="string">[remote</span> <span class="string">"origin"</span><span class="string">]</span></span><br><span class="line">        <span class="string">url</span> <span class="string">=</span> <span class="string">git@github.com:BoobooWei/DBA_Git.git</span></span><br><span class="line">        <span class="string">fetch</span> <span class="string">=</span> <span class="string">+refs/heads/*:refs/remotes/origin/*</span></span><br><span class="line"><span class="string">[branch</span> <span class="string">"master"</span><span class="string">]</span></span><br><span class="line">        <span class="string">remote</span> <span class="string">=</span> <span class="string">origin</span></span><br><span class="line">        <span class="string">merge</span> <span class="string">=</span> <span class="string">refs/heads/master</span></span><br><span class="line"><span class="string">[alias]</span></span><br><span class="line">        <span class="string">amend</span> <span class="string">=</span> <span class="string">commit</span> <span class="string">--amend</span></span><br><span class="line">        <span class="string">amendf</span> <span class="string">=</span> <span class="string">commit</span> <span class="string">--amend</span> <span class="string">--no-edit</span></span><br><span class="line">        <span class="string">br</span> <span class="string">=</span> <span class="string">branch</span></span><br><span class="line">        <span class="string">ct</span> <span class="string">=</span> <span class="string">commit</span></span><br><span class="line">        <span class="string">co</span> <span class="string">=</span> <span class="string">checkout</span></span><br><span class="line">        <span class="string">cp</span> <span class="string">=</span> <span class="string">cherry-pick</span></span><br><span class="line">        <span class="string">df</span> <span class="string">=</span> <span class="string">diff</span></span><br><span class="line">        <span class="string">ds</span> <span class="string">=</span> <span class="string">diff</span> <span class="string">--staged</span></span><br><span class="line">        <span class="string">l</span> <span class="string">=</span> <span class="string">log</span></span><br><span class="line">        <span class="string">lg</span> <span class="string">=</span> <span class="string">log</span> <span class="string">--graph</span> <span class="string">--all</span> <span class="string">--format=format:'%C(bold</span> <span class="string">blue)%h%C(reset)</span> <span class="bullet">-</span> <span class="string">%C(bold</span> <span class="string">green)(%ar)%C(reset)</span> <span class="string">%C(white)%s%C(reset)</span> <span class="string">%C(bold</span> <span class="string">white)��</span> <span class="string">%an%C(reset)%C(bold</span> <span class="string">yellow)%d%C(reset)'</span> <span class="string">--abbrev-commit</span> <span class="string">--date=relative</span></span><br><span class="line">        <span class="string">lp</span> <span class="string">=</span> <span class="string">log</span> <span class="string">--pretty=oneline</span></span><br><span class="line">        <span class="string">sa</span> <span class="string">=</span> <span class="string">stash</span> <span class="string">apply</span></span><br><span class="line">        <span class="string">sh</span> <span class="string">=</span> <span class="string">show</span></span><br><span class="line">        <span class="string">ss</span> <span class="string">=</span> <span class="string">stash</span> <span class="string">save</span></span><br><span class="line">        <span class="string">st</span> <span class="string">=</span> <span class="string">status</span></span><br><span class="line"></span><br><span class="line"><span class="string">[color]</span></span><br><span class="line">        <span class="string">ui</span> <span class="string">=</span> <span class="string">auto</span></span><br><span class="line"><span class="string">[color</span> <span class="string">"branch"</span><span class="string">]</span></span><br><span class="line">        <span class="string">current</span> <span class="string">=</span> <span class="string">yellow</span> <span class="string">reverse</span></span><br><span class="line">        <span class="string">local</span> <span class="string">=</span> <span class="string">yellow</span></span><br><span class="line">        <span class="string">remote</span> <span class="string">=</span> <span class="string">green</span></span><br><span class="line"><span class="string">[color</span> <span class="string">"status"</span><span class="string">]</span></span><br><span class="line">        <span class="string">added</span> <span class="string">=</span> <span class="string">yellow</span></span><br><span class="line">        <span class="string">changed</span> <span class="string">=</span> <span class="string">green</span></span><br><span class="line">        <span class="string">untracked</span> <span class="string">=</span> <span class="string">cyan</span></span><br><span class="line"><span class="string">[color</span> <span class="string">"diff"</span><span class="string">]</span> <span class="comment"># ��ִ��diff����ʱ��ϵͳչʾ����ɫ</span></span><br><span class="line">        <span class="string">meta</span> <span class="string">=</span> <span class="string">yellow</span></span><br><span class="line">        <span class="string">frag</span> <span class="string">=</span> <span class="string">magenta</span> <span class="string">bold</span></span><br><span class="line">        <span class="string">commit</span> <span class="string">=</span> <span class="string">yellow</span> <span class="string">bold</span></span><br><span class="line">        <span class="string">old</span> <span class="string">=</span> <span class="string">red</span> <span class="string">bold</span></span><br><span class="line">        <span class="string">new</span> <span class="string">=</span> <span class="string">green</span> <span class="string">bold</span></span><br><span class="line">        <span class="string">whitespace</span> <span class="string">=</span> <span class="string">red</span> <span class="string">reverse</span></span><br><span class="line"><span class="string">[color</span> <span class="string">"diff-highlight"</span><span class="string">]</span></span><br><span class="line">        <span class="string">oldNormal</span> <span class="string">=</span> <span class="string">red</span> <span class="string">bold</span></span><br><span class="line">        <span class="string">oldHighlight</span> <span class="string">=</span> <span class="string">red</span> <span class="string">bold</span> <span class="number">52</span></span><br><span class="line">        <span class="string">newNormal</span> <span class="string">=</span> <span class="string">green</span> <span class="string">bold</span></span><br><span class="line">        <span class="string">newHighlight</span> <span class="string">=</span> <span class="string">green</span> <span class="string">bold</span> <span class="number">22</span></span><br><span class="line"></span><br><span class="line"><span class="string">[credential]</span></span><br><span class="line">        <span class="string">helper</span> <span class="string">=</span> <span class="string">cache</span> <span class="string">--timeout=28800</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="活跃统计" class="article-heading"><a href="#活跃统计" class="headerlink" title="活跃统计"></a>活跃统计<a class="article-anchor" href="#活跃统计" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span> --date=iso | perl -nalE <span class="string">'if (/^Date:\s+[\d-]&#123;10&#125;\s(\d&#123;2&#125;)/) &#123; say $1+0 &#125;'</span> | sort | uniq -c|perl -MList::Util=max -nalE <span class="string">'$h&#123;$F[1]&#125; = $F[0]; &#125;&#123; $m = max values %h; foreach (0..23) &#123; $h&#123;$_&#125; = 0 if not exists $h&#123;$_&#125; &#125; foreach (sort &#123;$a &lt;=&gt; $b &#125; keys %h) &#123; say sprintf "%02d - %4d %s", $_, $h&#123;$_&#125;, "*"x ($h&#123;$_&#125; / $m * 50); &#125;'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">00 -    3 ********</span><br><span class="line">01 -    2 *****</span><br><span class="line">02 -    1 **</span><br><span class="line">03 -    0</span><br><span class="line">04 -    0</span><br><span class="line">05 -    0</span><br><span class="line">06 -    1 **</span><br><span class="line">07 -    0</span><br><span class="line">08 -    0</span><br><span class="line">09 -    3 ********</span><br><span class="line">10 -    4 ***********</span><br><span class="line">11 -    4 ***********</span><br><span class="line">12 -    2 *****</span><br><span class="line">13 -   11 ********************************</span><br><span class="line">14 -   12 ***********************************</span><br><span class="line">15 -    5 **************</span><br><span class="line">16 -    9 **************************</span><br><span class="line">17 -    2 *****</span><br><span class="line">18 -    4 ***********</span><br><span class="line">19 -    0</span><br><span class="line">20 -    0</span><br><span class="line">21 -    3 ********</span><br><span class="line">22 -   17 **************************************************</span><br><span class="line">23 -    4 ***********</span><br></pre></td></tr></table></figure>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-06-06T01:47:22.575Z" itemprop="dateModified">上次更新：2020-06-06</time>
-                
+                <time class="article-footer-updated" datetime="2020-10-13T09:36:29.495Z" itemprop="dateModified">上次更新：2020-10-13</time>
+                <a href="/git/index.html" class="article-footer-next" title="概览"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
 <section id="comments">
@@ -163,7 +274,7 @@
 </span>
 
               <strong class="sidebar-title">目录</strong>
-              
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%BE%E7%A8%8B%E7%BB%BC%E8%BF%B0"><span class="toc-text">课程综述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88Git"><span class="toc-text">为什么Git?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%8E%E4%B9%88%E5%AD%A6%E4%B9%A0%EF%BC%9F"><span class="toc-text">怎么学习？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B6%E8%8E%B7%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">收获什么？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-config"><span class="toc-text">git.config</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B4%BB%E8%B7%83%E7%BB%9F%E8%AE%A1"><span class="toc-text">活跃统计</span></a></li></ol></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
@@ -171,7 +282,7 @@
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link current">概览</a>
+    <strong class="sidebar-title">开始使用</strong><a href="/git/index.html" class="sidebar-link">概览</a><strong class="sidebar-title">Git基础</strong><a href="/git/Chapter01/01_课程综述.html" class="sidebar-link">课程综述</a><a href="/git/Chapter01/02_安装Git.html" class="sidebar-link">安装Git</a><a href="/git/Chapter01/03_使用Git之前需要做的最小配置.html" class="sidebar-link">最小配置</a><a href="/git/Chapter01/04_创建第一个仓库并配置local用户信息.html" class="sidebar-link">配置local用户</a><a href="/git/Chapter01/05_通过几次commit来认识工作区和暂存区.html" class="sidebar-link">工作区和暂存区</a><a href="/git/Chapter01/06_给文件重命名的简便方法.html" class="sidebar-link">给文件重命名</a><a href="/git/Chapter01/07_通过git_log查看版本演变历史.html" class="sidebar-link">版本演变历史</a><a href="/git/Chapter01/08_gitk_通过图形界面工具来查看版本历史.html" class="sidebar-link">图形化gitk</a><a href="/git/Chapter01/09_探密.html" class="sidebar-link">探密</a><a href="/git/Chapter01/10_commit、tree和blob三个对象之间的关系.html" class="sidebar-link">commit、tree和blob</a><a href="/git/Chapter01/11_小练习_数一数tree的个数.html" class="sidebar-link">小练习</a><a href="/git/Chapter01/12_分离头指针情况下的注意事项.html" class="sidebar-link">分离头指针</a><a href="/git/Chapter01/13_进一步理解HEAD和branch.html" class="sidebar-link">HEAD和branch</a><strong class="sidebar-title">Git常见场景</strong><a href="/git/Chapter02/14_怎么删除不需要的分支.html" class="sidebar-link">删除不需要的分支</a><a href="/git/Chapter02/15_怎么修改最新commit和message.html" class="sidebar-link">修改最新commit和message</a><a href="/git/Chapter02/16_怎么修改老旧commit和message.html" class="sidebar-link">修改老旧commit和message</a><a href="/git/Chapter02/17_怎么把连续的多个commit整理成1个.html" class="sidebar-link">多个commit整理成1个</a><a href="/git/Chapter02/18_怎么把间隔的几个commit整理成1个.html" class="sidebar-link">间隔的几个commit整理成1个</a><a href="/git/Chapter02/19_怎么比较暂存区和HEAD所含文件的差异.html" class="sidebar-link">暂存区和HEAD所含文件的差异</a><a href="/git/Chapter02/20_怎么比较工作区和暂存区所含文件的差异.html" class="sidebar-link">工作区和暂存区所含文件的差异</a><a href="/git/Chapter02/21_如何让暂存区恢复和HEAD的一样.html" class="sidebar-link">暂存区恢复和HEAD的一样</a><a href="/git/Chapter02/22_如何让工作区的文件恢复为和暂存区一样.html" class="sidebar-link">工作区的文件恢复为和暂存区一样</a><a href="/git/Chapter02/23_怎么消除暂存区部分文件的修改.html" class="sidebar-link">消除暂存区部分文件的修改</a><a href="/git/Chapter02/24_消除最近的几次提交.html" class="sidebar-link">消除最近的几次提交</a><a href="/git/Chapter02/25_看看不同提交的指定文件的差异.html" class="sidebar-link">不同提交的指定文件的差异</a><a href="/git/Chapter02/26_正确删除文件的方法.html" class="sidebar-link">正确删除文件的方法</a><a href="/git/Chapter02/27_开发中临时加塞了紧急任务怎么处理.html" class="sidebar-link">开发中临时加塞了紧急任务</a><a href="/git/Chapter02/28_如何指定不需要Git管理的文件.html" class="sidebar-link">指定不需要Git管理的文件</a><a href="/git/Chapter02/29_如何将Git仓库备份到本地.html" class="sidebar-link">将Git仓库备份到本地</a><strong class="sidebar-title">Github同步</strong><a href="/git/Chapter03/index.html" class="sidebar-link">概览</a><strong class="sidebar-title">多人协作</strong><a href="/git/Chapter04/index.html" class="sidebar-link">概览</a><strong class="sidebar-title">Git集成使用禁忌</strong><a href="/git/Chapter05/index.html" class="sidebar-link">概览</a><strong class="sidebar-title">初识GitHub</strong><a href="/git/Chapter06/index.html" class="sidebar-link">概览</a><a href="/git/Chapter06/41_GitHub为什么会火.html" class="sidebar-link">GitHub为什么会火</a><a href="/git/Chapter06/42_GitHub都有哪些核心功能.html" class="sidebar-link">GitHub都有哪些核心功能</a><a href="/git/Chapter06/43_怎么快速淘到感兴趣的开源项目.html" class="sidebar-link">快速淘到感兴趣的开源项目</a><a href="/git/Chapter06/44_怎样在GitHub上搭建个人博客.html" class="sidebar-link">GitHub上搭建个人博客</a><a href="/git/Chapter06/45_开源项目怎么保证代码质量.html" class="sidebar-link">开源项目保证代码质量</a><a href="/git/Chapter06/46_为何需要组织类型的仓库.html" class="sidebar-link">组织类型的仓库</a><strong class="sidebar-title">使用GitHub</strong><a href="/git/Chapter07/index.html" class="sidebar-link">概览</a><strong class="sidebar-title">GitLab实践</strong><a href="/git/Chapter08/index.html" class="sidebar-link">概览</a>
   </div>
 </aside>
     </div>
@@ -210,7 +321,7 @@
       </li>
     </ul>
     
-      <strong class="mobile-nav-title">开始使用</strong><a href="index.html" class="mobile-nav-link current">概览</a>
+      <strong class="mobile-nav-title">开始使用</strong><a href="/git/index.html" class="mobile-nav-link">概览</a><strong class="mobile-nav-title">Git基础</strong><a href="/git/Chapter01/01_课程综述.html" class="mobile-nav-link">课程综述</a><a href="/git/Chapter01/02_安装Git.html" class="mobile-nav-link">安装Git</a><a href="/git/Chapter01/03_使用Git之前需要做的最小配置.html" class="mobile-nav-link">最小配置</a><a href="/git/Chapter01/04_创建第一个仓库并配置local用户信息.html" class="mobile-nav-link">配置local用户</a><a href="/git/Chapter01/05_通过几次commit来认识工作区和暂存区.html" class="mobile-nav-link">工作区和暂存区</a><a href="/git/Chapter01/06_给文件重命名的简便方法.html" class="mobile-nav-link">给文件重命名</a><a href="/git/Chapter01/07_通过git_log查看版本演变历史.html" class="mobile-nav-link">版本演变历史</a><a href="/git/Chapter01/08_gitk_通过图形界面工具来查看版本历史.html" class="mobile-nav-link">图形化gitk</a><a href="/git/Chapter01/09_探密.html" class="mobile-nav-link">探密</a><a href="/git/Chapter01/10_commit、tree和blob三个对象之间的关系.html" class="mobile-nav-link">commit、tree和blob</a><a href="/git/Chapter01/11_小练习_数一数tree的个数.html" class="mobile-nav-link">小练习</a><a href="/git/Chapter01/12_分离头指针情况下的注意事项.html" class="mobile-nav-link">分离头指针</a><a href="/git/Chapter01/13_进一步理解HEAD和branch.html" class="mobile-nav-link">HEAD和branch</a><strong class="mobile-nav-title">Git常见场景</strong><a href="/git/Chapter02/14_怎么删除不需要的分支.html" class="mobile-nav-link">删除不需要的分支</a><a href="/git/Chapter02/15_怎么修改最新commit和message.html" class="mobile-nav-link">修改最新commit和message</a><a href="/git/Chapter02/16_怎么修改老旧commit和message.html" class="mobile-nav-link">修改老旧commit和message</a><a href="/git/Chapter02/17_怎么把连续的多个commit整理成1个.html" class="mobile-nav-link">多个commit整理成1个</a><a href="/git/Chapter02/18_怎么把间隔的几个commit整理成1个.html" class="mobile-nav-link">间隔的几个commit整理成1个</a><a href="/git/Chapter02/19_怎么比较暂存区和HEAD所含文件的差异.html" class="mobile-nav-link">暂存区和HEAD所含文件的差异</a><a href="/git/Chapter02/20_怎么比较工作区和暂存区所含文件的差异.html" class="mobile-nav-link">工作区和暂存区所含文件的差异</a><a href="/git/Chapter02/21_如何让暂存区恢复和HEAD的一样.html" class="mobile-nav-link">暂存区恢复和HEAD的一样</a><a href="/git/Chapter02/22_如何让工作区的文件恢复为和暂存区一样.html" class="mobile-nav-link">工作区的文件恢复为和暂存区一样</a><a href="/git/Chapter02/23_怎么消除暂存区部分文件的修改.html" class="mobile-nav-link">消除暂存区部分文件的修改</a><a href="/git/Chapter02/24_消除最近的几次提交.html" class="mobile-nav-link">消除最近的几次提交</a><a href="/git/Chapter02/25_看看不同提交的指定文件的差异.html" class="mobile-nav-link">不同提交的指定文件的差异</a><a href="/git/Chapter02/26_正确删除文件的方法.html" class="mobile-nav-link">正确删除文件的方法</a><a href="/git/Chapter02/27_开发中临时加塞了紧急任务怎么处理.html" class="mobile-nav-link">开发中临时加塞了紧急任务</a><a href="/git/Chapter02/28_如何指定不需要Git管理的文件.html" class="mobile-nav-link">指定不需要Git管理的文件</a><a href="/git/Chapter02/29_如何将Git仓库备份到本地.html" class="mobile-nav-link">将Git仓库备份到本地</a><strong class="mobile-nav-title">Github同步</strong><a href="/git/Chapter03/index.html" class="mobile-nav-link">概览</a><strong class="mobile-nav-title">多人协作</strong><a href="/git/Chapter04/index.html" class="mobile-nav-link">概览</a><strong class="mobile-nav-title">Git集成使用禁忌</strong><a href="/git/Chapter05/index.html" class="mobile-nav-link">概览</a><strong class="mobile-nav-title">初识GitHub</strong><a href="/git/Chapter06/index.html" class="mobile-nav-link">概览</a><a href="/git/Chapter06/41_GitHub为什么会火.html" class="mobile-nav-link">GitHub为什么会火</a><a href="/git/Chapter06/42_GitHub都有哪些核心功能.html" class="mobile-nav-link">GitHub都有哪些核心功能</a><a href="/git/Chapter06/43_怎么快速淘到感兴趣的开源项目.html" class="mobile-nav-link">快速淘到感兴趣的开源项目</a><a href="/git/Chapter06/44_怎样在GitHub上搭建个人博客.html" class="mobile-nav-link">GitHub上搭建个人博客</a><a href="/git/Chapter06/45_开源项目怎么保证代码质量.html" class="mobile-nav-link">开源项目保证代码质量</a><a href="/git/Chapter06/46_为何需要组织类型的仓库.html" class="mobile-nav-link">组织类型的仓库</a><strong class="mobile-nav-title">使用GitHub</strong><a href="/git/Chapter07/index.html" class="mobile-nav-link">概览</a><strong class="mobile-nav-title">GitLab实践</strong><a href="/git/Chapter08/index.html" class="mobile-nav-link">概览</a>
     
   </div>
   <div id="mobile-lang-select-wrap">
