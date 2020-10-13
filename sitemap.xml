@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/linux/booboo_bash_shell_scripts/</loc>
+    
+    <lastmod>2020-10-13T11:38:19.480Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/linux/booboo_bash_shell_scripts/03_shell_sed_awk</loc>
     
     <lastmod>2020-10-13T11:34:09.403Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>http://www.toberoot.com/linux/booboo_bash_shell_scripts/shell%E4%B8%8A%E6%9C%BA</loc>
     
     <lastmod>2020-10-13T11:28:47.640Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/linux/booboo_bash_shell_scripts/</loc>
-    
-    <lastmod>2020-10-13T11:26:07.707Z</lastmod>
     
   </url>
   
