@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/linux/booboo_easy_service/</loc>
+    
+    <lastmod>2020-10-13T11:10:12.574Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/booboo_easy_service/07_iptables_firewalld</loc>
+    
+    <lastmod>2020-10-13T11:09:44.727Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/booboo_easy_service/06_ntp_chrony</loc>
+    
+    <lastmod>2020-10-13T11:09:38.028Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/booboo_easy_service/05_apache</loc>
+    
+    <lastmod>2020-10-13T11:09:29.410Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/booboo_easy_service/00_linux_classroom_env</loc>
+    
+    <lastmod>2020-10-13T11:09:21.421Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/booboo_easy_service/04_samba</loc>
+    
+    <lastmod>2020-10-13T11:09:21.419Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/booboo_easy_service/03_nfs</loc>
+    
+    <lastmod>2020-10-13T11:09:21.416Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/booboo_easy_service/02_ftp</loc>
+    
+    <lastmod>2020-10-13T11:09:21.414Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/booboo_easy_service/01_dns</loc>
+    
+    <lastmod>2020-10-13T11:09:21.410Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/linux/booboo_linux_base/</loc>
     
     <lastmod>2020-10-13T10:52:53.949Z</lastmod>
