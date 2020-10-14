@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/linux/booboo_middle_service/02-nginx</loc>
+    
+    <lastmod>2020-10-14T09:32:12.953Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/mongodb/</loc>
+    
+    <lastmod>2020-10-14T09:15:52.211Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/linux/booboo_middle_service/04-ldap</loc>
     
     <lastmod>2020-10-14T08:58:47.151Z</lastmod>
@@ -40,13 +54,6 @@
     <loc>http://www.toberoot.com/linux/booboo_middle_service/03-tomcat</loc>
     
     <lastmod>2020-10-14T08:31:58.329Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/linux/booboo_middle_service/02-nginx</loc>
-    
-    <lastmod>2020-10-14T08:27:41.569Z</lastmod>
     
   </url>
   
