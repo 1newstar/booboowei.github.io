@@ -2,6 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/nosql/redis/booboo_redis/03-Redis%E4%B8%BB%E4%BB%8E</loc>
+    
+    <lastmod>2020-10-14T07:07:57.218Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/</loc>
+    
+    <lastmod>2020-10-14T07:02:25.429Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/redis/</loc>
+    
+    <lastmod>2020-10-14T06:55:11.377Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/redis/booboo_redis/</loc>
+    
+    <lastmod>2020-10-14T06:48:40.542Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/redis/booboo_redis/05-Redis%E6%8E%92%E9%94%99%E6%8C%87%E5%8D%97</loc>
+    
+    <lastmod>2020-10-14T06:48:05.527Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/redis/booboo_redis/04-Redis%E9%9B%86%E7%BE%A4</loc>
+    
+    <lastmod>2020-10-14T06:47:27.308Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/redis/booboo_redis/02-Redis%E6%8C%81%E4%B9%85%E5%8C%96</loc>
+    
+    <lastmod>2020-10-14T06:46:50.266Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/redis/booboo_redis/01-Redis%E5%85%A5%E9%97%A8</loc>
+    
+    <lastmod>2020-10-14T06:46:30.617Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/cloud/</loc>
     
     <lastmod>2020-10-14T06:02:16.321Z</lastmod>
