@@ -2,6 +2,160 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/hadoop/</loc>
+    
+    <lastmod>2020-10-14T10:55:07.468Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/hadoop/02_operation/hadoopInstall</loc>
+    
+    <lastmod>2020-10-14T10:40:20.814Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/hadoop/02_operation/hbaseInstall</loc>
+    
+    <lastmod>2020-10-14T10:40:12.321Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/hadoop/02_operation/hiveInstall</loc>
+    
+    <lastmod>2020-10-14T10:40:02.144Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/hadoop/02_operation/hivesql</loc>
+    
+    <lastmod>2020-10-14T10:39:53.355Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/hadoop/01-Hadoop%E7%90%86%E8%AE%BA/02-Hadoop-pagerank</loc>
+    
+    <lastmod>2020-10-14T10:23:45.892Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/cloud/aliyun/bigdata/maxcompute/</loc>
+    
+    <lastmod>2020-10-14T10:21:15.917Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/hadoop/01-Hadoop%E7%90%86%E8%AE%BA/01-Hadoop%E7%9A%84%E8%B5%B7%E6%BA%90%E4%B8%8E%E4%BD%93%E7%B3%BB%E4%BB%8B%E7%BB%8D</loc>
+    
+    <lastmod>2020-10-14T10:19:17.297Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/cloud/aliyun/bigdata/datav/02_%E5%91%98%E5%B7%A5%E8%B7%AF%E7%BA%BF</loc>
+    
+    <lastmod>2020-10-14T10:10:54.745Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/cloud/aliyun/bigdata/datav/01_%E5%9F%BA%E7%A1%80%E5%B9%B3%E9%9D%A2%E5%9C%B0%E5%9B%BE</loc>
+    
+    <lastmod>2020-10-14T10:10:14.701Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/cloud/aliyun/bigdata/datav/</loc>
+    
+    <lastmod>2020-10-14T10:09:38.830Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/devops/python/booboo_python/06-python</loc>
+    
+    <lastmod>2020-10-14T10:03:19.646Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/devops/python/booboo_python/02-python</loc>
+    
+    <lastmod>2020-10-14T10:01:56.737Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/devops/python/booboo_python/04-python</loc>
+    
+    <lastmod>2020-10-14T10:00:04.922Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/devops/python/</loc>
+    
+    <lastmod>2020-10-14T09:56:38.424Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/devops/python/booboo_python/09-python%E8%80%83%E6%A0%B8</loc>
+    
+    <lastmod>2020-10-14T09:55:44.969Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/devops/python/booboo_python/08-checkio</loc>
+    
+    <lastmod>2020-10-14T09:55:20.793Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/devops/python/booboo_python/07-python</loc>
+    
+    <lastmod>2020-10-14T09:53:54.002Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/devops/python/booboo_python/05-python</loc>
+    
+    <lastmod>2020-10-14T09:52:57.611Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/devops/python/booboo_python/03-python</loc>
+    
+    <lastmod>2020-10-14T09:52:02.595Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/devops/python/booboo_python/</loc>
+    
+    <lastmod>2020-10-14T09:51:25.687Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/devops/python/booboo_python/01-python</loc>
+    
+    <lastmod>2020-10-14T09:50:06.502Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/linux/booboo_middle_service/02-nginx</loc>
     
     <lastmod>2020-10-14T09:32:12.953Z</lastmod>
@@ -2032,13 +2186,6 @@
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/api/table-encryption-management</loc>
-    
-    <lastmod>2020-06-08T04:30:46.321Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.toberoot.com/api/the-clone-plugin</loc>
     
     <lastmod>2020-06-08T04:30:46.321Z</lastmod>
@@ -2047,6 +2194,13 @@
   
   <url>
     <loc>http://www.toberoot.com/api/time-zone-support-for-timestamp-and-datatime</loc>
+    
+    <lastmod>2020-06-08T04:30:46.321Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/api/table-encryption-management</loc>
     
     <lastmod>2020-06-08T04:30:46.321Z</lastmod>
     
@@ -2074,14 +2228,14 @@
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/api/resource-management</loc>
+    <loc>http://www.toberoot.com/api/row-and-columns-aliases-with-on-duplicate-key-update</loc>
     
     <lastmod>2020-06-08T04:30:46.319Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/api/row-and-columns-aliases-with-on-duplicate-key-update</loc>
+    <loc>http://www.toberoot.com/api/resource-management</loc>
     
     <lastmod>2020-06-08T04:30:46.319Z</lastmod>
     
@@ -2179,14 +2333,14 @@
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/api/json-schema-validation</loc>
+    <loc>http://www.toberoot.com/api/json-enhancements</loc>
     
     <lastmod>2020-06-08T04:30:46.314Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/api/json-enhancements</loc>
+    <loc>http://www.toberoot.com/api/json-schema-validation</loc>
     
     <lastmod>2020-06-08T04:30:46.314Z</lastmod>
     
@@ -2301,13 +2455,6 @@
     <loc>http://www.toberoot.com/tick/</loc>
     
     <lastmod>2020-06-01T03:27:54.786Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/devops/python/</loc>
-    
-    <lastmod>2020-06-01T03:27:50.145Z</lastmod>
     
   </url>
   
