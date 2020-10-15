@@ -2,15 +2,15 @@
 <html lang="zh-cn">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>Bootstrap 学习笔记 | BoobooWei</title>
+  <title>常用接口 | BoobooWei</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://www.toberoot.com/devops/bootstrap/index.html">
+  <link rel="canonical" href="http://www.toberoot.com/devops/00_python_base/13-Python%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3.html">
   <!-- Alternative links -->
   
     
-      <link rel="alternative" hreflang="zh-cn" href="http://www.toberoot.com/zh-cn/devops/bootstrap/">
+      <link rel="alternative" hreflang="zh-cn" href="http://www.toberoot.com/zh-cn/devops/00_python_base/13-Python%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3">
     
   
   <!-- Icon -->
@@ -41,15 +41,15 @@
   <!-- RSS -->
   <link rel="alternate" href="/atom.xml" title="BoobooWei" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Hexo is a fast, simple &amp; powerful blog framework powered by Node.js.">
+  <meta name="description" content="常用小方法日期时间UTC+8当前时间time.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;, time.localtime(time.time()))    去除网页标签import reimport sysa_string&#x3D;&quot;&quot;&quot;&lt;div&gt;        &lt;p&gt;【背景】 客户采购我司CMS服务，请协调对接人&lt;&#x2F;p&gt;            &lt;p">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Bootstrap 学习笔记">
-<meta property="og:url" content="http://www.toberoot.com/devops/bootstrap/">
+<meta property="og:title" content="常用接口">
+<meta property="og:url" content="http://www.toberoot.com/devops/00_python_base/13-Python%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3">
 <meta property="og:site_name" content="BoobooWei">
-<meta property="og:description" content="Hexo is a fast, simple &amp; powerful blog framework powered by Node.js.">
+<meta property="og:description" content="常用小方法日期时间UTC+8当前时间time.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;, time.localtime(time.time()))    去除网页标签import reimport sysa_string&#x3D;&quot;&quot;&quot;&lt;div&gt;        &lt;p&gt;【背景】 客户采购我司CMS服务，请协调对接人&lt;&#x2F;p&gt;            &lt;p">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-10-15T04:11:34.840Z">
-<meta property="article:modified_time" content="2020-10-15T04:11:34.840Z">
+<meta property="article:published_time" content="2020-10-15T06:15:32.879Z">
+<meta property="article:modified_time" content="2020-10-15T06:15:32.879Z">
 <meta property="article:author" content="魏亚萍">
 <meta name="twitter:card" content="summary">
 <meta property="fb:admins" content="100000247608790">
@@ -118,14 +118,24 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Bootstrap 学习笔记</h1>
-                <a target="_blank" href="https://github.com/booboowei/site/edit/master/source/devops/bootstrap/index.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">常用接口</h1>
+                <a target="_blank" href="https://github.com/booboowei/site/edit/master/source/devops/00_python_base/13-Python工作中常用接口.md" rel="external nofollow noreferrer noopener" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
               </header>
               <div class="article-content" itemprop="articleBody">
-                
+                <h1 id="常用小方法" class="article-heading"><a href="#常用小方法" class="headerlink" title="常用小方法"></a>常用小方法<a class="article-anchor" href="#常用小方法" aria-hidden="true"></a></h1><h2 id="日期时间" class="article-heading"><a href="#日期时间" class="headerlink" title="日期时间"></a>日期时间<a class="article-anchor" href="#日期时间" aria-hidden="true"></a></h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">UTC+<span class="number">8</span></span><br><span class="line">当前时间</span><br><span class="line">time.strftime(<span class="string">'%Y-%m-%d %H:%M:%S'</span>, time.localtime(time.time()))</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="去除网页标签" class="article-heading"><a href="#去除网页标签" class="headerlink" title="去除网页标签"></a>去除网页标签<a class="article-anchor" href="#去除网页标签" aria-hidden="true"></a></h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line">a_string=<span class="string">"""</span></span><br><span class="line"><span class="string">&lt;div&gt;</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    &lt;p&gt;【背景】 客户采购我司CMS服务，请协调对接人&lt;/p&gt;</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    &lt;p&gt;【希望驻云做什么】 客户采购我司CMS服务，请协调对接人&lt;/p&gt;</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    &lt;p&gt;【期望完成时间】 2018/10/31 12:00&lt;/p&gt;</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">      &lt;p&gt;【是否需要上门】 否&lt;/p&gt;</span></span><br><span class="line"><span class="string">      </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">      &lt;p&gt;【联系人】 刘茂鹏&lt;/p&gt;</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">      &lt;p&gt;【联系方式】 1&lt;/p&gt;</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">&lt;/div&gt;"""</span></span><br><span class="line"></span><br><span class="line">a = re.sub(<span class="string">r'&lt;/?(div|p)&gt;'</span>,<span class="string">''</span>,a_string)</span><br><span class="line">b = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> a.split(<span class="string">'\n'</span>):</span><br><span class="line">    <span class="keyword">if</span> i.strip() != <span class="string">''</span>:</span><br><span class="line">        b.append(i.strip())</span><br><span class="line">print(<span class="string">'\n'</span>.join(b))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">背景】 客户采购我司CMS服务，请协调对接人</span><br><span class="line">【希望驻云做什么】 客户采购我司CMS服务，请协调对接人</span><br><span class="line">【期望完成时间】 <span class="number">2018</span>/<span class="number">10</span>/<span class="number">31</span> <span class="number">12</span>:<span class="number">00</span></span><br><span class="line">【是否需要上门】 否</span><br><span class="line">【联系人】 刘茂鹏</span><br><span class="line">【联系方式】 <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="生产依赖包" class="article-heading"><a href="#生产依赖包" class="headerlink" title="生产依赖包"></a>生产依赖包<a class="article-anchor" href="#生产依赖包" aria-hidden="true"></a></h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+
+<h2 id="根据-t打印表格" class="article-heading"><a href="#根据-t打印表格" class="headerlink" title="根据\t打印表格"></a>根据\t打印表格<a class="article-anchor" href="#根据-t打印表格" aria-hidden="true"></a></h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = <span class="string">"user\tpassword\temail\nbooboo\t123\tere@hotmail.com\n"</span></span><br><span class="line">b = a.expandtabs(<span class="number">20</span>)</span><br><span class="line">print(b)</span><br><span class="line"></span><br><span class="line">user                password            email</span><br><span class="line">booboo              <span class="number">123</span>                 ere@hotmail.com</span><br></pre></td></tr></table></figure>
+
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-10-15T04:11:34.840Z" itemprop="dateModified">上次更新：2020-10-15</time>
+                <time class="article-footer-updated" datetime="2020-10-15T06:15:32.879Z" itemprop="dateModified">上次更新：2020-10-15</time>
                 <a href="/devops/index.html" class="article-footer-next" title="概览"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -134,8 +144,8 @@
 </section>
 <script>
   var disqus_shortname = 'toberoot';
-  var disqus_url = 'http://www.toberoot.com/devops/bootstrap/index.html';
-  var disqus_title = "Bootstrap 学习笔记";
+  var disqus_url = 'http://www.toberoot.com/devops/00_python_base/13-Python%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%8E%A5%E5%8F%A3.html';
+  var disqus_title = "常用接口";
   var disqus_config = function(){
     this.language = 'zh';
   };
@@ -163,7 +173,7 @@
 </span>
 
               <strong class="sidebar-title">目录</strong>
-              
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%B0%8F%E6%96%B9%E6%B3%95"><span class="toc-text">常用小方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4"><span class="toc-text">日期时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%BB%E9%99%A4%E7%BD%91%E9%A1%B5%E6%A0%87%E7%AD%BE"><span class="toc-text">去除网页标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E4%BA%A7%E4%BE%9D%E8%B5%96%E5%8C%85"><span class="toc-text">生产依赖包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE-t%E6%89%93%E5%8D%B0%E8%A1%A8%E6%A0%BC"><span class="toc-text">根据\t打印表格</span></a></li></ol></li></ol>
               <a href="#" id="article-toc-top">回到顶部</a>
             </div>
           </aside>
