@@ -2,6 +2,125 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/nosql/dba_redis/11_redis_ops</loc>
+    
+    <lastmod>2020-10-15T09:42:40.092Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/dba_redis/10_redis_demo</loc>
+    
+    <lastmod>2020-10-15T09:35:36.921Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/cloud/aliyun/redis/</loc>
+    
+    <lastmod>2020-10-15T09:32:03.016Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/dba_redis/9_redis_replication</loc>
+    
+    <lastmod>2020-10-15T09:30:51.809Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/dba_redis/7_redis_server_serverCron</loc>
+    
+    <lastmod>2020-10-15T09:30:36.753Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/dba_redis/8_redis_server_initialize</loc>
+    
+    <lastmod>2020-10-15T09:30:36.748Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/dba_redis/6_redis_server_cmd</loc>
+    
+    <lastmod>2020-10-15T09:30:19.501Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/dba_redis/4_redis_client</loc>
+    
+    <lastmod>2020-10-15T09:30:09.982Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/dba_redis/5_redis_client_server</loc>
+    
+    <lastmod>2020-10-15T09:30:09.975Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/dba_redis/3_redis_expire</loc>
+    
+    <lastmod>2020-10-15T09:29:50.920Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/dba_redis/2_redis_rdb_aof</loc>
+    
+    <lastmod>2020-10-15T09:29:42.214Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/dba_redis/1_redis_server</loc>
+    
+    <lastmod>2020-10-15T09:29:33.320Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/dba_redis/0_hash_tables</loc>
+    
+    <lastmod>2020-10-15T09:29:19.251Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/nosql/dba_redis/</loc>
+    
+    <lastmod>2020-10-15T09:28:52.036Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/linux/booboo_middle_service/</loc>
+    
+    <lastmod>2020-10-15T09:22:33.275Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/devops/11_flask_admin/</loc>
+    
+    <lastmod>2020-10-15T09:15:29.882Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/devops/00_python_base/</loc>
+    
+    <lastmod>2020-10-15T09:13:57.028Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/devops/</loc>
     
     <lastmod>2020-10-15T06:26:23.375Z</lastmod>
@@ -114,13 +233,6 @@
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/devops/11_flask_admin/</loc>
-    
-    <lastmod>2020-10-15T06:21:17.202Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.toberoot.com/devops/01_python_net/</loc>
     
     <lastmod>2020-10-15T06:19:58.186Z</lastmod>
@@ -208,13 +320,6 @@
     <loc>http://www.toberoot.com/devops/00_python_base/02_Python%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B</loc>
     
     <lastmod>2020-10-15T06:17:08.822Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/devops/00_python_base/</loc>
-    
-    <lastmod>2020-10-15T06:16:34.219Z</lastmod>
     
   </url>
   
@@ -460,13 +565,6 @@
     <loc>http://www.toberoot.com/linux/booboo_middle_service/07-cdn</loc>
     
     <lastmod>2020-10-14T08:45:01.959Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/linux/booboo_middle_service/</loc>
-    
-    <lastmod>2020-10-14T08:42:31.216Z</lastmod>
     
   </url>
   
