@@ -2417,6 +2417,13 @@
   </url>
   
   <url>
+    <loc>http://www.toberoot.com/api/table-encryption-management</loc>
+    
+    <lastmod>2020-06-08T04:30:46.321Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/api/the-clone-plugin</loc>
     
     <lastmod>2020-06-08T04:30:46.321Z</lastmod>
@@ -2425,13 +2432,6 @@
   
   <url>
     <loc>http://www.toberoot.com/api/time-zone-support-for-timestamp-and-datatime</loc>
-    
-    <lastmod>2020-06-08T04:30:46.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/api/table-encryption-management</loc>
     
     <lastmod>2020-06-08T04:30:46.321Z</lastmod>
     
@@ -2459,14 +2459,14 @@
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/api/row-and-columns-aliases-with-on-duplicate-key-update</loc>
+    <loc>http://www.toberoot.com/api/resource-management</loc>
     
     <lastmod>2020-06-08T04:30:46.319Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/api/resource-management</loc>
+    <loc>http://www.toberoot.com/api/row-and-columns-aliases-with-on-duplicate-key-update</loc>
     
     <lastmod>2020-06-08T04:30:46.319Z</lastmod>
     
@@ -2942,14 +2942,14 @@
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/devops/01_python_net/03_Python%E7%BD%91%E7%BB%9C%E5%BC%80%E5%8F%91%E4%B9%8B%E8%AF%A6%E8%A7%A3socket%E5%B1%82</loc>
+    <loc>http://www.toberoot.com/devops/01_python_net/02_Python%E7%BD%91%E7%BB%9C%E5%BC%80%E5%8F%91%E4%B9%8BOSI%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B</loc>
     
     <lastmod>2020-03-10T03:53:24.530Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/devops/01_python_net/02_Python%E7%BD%91%E7%BB%9C%E5%BC%80%E5%8F%91%E4%B9%8BOSI%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B</loc>
+    <loc>http://www.toberoot.com/devops/01_python_net/03_Python%E7%BD%91%E7%BB%9C%E5%BC%80%E5%8F%91%E4%B9%8B%E8%AF%A6%E8%A7%A3socket%E5%B1%82</loc>
     
     <lastmod>2020-03-10T03:53:24.530Z</lastmod>
     
@@ -2963,14 +2963,14 @@
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/devops/01_python_net/06_Python%E7%BD%91%E7%BB%9C%E5%BC%80%E5%8F%91%E4%B9%8B%E7%B2%98%E5%8C%85%E7%8E%B0%E8%B1%A1</loc>
+    <loc>http://www.toberoot.com/devops/01_python_net/05_Python%E7%BD%91%E7%BB%9C%E5%BC%80%E5%8F%91%E4%B9%8B%E5%9F%BA%E4%BA%8EUDP%E7%9A%84%E5%A5%97%E6%8E%A5%E5%AD%97</loc>
     
     <lastmod>2020-03-10T03:53:24.530Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/devops/01_python_net/05_Python%E7%BD%91%E7%BB%9C%E5%BC%80%E5%8F%91%E4%B9%8B%E5%9F%BA%E4%BA%8EUDP%E7%9A%84%E5%A5%97%E6%8E%A5%E5%AD%97</loc>
+    <loc>http://www.toberoot.com/devops/01_python_net/06_Python%E7%BD%91%E7%BB%9C%E5%BC%80%E5%8F%91%E4%B9%8B%E7%B2%98%E5%8C%85%E7%8E%B0%E8%B1%A1</loc>
     
     <lastmod>2020-03-10T03:53:24.530Z</lastmod>
     
