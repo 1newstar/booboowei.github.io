@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/mysql/dba_mysql/01-%E7%B2%BE%E5%93%81_MySQL%E5%B8%B8%E7%94%A8SQL</loc>
+    
+    <lastmod>2020-10-15T10:51:55.962Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mysql/dba_mysql/00-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E4%BD%9C%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90</loc>
+    
+    <lastmod>2020-10-15T10:14:11.932Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/mysql/dba_mysql/</loc>
+    
+    <lastmod>2020-10-15T10:13:02.392Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/nosql/dba_redis/11_redis_ops</loc>
     
     <lastmod>2020-10-15T09:42:40.092Z</lastmod>
