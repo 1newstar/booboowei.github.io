@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/mse/calculus/</loc>
+    
+    <lastmod>2020-10-15T04:25:52.279Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/cloud/</loc>
     
     <lastmod>2020-10-15T04:17:47.387Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>http://www.toberoot.com/devops/bootstrap/</loc>
     
     <lastmod>2020-10-15T04:11:34.840Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mse/calculus/</loc>
-    
-    <lastmod>2020-10-15T04:10:15.314Z</lastmod>
     
   </url>
   
