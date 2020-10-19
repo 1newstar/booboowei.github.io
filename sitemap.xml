@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/cloud/tencent/cloud_lite_mysql</loc>
+    
+    <lastmod>2020-10-19T03:03:11.997Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/mysql/dba_mysql/01-%E7%B2%BE%E5%93%81_MySQL%E5%B8%B8%E7%94%A8SQL</loc>
     
     <lastmod>2020-10-15T10:51:55.962Z</lastmod>
