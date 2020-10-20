@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/devops/11_flask_admin/13-%E4%BF%AE%E6%94%B9Flask_admin%E5%89%8D%E7%AB%AF%E8%A1%A8%E6%A0%BC%E9%80%9A%E8%BF%87js%E8%AE%A1%E7%AE%97%E7%94%9F%E6%88%90%E5%90%88%E8%AE%A1%E8%A1%8C</loc>
+    
+    <lastmod>2020-10-20T08:38:45.186Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/mysql/dba_mysql/a</loc>
     
     <lastmod>2020-10-20T08:30:20.001Z</lastmod>
@@ -852,13 +859,6 @@
     <loc>http://www.toberoot.com/devops/12_mini_project/</loc>
     
     <lastmod>2020-10-15T06:25:00.677Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/devops/11_flask_admin/13-%E4%BF%AE%E6%94%B9Flask_admin%E5%89%8D%E7%AB%AF%E8%A1%A8%E6%A0%BC%E9%80%9A%E8%BF%87js%E8%AE%A1%E7%AE%97%E7%94%9F%E6%88%90%E5%90%88%E8%AE%A1%E8%A1%8C</loc>
-    
-    <lastmod>2020-10-15T06:23:07.562Z</lastmod>
     
   </url>
   
