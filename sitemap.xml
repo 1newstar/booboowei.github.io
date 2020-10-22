@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/linux/lamp/phpems</loc>
+    
+    <lastmod>2020-10-22T03:30:13.210Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/devops/11_flask_admin/13-%E4%BF%AE%E6%94%B9Flask_admin%E5%89%8D%E7%AB%AF%E8%A1%A8%E6%A0%BC%E9%80%9A%E8%BF%87js%E8%AE%A1%E7%AE%97%E7%94%9F%E6%88%90%E5%90%88%E8%AE%A1%E8%A1%8C</loc>
     
     <lastmod>2020-10-20T12:07:34.383Z</lastmod>
@@ -2217,13 +2224,6 @@
     <loc>http://www.toberoot.com/amy/english/k_star/2020-08-23-amy</loc>
     
     <lastmod>2020-08-31T07:36:34.014Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/linux/lamp/phpems</loc>
-    
-    <lastmod>2020-08-26T08:18:51.550Z</lastmod>
     
   </url>
   
