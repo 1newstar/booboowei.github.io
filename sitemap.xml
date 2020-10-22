@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/mysql/dba_mysql/tidb/tidb</loc>
+    
+    <lastmod>2020-10-22T04:24:04.151Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/linux/lamp/phpems</loc>
     
     <lastmod>2020-10-22T03:37:13.509Z</lastmod>
@@ -3229,14 +3236,14 @@
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/api/window-functions</loc>
+    <loc>http://www.toberoot.com/api/xml-enhancements</loc>
     
     <lastmod>2020-06-08T04:30:46.322Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/api/xml-enhancements</loc>
+    <loc>http://www.toberoot.com/api/window-functions</loc>
     
     <lastmod>2020-06-08T04:30:46.322Z</lastmod>
     
@@ -3390,14 +3397,14 @@
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/api/json-enhancements</loc>
+    <loc>http://www.toberoot.com/api/json-schema-validation</loc>
     
     <lastmod>2020-06-08T04:30:46.314Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.toberoot.com/api/json-schema-validation</loc>
+    <loc>http://www.toberoot.com/api/json-enhancements</loc>
     
     <lastmod>2020-06-08T04:30:46.314Z</lastmod>
     
