@@ -71,8 +71,8 @@
 <meta property="og:image" content="http://www.toberoot.com/mysql/booboo_mysql/pic/lock15.png">
 <meta property="og:image" content="http://www.toberoot.com/mysql/booboo_mysql/pic/lock18.png">
 <meta property="og:image" content="http://www.toberoot.com/mysql/booboo_mysql/pic/lock19.png">
-<meta property="article:published_time" content="2020-10-27T06:22:36.451Z">
-<meta property="article:modified_time" content="2020-10-27T06:22:36.451Z">
+<meta property="article:published_time" content="2020-10-27T06:27:40.866Z">
+<meta property="article:modified_time" content="2020-10-27T06:27:40.866Z">
 <meta property="article:author" content="魏亚萍">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://www.toberoot.com/mysql/booboo_mysql/pic/04-mysql2.jpg">
@@ -823,7 +823,24 @@
 </tr>
 </tbody></table>
 <p>Undo Log</p>
-<p> | DB_ROW_ID | 用户名 | 年龄 | DB_TRX_ID | DB_ROLL_PTR<br>:- | :——– | :– | :- | :——– | ———–<br> | 1         | Amy | 5  | NULL      | NULL        |</p>
+<table>
+<thead>
+<tr>
+<th align="left">DB_ROW_ID</th>
+<th align="left">用户名</th>
+<th align="left">年龄</th>
+<th align="left">DB_TRX_ID</th>
+<th align="left">DB_ROLL_PTR</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">Amy</td>
+<td align="left">5</td>
+<td align="left">NULL</td>
+<td align="left">NULL</td>
+</tr>
+</tbody></table>
 <p>现在来了一个 <code>事务1</code> 对该记录的 <code>name</code> 做出了修改，改为 <code>Sage</code>。</p>
 <ul>
 <li>第一步: <code>事务1</code> 修改行记录时，数据库会先对该行加排他锁 <code>X</code>；</li>
@@ -870,7 +887,24 @@
 <td align="left">ox1234567</td>
 </tr>
 </tbody></table>
-<p> | DB_ROW_ID | 用户名 | 年龄 | DB_TRX_ID | DB_ROLL_PTR<br>:- | :——– | :– | :- | :——– | ———–<br> | 1         | Amy | 5  | NULL      | NULL        |</p>
+<table>
+<thead>
+<tr>
+<th align="left">DB_ROW_ID</th>
+<th align="left">用户名</th>
+<th align="left">年龄</th>
+<th align="left">DB_TRX_ID</th>
+<th align="left">DB_ROLL_PTR</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">Amy</td>
+<td align="left">5</td>
+<td align="left">NULL</td>
+<td align="left">NULL</td>
+</tr>
+</tbody></table>
 <ul>
 <li>第一步: 事务2修改该行数据时，数据库也先为该行加锁；</li>
 <li>第二步: 然后把该行数据拷贝到 <code>undo log</code>中，作为旧记录，发现该行记录已经有<code>undo log</code>了，那么最新的旧数据作为链表的表头，插在该行记录的 <code>undo log</code> 最前面；</li>
@@ -881,7 +915,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-10-27T06:22:36.451Z" itemprop="dateModified">上次更新：2020-10-27</time>
+                <time class="article-footer-updated" datetime="2020-10-27T06:27:40.866Z" itemprop="dateModified">上次更新：2020-10-27</time>
                 <a href="/mysql/index.html" class="article-footer-next" title="概览"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
