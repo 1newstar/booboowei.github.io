@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/mysql/booboo_mysql/03-MySQL%E9%80%BB%E8%BE%91%E6%9E%B6%E6%9E%84%E5%92%8CInnodb%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E</loc>
+    
+    <lastmod>2020-10-27T06:22:36.451Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/oracle/oracle-11g/E-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D-21-%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E7%9A%84%E5%A4%87%E4%BB%BD%E6%81%A2%E5%A4%8D%E6%80%BB%E7%BB%93</loc>
     
     <lastmod>2020-10-26T07:50:34.800Z</lastmod>
@@ -1517,13 +1524,6 @@
     <loc>http://www.toberoot.com/mysql/booboo_mysql/04-MySQL%E5%A4%8D%E5%88%B6replication</loc>
     
     <lastmod>2020-10-14T02:40:55.561Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/mysql/booboo_mysql/03-MySQL%E9%80%BB%E8%BE%91%E6%9E%B6%E6%9E%84%E5%92%8CInnodb%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E</loc>
-    
-    <lastmod>2020-10-14T02:40:38.839Z</lastmod>
     
   </url>
   
