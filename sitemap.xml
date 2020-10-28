@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.toberoot.com/oracle/ocp/1z0-062</loc>
+    
+    <lastmod>2020-10-28T06:37:49.444Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.toberoot.com/oracle/ocp/1z0-071</loc>
+    
+    <lastmod>2020-10-28T05:22:51.792Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.toberoot.com/mysql/booboo_mysql/03-MySQL%E9%80%BB%E8%BE%91%E6%9E%B6%E6%9E%84%E5%92%8CInnodb%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E</loc>
     
     <lastmod>2020-10-27T06:27:40.866Z</lastmod>
@@ -2210,13 +2224,6 @@
     <loc>http://www.toberoot.com/news/2020/09/26/tec-mysql/</loc>
     
     <lastmod>2020-09-01T06:00:10.672Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.toberoot.com/oracle/ocp/1z0-071</loc>
-    
-    <lastmod>2020-08-31T07:40:10.351Z</lastmod>
     
   </url>
   
