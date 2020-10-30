@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.toberoot.com/"/>
-  <updated>2020-10-14T03:19:37.753Z</updated>
+  <updated>2020-10-30T09:13:58.237Z</updated>
   <id>http://www.toberoot.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DAMS 中国数据智能管理峰会 2020 上海</title>
+    <link href="http://www.toberoot.com/news/2020/10/30/dams/"/>
+    <id>http://www.toberoot.com/news/2020/10/30/dams/</id>
+    <published>2020-10-30T00:00:00.000Z</published>
+    <updated>2020-10-30T09:13:58.237Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="开源数据库-MySQL-在民生银行的应用实践"><a href="#开源数据库-MySQL-在民生银行的应用实践" class="headerlink" title="开源数据库 MySQL 在民生银行的应用实践"></a>开源数据库 MySQL 在民生银行的应用实践</h1><blockquote><p>明生银行 项目经理 徐春阳</p></blockquote><ol><li><p>为什么要用? 国家安全要求</p></li><li><p>怎么用？ 自主</p></li><li><p>经历总结 “平头哥”的精神、用于尝试、乐观时谨慎、”谨慎”时乐观、持续学习与研究</p></li><li><p>开源收获： 资源、自主、效率、经验、能力、也收获了沉甸甸的责任</p></li><li><p>使用与运维MySQL的模式</p><ul><li>利用及其有限的资源维护总行MySQL数据库系统；</li><li>抓大放小，抓主要重要放次要，协同管理</li><li>建设必要的运维工具/系统辅助运维</li><li>制定使用规范、指导手册、知识库</li></ul></li><li><p>“人工”智能</p><ul><li>标准监控频率漏掉间歇性/抖动性的现象</li><li>再智能的监控难以分辨。。</li><li>提高”人工”智能的方法就是持续学习与研究，透析数据库内部机制</li></ul></li></ol><h1 id="如何构建数据库容器化PaaS"><a href="#如何构建数据库容器化PaaS" class="headerlink" title="如何构建数据库容器化PaaS"></a>如何构建数据库容器化PaaS</h1><blockquote><p>爱可生 资深架构师 徐阳</p></blockquote><p>思考： 为何现在还有企业一点云数据库都不碰，选择使用这样PaaS平台去实现使用数据库的需求呢？</p><h1 id="腾讯游戏大数据资产管理实践"><a href="#腾讯游戏大数据资产管理实践" class="headerlink" title="腾讯游戏大数据资产管理实践"></a>腾讯游戏大数据资产管理实践</h1><blockquote><p>腾讯游戏 大数据管理负责人 陈林荣</p></blockquote><p>《数据资产管理实践白皮书4.0》</p><ul><li>数据资产管理 DAM，Data Asset Management</li><li>元数据管理成熟度（IBM）</li></ul><blockquote><p>目前接触到的项目中，深切体会到”治理”的难度和重要性。</p></blockquote><h1 id="一个万亿规模数据库核心存储引擎的实现与应用"><a href="#一个万亿规模数据库核心存储引擎的实现与应用" class="headerlink" title="一个万亿规模数据库核心存储引擎的实现与应用"></a>一个万亿规模数据库核心存储引擎的实现与应用</h1><blockquote><p>南京录信软件 CTO 母延年</p></blockquote><h1 id="从自研演进看分布式数据库"><a href="#从自研演进看分布式数据库" class="headerlink" title="从自研演进看分布式数据库"></a>从自研演进看分布式数据库</h1><blockquote><p>中国银联云计算中心 云组件总监 周家晶</p></blockquote><h1 id="字节跳动数据治理实践"><a href="#字节跳动数据治理实践" class="headerlink" title="字节跳动数据治理实践"></a>字节跳动数据治理实践</h1><blockquote><p>今日头条 数据BP/数据治理负责人 任长延</p></blockquote><p>给我比较大的触动是，字节跳动没有成立自己的大数据团队，而是将组件了一个虚拟的数据治理委员会，这种方式非常好。</p><p>之前参与到大数据团队的项目，更多的是做SQL工程师，如果完全去做其实就丢下自己原先的数据库管理技术了。他们的这种方式我喜欢，而且他们很高效率。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;开源数据库-MySQL-在民生银行的应用实践&quot;&gt;&lt;a href=&quot;#开源数据库-MySQL-在民生银行的应用实践&quot; class=&quot;headerlink&quot; title=&quot;开源数据库 MySQL 在民生银行的应用实践&quot;&gt;&lt;/a&gt;开源数据库 MySQL 在民生银行的应用
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>思考：聊一聊治病救人与系统运维</title>
@@ -573,36 +595,6 @@ mysql&amp;gt; select user,host,authentication_string from mysql.user;
       <category term="紧急救援" scheme="http://www.toberoot.com/tags/%E7%B4%A7%E6%80%A5%E6%95%91%E6%8F%B4/"/>
     
       <category term="MySQL" scheme="http://www.toberoot.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开源工具-binlog2sql工具</title>
-    <link href="http://www.toberoot.com/news/2020/04/24/tec-mysql/"/>
-    <id>http://www.toberoot.com/news/2020/04/24/tec-mysql/</id>
-    <published>2020-04-24T10:44:33.000Z</published>
-    <updated>2020-04-24T05:54:27.062Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="开源工具-binlog2sql工具"><a href="#开源工具-binlog2sql工具" class="headerlink" title="开源工具-binlog2sql工具"></a>开源工具-binlog2sql工具</h2><p>从MySQL binlog解析出你要的SQL。根据不同选项，你可以得到原始SQL、回滚SQL、去除主键的INSERT SQL等。</p><h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><ul><li>数据快速回滚（闪回）</li><li>主从切换后master丢数据的修复</li><li>从binlog生成标准SQL，带来的衍生功能</li></ul><h3 id="限制"><a href="#限制" class="headerlink" title="限制"></a>限制</h3><ul><li>mysql server必须开启，离线模式下不能解析</li><li>参数 binlog_row_image 必须为FULL，暂不支持MINIMAL</li><li>解析速度不如mysqlbinlog</li></ul><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># centos7</span></span><br><span class="line"><span class="comment"># python2.7</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/danfengcao/binlog2sql.git &amp;&amp; <span class="built_in">cd</span> binlog2sql</span><br><span class="line">yum -y install epel-release</span><br><span class="line">yum -y install python-pip</span><br><span class="line">pip install --upgrade pip</span><br><span class="line">pip install -r requirements.txt </span><br></pre></td></tr></table></figure><h3 id="对MySQL的使用限制"><a href="#对MySQL的使用限制" class="headerlink" title="对MySQL的使用限制"></a>对MySQL的使用限制</h3><p>MySQL server必须设置以下参数:</p><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">server_id = 1</span><br><span class="line">log_bin = /var/log/mysql/mysql-bin.log</span><br><span class="line">max_binlog_size = 1G</span><br><span class="line">binlog_format = row</span><br><span class="line">binlog_row_image = full</span><br></pre></td></tr></table></figure><p>user需要的最小权限集合：</p><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span>, super/<span class="keyword">replication</span> <span class="keyword">client</span>, <span class="keyword">replication</span> <span class="keyword">slave</span></span><br></pre></td></tr></table></figure><p>建议授权</p><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="keyword">SELECT</span>, <span class="keyword">REPLICATION</span> <span class="keyword">SLAVE</span>, <span class="keyword">REPLICATION</span> <span class="keyword">CLIENT</span> <span class="keyword">ON</span> *.* <span class="keyword">TO</span> </span><br></pre></td></tr></table></figure><h2 id="binlog2sql帮助"><a href="#binlog2sql帮助" class="headerlink" title="binlog2sql帮助"></a>binlog2sql帮助</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql连接配置</span><br><span class="line">-h host; -P port; -u user; -p password</span><br><span class="line">解析模式</span><br><span class="line">--stop-never 持续同步binlog。可选。不加则同步至执行命令时最新的binlog位置。</span><br><span class="line">-K, --no-primary-key 对INSERT语句去除主键。可选。</span><br><span class="line">-B, --flashback 生成回滚语句，可解析大文件，不受内存限制，每打印一千行加一句SLEEP SELECT(1)。可选。与stop-never或no-primary-key不能同时添加。</span><br><span class="line">解析范围控制</span><br><span class="line">--start-file 起始解析文件。必须。</span><br><span class="line">--start-position/--start-pos start-file的起始解析位置。可选。默认为start-file的起始位置。</span><br><span class="line">--stop-file/--end-file 末尾解析文件。可选。默认为start-file同一个文件。若解析模式为stop-never，此选项失效。</span><br><span class="line">--stop-position/--end-pos stop-file的末尾解析位置。可选。默认为stop-file的最末位置；若解析模式为stop-never，此选项失效。</span><br><span class="line">--start-datetime 从哪个时间点的binlog开始解析，格式必须为datetime，如<span class="string">'2016-11-11 11:11:11'</span>。可选。默认不过滤。</span><br><span class="line">--stop-datetime 到哪个时间点的binlog停止解析，格式必须为datetime，如<span class="string">'2016-11-11 11:11:11'</span>。可选。默认不过滤。</span><br><span class="line">对象过滤</span><br><span class="line">-d, --databases 只输出目标db的sql。可选。默认为空。</span><br><span class="line">-t, --tables 只输出目标tables的sql。可选。默认为空。</span><br></pre></td></tr></table></figure><h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><h4 id="解析标准SQL"><a href="#解析标准SQL" class="headerlink" title="解析标准SQL"></a>解析标准SQL</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python binlog2sql.py -h127.0.0.1 -P3306 -uroot -dhjxdb -t user --start-file=<span class="string">'mysql-bin.000001'</span> --start-datetime=<span class="string">'2017-09-14 13:50:00'</span> --stop-datetime=<span class="string">'2017-09-14 14:10:00'</span></span><br></pre></td></tr></table></figure><h3 id="解析出回滚SQL"><a href="#解析出回滚SQL" class="headerlink" title="解析出回滚SQL"></a>解析出回滚SQL</h3><ul><li><code>-B</code>: 参数代表回滚</li></ul><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python binlog2sql.py -h127.0.0.1 -P3306 -uroot -dhjxdb -t user --start-file=<span class="string">'mysql-bin.000001'</span> --start-position=4946 --stop-position=5921 -B </span><br></pre></td></tr></table></figure><p>工具是给人用的，关键还得有思路。加油⛽️</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;开源工具-binlog2sql工具&quot;&gt;&lt;a href=&quot;#开源工具-binlog2sql工具&quot; class=&quot;headerlink&quot; title=&quot;开源工具-binlog2sql工具&quot;&gt;&lt;/a&gt;开源工具-binlog2sql工具&lt;/h2&gt;&lt;p&gt;从MySQL bin
-      
-    
-    </summary>
-    
-    
-      <category term="技术广角" scheme="http://www.toberoot.com/categories/%E6%8A%80%E6%9C%AF%E5%B9%BF%E8%A7%92/"/>
-    
-      <category term="MySQL" scheme="http://www.toberoot.com/categories/%E6%8A%80%E6%9C%AF%E5%B9%BF%E8%A7%92/MySQL/"/>
-    
-    
-      <category term="紧急救援" scheme="http://www.toberoot.com/tags/%E7%B4%A7%E6%80%A5%E6%95%91%E6%8F%B4/"/>
-    
-      <category term="binlog2sql" scheme="http://www.toberoot.com/tags/binlog2sql/"/>
     
   </entry>
   
