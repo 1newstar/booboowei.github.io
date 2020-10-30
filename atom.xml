@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.toberoot.com/"/>
-  <updated>2020-10-30T09:13:58.237Z</updated>
+  <updated>2020-10-30T22:36:04.617Z</updated>
   <id>http://www.toberoot.com/</id>
   
   <author>
@@ -21,15 +21,17 @@
     <link href="http://www.toberoot.com/news/2020/10/30/dams/"/>
     <id>http://www.toberoot.com/news/2020/10/30/dams/</id>
     <published>2020-10-30T00:00:00.000Z</published>
-    <updated>2020-10-30T09:13:58.237Z</updated>
+    <updated>2020-10-30T22:36:04.617Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="开源数据库-MySQL-在民生银行的应用实践"><a href="#开源数据库-MySQL-在民生银行的应用实践" class="headerlink" title="开源数据库 MySQL 在民生银行的应用实践"></a>开源数据库 MySQL 在民生银行的应用实践</h1><blockquote><p>明生银行 项目经理 徐春阳</p></blockquote><ol><li><p>为什么要用? 国家安全要求</p></li><li><p>怎么用？ 自主</p></li><li><p>经历总结 “平头哥”的精神、用于尝试、乐观时谨慎、”谨慎”时乐观、持续学习与研究</p></li><li><p>开源收获： 资源、自主、效率、经验、能力、也收获了沉甸甸的责任</p></li><li><p>使用与运维MySQL的模式</p><ul><li>利用及其有限的资源维护总行MySQL数据库系统；</li><li>抓大放小，抓主要重要放次要，协同管理</li><li>建设必要的运维工具/系统辅助运维</li><li>制定使用规范、指导手册、知识库</li></ul></li><li><p>“人工”智能</p><ul><li>标准监控频率漏掉间歇性/抖动性的现象</li><li>再智能的监控难以分辨。。</li><li>提高”人工”智能的方法就是持续学习与研究，透析数据库内部机制</li></ul></li></ol><h1 id="如何构建数据库容器化PaaS"><a href="#如何构建数据库容器化PaaS" class="headerlink" title="如何构建数据库容器化PaaS"></a>如何构建数据库容器化PaaS</h1><blockquote><p>爱可生 资深架构师 徐阳</p></blockquote><p>思考： 为何现在还有企业一点云数据库都不碰，选择使用这样PaaS平台去实现使用数据库的需求呢？</p><h1 id="腾讯游戏大数据资产管理实践"><a href="#腾讯游戏大数据资产管理实践" class="headerlink" title="腾讯游戏大数据资产管理实践"></a>腾讯游戏大数据资产管理实践</h1><blockquote><p>腾讯游戏 大数据管理负责人 陈林荣</p></blockquote><p>《数据资产管理实践白皮书4.0》</p><ul><li>数据资产管理 DAM，Data Asset Management</li><li>元数据管理成熟度（IBM）</li></ul><blockquote><p>目前接触到的项目中，深切体会到”治理”的难度和重要性。</p></blockquote><h1 id="一个万亿规模数据库核心存储引擎的实现与应用"><a href="#一个万亿规模数据库核心存储引擎的实现与应用" class="headerlink" title="一个万亿规模数据库核心存储引擎的实现与应用"></a>一个万亿规模数据库核心存储引擎的实现与应用</h1><blockquote><p>南京录信软件 CTO 母延年</p></blockquote><h1 id="从自研演进看分布式数据库"><a href="#从自研演进看分布式数据库" class="headerlink" title="从自研演进看分布式数据库"></a>从自研演进看分布式数据库</h1><blockquote><p>中国银联云计算中心 云组件总监 周家晶</p></blockquote><h1 id="字节跳动数据治理实践"><a href="#字节跳动数据治理实践" class="headerlink" title="字节跳动数据治理实践"></a>字节跳动数据治理实践</h1><blockquote><p>今日头条 数据BP/数据治理负责人 任长延</p></blockquote><p>给我比较大的触动是，字节跳动没有成立自己的大数据团队，而是将组件了一个虚拟的数据治理委员会，这种方式非常好。</p><p>之前参与到大数据团队的项目，更多的是做SQL工程师，如果完全去做其实就丢下自己原先的数据库管理技术了。他们的这种方式我喜欢，而且他们很高效率。</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="2020-10-30-dams/01.jpeg" alt=""></p><p><img src="2020-10-30-dams/02.jpeg" alt=""></p><h1 id="开源数据库-MySQL-在民生银行的应用实践"><a href="#开源数据库-MySQL-在民生银行的应用实践" class="headerlink" title="开源数据库 MySQL 在民生银行的应用实践"></a>开源数据库 MySQL 在民生银行的应用实践</h1><blockquote><p>明生银行 项目经理 徐春阳</p></blockquote><ol><li><p>为什么要用? 国家安全要求</p></li><li><p>怎么用？ 自主</p></li><li><p>经历总结 “平头哥”的精神、用于尝试、乐观时谨慎、”谨慎”时乐观、持续学习与研究</p></li><li><p>开源收获： 资源、自主、效率、经验、能力、也收获了沉甸甸的责任</p></li><li><p>使用与运维MySQL的模式</p><ul><li>利用及其有限的资源维护总行MySQL数据库系统；</li><li>抓大放小，抓主要重要放次要，协同管理</li><li>建设必要的运维工具/系统辅助运维</li><li>制定使用规范、指导手册、知识库</li></ul></li><li><p>“人工”智能</p><ul><li>标准监控频率漏掉间歇性/抖动性的现象</li><li>再智能的监控难以分辨。。</li><li>提高”人工”智能的方法就是持续学习与研究，透析数据库内部机制</li></ul></li></ol><h1 id="如何构建数据库容器化PaaS"><a href="#如何构建数据库容器化PaaS" class="headerlink" title="如何构建数据库容器化PaaS"></a>如何构建数据库容器化PaaS</h1><blockquote><p>爱可生 资深架构师 徐阳</p></blockquote><p>思考： 为何现在还有企业一点云数据库都不碰，选择使用这样PaaS平台去实现使用数据库的需求呢？</p><h1 id="腾讯游戏大数据资产管理实践"><a href="#腾讯游戏大数据资产管理实践" class="headerlink" title="腾讯游戏大数据资产管理实践"></a>腾讯游戏大数据资产管理实践</h1><blockquote><p>腾讯游戏 大数据管理负责人 陈林荣</p></blockquote><p>《数据资产管理实践白皮书4.0》</p><ul><li>数据资产管理 DAM，Data Asset Management</li><li>元数据管理成熟度（IBM）</li></ul><blockquote><p>目前接触到的项目中，深切体会到”治理”的难度和重要性。</p></blockquote><h1 id="一个万亿规模数据库核心存储引擎的实现与应用"><a href="#一个万亿规模数据库核心存储引擎的实现与应用" class="headerlink" title="一个万亿规模数据库核心存储引擎的实现与应用"></a>一个万亿规模数据库核心存储引擎的实现与应用</h1><blockquote><p>南京录信软件 CTO 母延年</p></blockquote><h1 id="从自研演进看分布式数据库"><a href="#从自研演进看分布式数据库" class="headerlink" title="从自研演进看分布式数据库"></a>从自研演进看分布式数据库</h1><blockquote><p>中国银联云计算中心 云组件总监 周家晶</p></blockquote><h1 id="字节跳动数据治理实践"><a href="#字节跳动数据治理实践" class="headerlink" title="字节跳动数据治理实践"></a>字节跳动数据治理实践</h1><blockquote><p>今日头条 数据BP/数据治理负责人 任长延</p></blockquote><p>给我比较大的触动是，字节跳动没有成立自己的大数据团队，而是将组件了一个虚拟的数据治理委员会，这种方式非常好。</p><p>之前参与到大数据团队的项目，更多的是做SQL工程师，如果完全去做其实就丢下自己原先的数据库管理技术了。他们的这种方式我喜欢，而且他们很高效率。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;开源数据库-MySQL-在民生银行的应用实践&quot;&gt;&lt;a href=&quot;#开源数据库-MySQL-在民生银行的应用实践&quot; class=&quot;headerlink&quot; title=&quot;开源数据库 MySQL 在民生银行的应用实践&quot;&gt;&lt;/a&gt;开源数据库 MySQL 在民生银行的应用
+        &lt;p&gt;&lt;img src=&quot;2020-10-30-dams/01.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;2020-10-30-dams/02.jpeg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;开源数据库-MySQL-在民生银行的应用实践&quot;&gt;&lt;a href=
       
     
     </summary>
